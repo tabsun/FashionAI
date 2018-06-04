@@ -10,6 +10,8 @@ FashionAI是阿里天池组织的一个服饰关键点检测比赛，包括blous
 
 整个过程中在focal loss/dsconv/upsampling/stage 方面实验较多，遗憾的是refine net方面没有来得及完成实验，目前还在尝试。
 
+最终结果为单模型4.51%，如果做refine net或者ensemble model或许会有所提高。
+
 This is an experimental project for FashionAI competetion which is developed based on [OpenPose(Cao et al)](https://arxiv.org/abs/1611.08050) and [tf-openpose](https://github.com/ildoonet/tf-pose-estimation).
 
 And for each clothe type (dress / skirt / outwear / trousers / blouse) we trained one model separately taking vgg19 network as initial weights for the first several layers. Basically each model need 2 days to train on a 8-gpu machine.
@@ -74,7 +76,7 @@ This command will generate 'submit_%s.csv' % clothe_type under ./submit director
 
 After test all 5 clothe_types then `python merge.py` will merge all results into one .csv file which is in the submit csv format.
 
-'''shell
+```shell
 >  cd code
 
 >  python run.py --model="cmu" --image="../data/test_b/test.csv" --tag="blouse" --test="submit" --resolution="368x368" --scales="[1.0, (0.5,0.25,1.5), (0.5,0.75,1.5), (0.25,0.5,1.5), (0.75,0.5,1.5), (0.5,0.5,1.5)]"
@@ -91,9 +93,9 @@ After test all 5 clothe_types then `python merge.py` will merge all results into
 
 >  python merge.py 
 
-'''
+```
 
->  That's all!
+That's all!
     
 ## Contact
 
