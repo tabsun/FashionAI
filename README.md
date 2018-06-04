@@ -19,26 +19,26 @@ Some results:
 _dress_ :
 
 <figure class="third">
-    <img src="https://wx2.sinaimg.cn/mw1024/89ef5361ly1fryzwf5m7uj20e80e80wo.jpg">
-    <img src="https://wx1.sinaimg.cn/mw1024/89ef5361ly1fryzwif71ej20e80e8myn.jpg">
-    <img src="https://wx1.sinaimg.cn/mw1024/89ef5361ly1fryzwodoa4j20an0e80ts.jpg">
+    <img width="120" src="https://wx2.sinaimg.cn/mw1024/89ef5361ly1fryzwf5m7uj20e80e80wo.jpg">
+    <img width="120" src="https://wx1.sinaimg.cn/mw1024/89ef5361ly1fryzwif71ej20e80e8myn.jpg">
+    <img width="120" src="https://wx1.sinaimg.cn/mw1024/89ef5361ly1fryzwodoa4j20an0e80ts.jpg">
 </figure>
 
 
 _outwear_ :
 
 <figure class="third">
-    <img src="https://wx2.sinaimg.cn/mw1024/89ef5361ly1fryzuh00acj20e80e8jtf.jpg">
-    <img src="https://wx4.sinaimg.cn/mw1024/89ef5361ly1fryzu09t1dj20e80e8767.jpg">
-    <img src="https://wx4.sinaimg.cn/mw1024/89ef5361ly1fryzu40mtgj20e80e8tb8.jpg">
+    <img width="120" src="https://wx2.sinaimg.cn/mw1024/89ef5361ly1fryzuh00acj20e80e8jtf.jpg">
+    <img width="120" src="https://wx4.sinaimg.cn/mw1024/89ef5361ly1fryzu09t1dj20e80e8767.jpg">
+    <img width="120" src="https://wx4.sinaimg.cn/mw1024/89ef5361ly1fryzu40mtgj20e80e8tb8.jpg">
 </figure>
 
 _blouse_ :
 
 <figure class="third">
-    <img src="https://wx3.sinaimg.cn/mw1024/89ef5361ly1fryzx6np9jj20e80e8myp.jpg">
-    <img src="https://wx2.sinaimg.cn/mw1024/89ef5361ly1fryzxcdp3wj20e80e875r.jpg">
-    <img src="https://wx1.sinaimg.cn/mw1024/89ef5361ly1fryzxsnqg9j20e80e8n0k.jpg">
+    <img width="120" src="https://wx3.sinaimg.cn/mw1024/89ef5361ly1fryzx6np9jj20e80e8myp.jpg">
+    <img width="120" src="https://wx2.sinaimg.cn/mw1024/89ef5361ly1fryzxcdp3wj20e80e875r.jpg">
+    <img width="120" src="https://wx1.sinaimg.cn/mw1024/89ef5361ly1fryzxsnqg9j20e80e8n0k.jpg">
 </figure>
 ![]() ![]() ![]()
 
