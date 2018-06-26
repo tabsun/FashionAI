@@ -7,7 +7,9 @@ import tensorflow.contrib.slim as slim
 import common
 
 DEFAULT_PADDING = 'SAME'
-
+USE_FUSED_BN = True
+BN_EPSILON = 9.999999747378752e-06
+BN_MOMENTUM = 0.99
 
 _init_xavier = tf.contrib.layers.xavier_initializer()
 _init_norm = tf.truncated_normal_initializer(stddev=0.01)
@@ -44,7 +46,7 @@ def layer(op):
 
 
 class BaseNetwork(object):
-    def __init__(self, inputs, trainable=True):
+    def __init__(self, inputs, clothe_class='', trainable=True):
         # The input nodes for this network
         self.inputs = inputs
         # The current list of terminal nodes
@@ -57,6 +59,9 @@ class BaseNetwork(object):
         self.use_dropout = tf.placeholder_with_default(tf.constant(1.0),
                                                        shape=[],
                                                        name='use_dropout')
+        # Each network has different output channels number
+        self.clothe_class = clothe_class
+
         self.setup()
 
     def setup(self):
@@ -71,38 +76,18 @@ class BaseNetwork(object):
         ignore_missing: If true, serialized weights for missing layers are ignored.
         '''
         data_dict = np.load(data_path, encoding='bytes').item()
-        op_filters = ['conv1_1', 'conv1_2', 'conv2_1', 'conv2_2', 'conv3_1', 'conv3_2', 'conv3_3', 'conv3_4', 'conv4_1', 'conv4_2']
-        for op_name in data_dict:
-            if op_name in op_filters:
-                if isinstance(data_dict[op_name]['weights'], np.ndarray) and isinstance(data_dict[op_name]['biases'], np.ndarray):
-                    if 'RMSProp' in op_name:
-                        continue
-                    with tf.variable_scope('', reuse=True):
-                        var = tf.get_variable(op_name+'/weights')
-                        try:
-                            session.run(var.assign(data_dict[op_name]['weights']))
-                        except Exception as e:
-                            print(op_name)
-                            print(e)
-                            sys.exit(-1)
-                    with tf.variable_scope('', reuse=True):
-                        var = tf.get_variable(op_name+'/biases')
-                        try:
-                            session.run(var.assign(data_dict[op_name]['biases']))
-                        except Exception as e:
-                            print(op_name)
-                            print(e)
-                            sys.exit(-1)
-                else:
-                    with tf.variable_scope(op_name, reuse=True):
-                        for param_name, data in data_dict[op_name].items():
-                            try:
-                                var = tf.get_variable(param_name.decode("utf-8"))
-                                session.run(var.assign(data))
-                            except ValueError as e:
-                                print(e)
-                                if not ignore_missing:
-                                    raise
+        for index, op_name in enumerate(data_dict.keys()):
+            print op_name, "  {} / {}".format(index, len(data_dict.keys()))
+            if 'conv' not in op_name:
+                continue
+            with tf.variable_scope('', reuse=True):
+                try:
+                    var = tf.get_variable(op_name.decode("utf-8"))
+                    session.run(var.assign(data_dict[op_name]))
+                except ValueError as e:
+                    print(e)
+                    if not ignore_missing:
+                        raise
 
     def feed(self, *args):
         '''Set the input(s) for the next operation by replacing the terminal nodes.
@@ -148,6 +133,145 @@ class BaseNetwork(object):
         '''Verifies that the padding is one of the supported ones.'''
         assert padding in ('SAME', 'VALID')
 
+    def get_bilinear_filter(self, filter_shape, upscale_factor, name):
+        #with tf.variable_scope(name):
+        ##filter_shape is [width, height, num_in_channels, num_out_channels]
+        kernel_size = filter_shape[1]
+        ### Centre location of the filter for which value is calculated
+        if kernel_size % 2 == 1:
+            centre_location = upscale_factor - 1
+        else:
+            centre_location = upscale_factor - 0.5
+ 
+        bilinear = np.zeros([filter_shape[0], filter_shape[1]])
+        for x in range(filter_shape[0]):
+            for y in range(filter_shape[1]):
+                ##Interpolation Calculation
+                value = (1 - abs((x - centre_location)/ upscale_factor)) * (1 - abs((y - centre_location)/ upscale_factor))
+                bilinear[x, y] = value
+        weights = np.zeros(filter_shape)
+        for i in range(filter_shape[2]):
+            weights[:, :, i, i] = bilinear
+        init = tf.constant_initializer(value=weights,
+                                       dtype=tf.float32)
+ 
+        bilinear_weights = tf.get_variable(name="decon_bilinear_filter", initializer=init,
+                               shape=weights.shape)
+        return bilinear_weights
+    
+
+    # input image order: BGR, range [0-255]
+    # mean_value: 104, 117, 123
+    # only subtract mean is used
+    # for root block, use dummy input_filters, e.g. 128 rather than 64 for the first block
+    @layer
+    def se_bottleneck_block(self, input, input_filters, is_training, data_format='channels_last', need_reduce=True, is_root=False, name=None, reduced_scale=16):
+        bn_axis = -1 if data_format == 'channels_last' else 1
+        strides_to_use = 1
+        name_prefix = name
+        residuals = input
+        if need_reduce:
+            strides_to_use = 1 if is_root else 2
+            proj_mapping = tf.layers.conv2d(input, input_filters * 2, (1, 1), use_bias=False,
+                                    name=name_prefix + '_1x1_proj', strides=(strides_to_use, strides_to_use),
+                                    padding='valid', data_format=data_format, activation=None,
+                                    kernel_initializer=tf.contrib.layers.xavier_initializer(),
+                                    bias_initializer=tf.zeros_initializer())
+            residuals = tf.layers.batch_normalization(proj_mapping, momentum=BN_MOMENTUM,
+                                    name=name_prefix + '_1x1_proj/bn', axis=bn_axis,
+                                    epsilon=BN_EPSILON, training=is_training, reuse=None, fused=USE_FUSED_BN)
+        reduced_inputs = tf.layers.conv2d(input, input_filters / 2, (1, 1), use_bias=False,
+                                name=name_prefix + '_1x1_reduce', strides=(strides_to_use, strides_to_use),
+                                padding='valid', data_format=data_format, activation=None,
+                                kernel_initializer=tf.contrib.layers.xavier_initializer(),
+                                bias_initializer=tf.zeros_initializer())
+        reduced_inputs_bn = tf.layers.batch_normalization(reduced_inputs, momentum=BN_MOMENTUM,
+                                            name=name_prefix + '_1x1_reduce/bn', axis=bn_axis,
+                                            epsilon=BN_EPSILON, training=is_training, reuse=None, fused=USE_FUSED_BN)
+        reduced_inputs_relu = tf.nn.relu(reduced_inputs_bn, name=name_prefix + '_1x1_reduce/relu')
+
+
+        conv3_inputs = tf.layers.conv2d(reduced_inputs_relu, input_filters / 2, (3, 3), use_bias=False,
+                                    name=name_prefix + '_3x3', strides=(1, 1),
+                                    padding='same', data_format=data_format, activation=None,
+                                    kernel_initializer=tf.contrib.layers.xavier_initializer(),
+                                    bias_initializer=tf.zeros_initializer())
+        conv3_inputs_bn = tf.layers.batch_normalization(conv3_inputs, momentum=BN_MOMENTUM, name=name_prefix + '_3x3/bn',
+                                            axis=bn_axis, epsilon=BN_EPSILON, training=is_training, reuse=None, fused=USE_FUSED_BN)
+        conv3_inputs_relu = tf.nn.relu(conv3_inputs_bn, name=name_prefix + '_3x3/relu')
+
+
+        increase_inputs = tf.layers.conv2d(conv3_inputs_relu, input_filters * 2, (1, 1), use_bias=False,
+                                    name=name_prefix + '_1x1_increase', strides=(1, 1),
+                                    padding='valid', data_format=data_format, activation=None,
+                                    kernel_initializer=tf.contrib.layers.xavier_initializer(),
+                                    bias_initializer=tf.zeros_initializer())
+
+        increase_inputs_bn = tf.layers.batch_normalization(increase_inputs, momentum=BN_MOMENTUM,
+                                            name=name_prefix + '_1x1_increase/bn', axis=bn_axis,
+                                            epsilon=BN_EPSILON, training=is_training, reuse=None, fused=USE_FUSED_BN)
+
+        if data_format == 'channels_first':
+            pooled_inputs = tf.reduce_mean(increase_inputs_bn, [2, 3], name=name_prefix + '_global_pool', keep_dims=True)
+        else:
+            pooled_inputs = tf.reduce_mean(increase_inputs_bn, [1, 2], name=name_prefix + '_global_pool', keep_dims=True)
+
+        down_inputs = tf.layers.conv2d(pooled_inputs, (input_filters * 2) // reduced_scale, (1, 1), use_bias=True,
+                                    name=name_prefix + '_1x1_down', strides=(1, 1),
+                                    padding='valid', data_format=data_format, activation=None,
+                                    kernel_initializer=tf.contrib.layers.xavier_initializer(),
+                                    bias_initializer=tf.zeros_initializer())
+        down_inputs_relu = tf.nn.relu(down_inputs, name=name_prefix + '_1x1_down/relu')
+
+
+        up_inputs = tf.layers.conv2d(down_inputs_relu, input_filters * 2, (1, 1), use_bias=True,
+                                    name=name_prefix + '_1x1_up', strides=(1, 1),
+                                    padding='valid', data_format=data_format, activation=None,
+                                    kernel_initializer=tf.contrib.layers.xavier_initializer(),
+                                    bias_initializer=tf.zeros_initializer())
+        prob_outputs = tf.nn.sigmoid(up_inputs, name=name_prefix + '_prob')
+
+        rescaled_feat = tf.multiply(prob_outputs, increase_inputs_bn, name=name_prefix + '_mul')
+        pre_act = tf.add(residuals, rescaled_feat, name=name_prefix + '_add')
+        return tf.nn.relu(pre_act, name=name_prefix)
+    
+    @layer
+    def conv_block(self, input, k_h, k_w, c_o, stride, data_format, is_training, name, use_bias=False ):
+        bn_axis = -1 if data_format == 'channels_last' else 1
+        pool_ind = name.split('conv')[-1]
+        input = tf.layers.conv2d(input, c_o, (k_h, k_w), use_bias=use_bias,
+                                name='{}/{}x{}_s{}'.format(name,k_h,k_w,stride), strides=(stride, stride),
+                                padding='valid', data_format=data_format, activation=None,
+                                kernel_initializer=tf.contrib.layers.xavier_initializer(),
+                                bias_initializer=tf.zeros_initializer())
+
+        input = tf.layers.batch_normalization(input, momentum=BN_MOMENTUM,
+                                            name='{}/{}x{}_s{}/bn'.format(name,k_h,k_w,stride), axis=bn_axis,
+                                            epsilon=BN_EPSILON, training=is_training, reuse=None, fused=USE_FUSED_BN)
+        input = tf.nn.relu(input, name='{}/relu_{}x{}_s{}'.format(name,k_h,k_w,stride))
+        input = tf.layers.max_pooling2d(input, [3, 3], [2, 2], padding='same', data_format=data_format, name='pool{}/3x3_s2'.format(pool_ind))
+        return input
+
+    @layer
+    def normalize_seres50(self, input, name, data_format='channels_last'):
+        # convert from RGB to BGR
+        if data_format == 'channels_last':
+            channels = tf.unstack(input, axis=-1)
+            swaped_input_image = tf.stack([tf.subtract(channels[2], 104.0, name='B_sub'), 
+                                           tf.subtract(channels[1], 117.0, name='G_sub'),
+                                           tf.subtract(channels[0], 123.0, name='R_sub')], axis=-1)
+        else:
+            channels = tf.unstack(input, axis=1)
+            swaped_input_image = tf.stack([tf.subtract(channels[2], 104.0, name='B_sub'), 
+                                           tf.subtract(channels[1], 117.0, name='G_sub'),
+                                           tf.subtract(channels[0], 123.0, name='R_sub')], axis=1)
+
+        if data_format == 'channels_first':
+            swaped_input_image = tf.pad(swaped_input_image, paddings = [[0, 0], [0, 0], [3, 3], [3, 3]])
+        else:
+            swaped_input_image = tf.pad(swaped_input_image, paddings = [[0, 0], [3, 3], [3, 3], [0, 0]])
+        return swaped_input_image
+
     @layer
     def normalize_vgg(self, input, name):
         # normalize input -1.0 ~ 1.0
@@ -171,8 +295,11 @@ class BaseNetwork(object):
         return input
 
     @layer
-    def upsample(self, input, factor, name):
-        return tf.image.resize_bilinear(input, [int(input.get_shape()[1]) * factor, int(input.get_shape()[2]) * factor], name=name)
+    def upsample(self, input, name, factor=None, target_size=None):
+        if factor:
+            return tf.image.resize_bilinear(input, [int(int(input.get_shape()[1]) * factor), int(int(input.get_shape()[2]) * factor)], name=name)
+        if target_size:
+            return tf.image.resize_bilinear(input, [target_size, target_size], name=name)
 
     @layer
     def separable_conv(self, input, k_h, k_w, c_o, stride, name, relu=True, set_bias=True):
@@ -269,6 +396,28 @@ class BaseNetwork(object):
                 # ReLU non-linearity
                 output = tf.nn.relu(output, name=scope.name)
             return output
+
+    @layer
+    def deconv(self, input, output_channels, upscale_factor, name):
+        kernel_size = 2*upscale_factor - upscale_factor%2
+        stride = upscale_factor
+        strides = [1, stride, stride, 1]
+
+        input_shape = tf.shape(input)
+        h = input_shape[1] * stride
+        w = input_shape[2] * stride
+        #
+        output_shape = tf.stack([input_shape[0], h, w, output_channels])
+        filter_shape = [kernel_size, kernel_size, output_channels, output_channels]
+        ##W = tf.Variable(tf.truncated_normal(filter_shape, stddev=0.1))
+        W = self.get_bilinear_filter(filter_shape, upscale_factor, name)
+        
+        #pad_space_h = (input_shape[1] * upscale_factor - h)
+        #pad_space_w = (input_shape[2] * upscale_factor - w)
+        #upsample = tf.nn.conv2d_transpose(input, W, output_shape, strides=strides, padding='SAME')
+        #paddings = tf.constant([[0,0],[0,1],[0,1],[0,0]])
+        
+        return tf.nn.conv2d_transpose(input, W, output_shape, strides=strides, padding='SAME', name=name) #tf.pad(upsample, paddings, 'CONSTANT')
 
     @layer
     def relu(self, input, name):
