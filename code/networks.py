@@ -3,7 +3,7 @@ import os
 import tensorflow as tf
 from network_mobilenet import MobilenetNetwork
 from network_mobilenet_thin import MobilenetNetworkThin
-
+from network_SEResNet50 import SEResNet50Network
 from network_cmu import CmuNetwork
 
 
@@ -13,7 +13,7 @@ def _get_base_path():
     return os.environ.get('OPENPOSE_MODEL')
 
 
-def get_network(type, placeholder_input, sess_for_load=None, trainable=True, model_path=None):
+def get_network(type, placeholder_input, sess_for_load=None, clothe_class='', trainable=True, model_path=None):
     if type == 'mobilenet':
         net = MobilenetNetwork({'image': placeholder_input}, conv_width=0.75, conv_width2=1.00, trainable=trainable)
         pretrain_path = 'pretrained/mobilenet_v1_0.75_224_2017_06_14/mobilenet_v1_0.75_224.ckpt'
@@ -33,12 +33,20 @@ def get_network(type, placeholder_input, sess_for_load=None, trainable=True, mod
         last_layer = 'MConv_Stage6_L{aux}_5'
 
     elif type == 'cmu':
-        net = CmuNetwork({'image': placeholder_input}, trainable=trainable)
+        net = CmuNetwork({'image': placeholder_input}, clothe_class=clothe_class, trainable=trainable)
         pretrain_path = 'numpy/openpose_coco.npy'
         last_layer = 'Mconv7_stage6_L{aux}'
     elif type == 'vgg':
-        net = CmuNetwork({'image': placeholder_input}, trainable=trainable)
+        net = CmuNetwork({'image': placeholder_input}, clothe_class=clothe_class, trainable=trainable)
         pretrain_path = 'numpy/vgg19.npy'
+        last_layer = 'Mconv7_stage6_L{aux}'
+    elif type == 'seresnet50':
+        net = SEResNet50Network({'image': placeholder_input}, clothe_class=clothe_class, trainable=trainable)
+        pretrain_path = 'numpy/se_resnet50.npy'
+        last_layer = 'Mconv7_stage6_L{aux}'
+    elif type == 'personlab_resnet101':
+        net = PersonLabNetwork({'image': placeholder_input}, trainable=trainable)
+        pretrain_path = 'pretrained/resnet_v2_101/resnet_v2_101.ckpt'
         last_layer = 'Mconv7_stage6_L{aux}'
     else:
         raise Exception('Invalid Mode.')
@@ -47,7 +55,7 @@ def get_network(type, placeholder_input, sess_for_load=None, trainable=True, mod
         pretrain_path = model_path
     pretrain_path_full = os.path.join(_get_base_path(), pretrain_path)
     if sess_for_load is not None:
-        if type == 'cmu' or type == 'vgg':
+        if type == 'cmu' or type == 'vgg' or type == 'seresnet50':
             if '.npy' in pretrain_path:
                 if not os.path.isfile(pretrain_path_full):
                     raise Exception('Model file doesn\'t exist, path=%s' % pretrain_path_full)
