@@ -1,19 +1,21 @@
 #!/bin/bash
 # cmu or vgg
-export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
+export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,8,7
 python train.py \
---model 'vgg' \
---datapath '../data/' \
---imgpath '../data/' \
---batchsize 96 \
+--model 'seresnet50' \
+--datapath '/home/shy/projects/tf-openpose/data/' \
+--imgpath '/home/shy/projects/tf-openpose/data/' \
+--batchsize 16 \
 --gpus 8 \
---max-epoch 40 \
---lr '0.0005' \
---pretrain_basepath './models/' \
---modelpath './models/trained/blouse/' \
---logpath './models/trained/blouse/' \
+--max-epoch 23 \
+--lr '0.0001' \
+--pretrain_basepath '/home/shy/projects/tf-openpose/models/' \
+--pretrain_path 'numpy/se_resnet50.npy' \
+--modelpath '/home/shy/projects/tf-openpose/models/trained/trousers' \
+--logpath '/home/shy/projects/tf-openpose/models/trained/trousers/' \
 --checkpoint '' \
---tag 'blouse' \
+--tag 'trousers' \
 --input-width 368 \
 --input-height 368
+
 

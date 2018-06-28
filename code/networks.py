@@ -4,6 +4,7 @@ import tensorflow as tf
 from network_mobilenet import MobilenetNetwork
 from network_mobilenet_thin import MobilenetNetworkThin
 from network_SEResNet50 import SEResNet50Network
+from network_SEResNeXt50 import SEResNeXt50Network
 from network_cmu import CmuNetwork
 
 
@@ -43,6 +44,10 @@ def get_network(type, placeholder_input, sess_for_load=None, clothe_class='', tr
     elif type == 'seresnet50':
         net = SEResNet50Network({'image': placeholder_input}, clothe_class=clothe_class, trainable=trainable)
         pretrain_path = 'numpy/se_resnet50.npy'
+        last_layer = 'Mconv7_stage6_L{aux}'
+    elif type == 'seresnext50':
+        net = SEResNeXt50Network({'image': placeholder_input}, clothe_class=clothe_class, trainable=trainable)
+        pretrain_path = 'numpy/se_resnext50.npy'
         last_layer = 'Mconv7_stage6_L{aux}'
     elif type == 'personlab_resnet101':
         net = PersonLabNetwork({'image': placeholder_input}, trainable=trainable)

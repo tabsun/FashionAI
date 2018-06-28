@@ -11,7 +11,7 @@ import tensorflow as tf
 output_channels = 16
 channels_num = dict({'blouse': 14, 'outwear': 15, 'dress': 16, 'trousers': 8, 'skirt': 5,'outwear2nd':7})
 
-class SEResNet50Network(network_base.BaseNetwork):
+class SEResNeXt50Network(network_base.BaseNetwork):
     def setup(self):
         # TODO
         data_format = 'channels_last'
