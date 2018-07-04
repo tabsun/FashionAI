@@ -31,7 +31,7 @@ My result is based on vgg16, then I did following experiments about backbone con
 class   | _vgg16_  | _SE-ResNet50_ | _SE-ResNeXt50_
 :------:|:--------:|:-------------:|:--------------:
 outwear|4.71|4.37|-
-dress|4.45|4.31|-
+dress|4.45|4.28|-
 blouse|4.06|-|-
 skirt|3.97|-|-
 trousers|3.91|3.68|4.94
