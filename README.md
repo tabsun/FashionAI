@@ -24,6 +24,18 @@ _dress_  | _outwear_ | _blouse_ | _skirt_ | _trousers_
 <img width="150" src="https://wx1.sinaimg.cn/mw1024/89ef5361ly1fryzwif71ej20e80e8myn.jpg"> | <img width="150" src="https://wx4.sinaimg.cn/mw1024/89ef5361ly1fryzu09t1dj20e80e8767.jpg"> | <img width="150" src="https://wx2.sinaimg.cn/mw1024/89ef5361ly1fryzxcdp3wj20e80e875r.jpg"> | <img width="150" src="https://wx3.sinaimg.cn/mw1024/89ef5361ly1fryzti1vplj20e80e8q5i.jpg"> | <img width="150" src="https://wx3.sinaimg.cn/mw1024/89ef5361ly1fryzse0nffj20an0e8acc.jpg">
 <img width="150" src="https://wx1.sinaimg.cn/mw1024/89ef5361ly1fryzwodoa4j20an0e80ts.jpg"> | <img width="150" src="https://wx4.sinaimg.cn/mw1024/89ef5361ly1fryzu40mtgj20e80e8tb8.jpg"> | <img width="150" src="https://wx1.sinaimg.cn/mw1024/89ef5361ly1fryzxsnqg9j20e80e8n0k.jpg"> | <img width="150" src="https://wx1.sinaimg.cn/mw1024/89ef5361ly1fryzt3lqxej20e80e8jsx.jpg"> | <img width="150" src="https://wx4.sinaimg.cn/mw1024/89ef5361ly1fryzs6023zj20e80e8aaw.jpg">
 
+## Experiments
+
+My result is based on vgg16, then I did following experiments about backbone contrast.
+
+class   | _vgg16_  | _SE-ResNet50_ | _SE-ResNeXt50_
+:------:|:--------:|:-------------:|:--------------:
+outwear|4.71|4.37|-
+dress|4.45|4.31|-
+blouse|4.06|-|-
+skirt|3.97|-|-
+trousers|3.91|3.68|4.94
+
 ## Requirement
 
 tensorflow(1.4.1+)
