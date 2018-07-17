@@ -60,7 +60,7 @@ def get_network(type, placeholder_input, sess_for_load=None, clothe_class='', tr
         pretrain_path = model_path
     pretrain_path_full = os.path.join(_get_base_path(), pretrain_path)
     if sess_for_load is not None:
-        if type == 'cmu' or type == 'vgg' or type == 'seresnet50':
+        if type == 'cmu' or type == 'vgg' or type == 'seresnet50' or type == 'seresnext50':
             if '.npy' in pretrain_path:
                 if not os.path.isfile(pretrain_path_full):
                     raise Exception('Model file doesn\'t exist, path=%s' % pretrain_path_full)

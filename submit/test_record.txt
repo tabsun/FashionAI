@@ -1,0 +1,25 @@
++++++++++++++++++++++++
++     standard        +
++++++++++++++++++++++++
+
+outwear  4.71
+trousers 3.91
+skirt    3.97
+dress    4.45
+blouse   4.06
+
++++++++++++++++++++++++
++     seresnet-50     +
++++++++++++++++++++++++
+
+outwear  4.37 @ step 64001 
+trousers 3.68 @ step 76000
+dress    4.28 @ step 91000
+blouse   4.01 @ step 90000
+skirt    3.62 @ step 121000
+
++++++++++++++++++++++++
++     seresnext-50     +
++++++++++++++++++++++++
+
+trousers 4.94 @ step 94000

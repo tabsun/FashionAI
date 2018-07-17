@@ -9,6 +9,7 @@ import tensorflow as tf
 # skirt       5 pts + 4 links
 # outwear2nd     apl apr wll wlr thl thr
 output_channels = 16
+target_size_ = 46
 channels_num = dict({'blouse': 14, 'outwear': 15, 'dress': 16, 'trousers': 8, 'skirt': 5,'outwear2nd':7})
 
 class SEResNet50Network(network_base.BaseNetwork):
@@ -45,13 +46,13 @@ class SEResNet50Network(network_base.BaseNetwork):
              .se_bottleneck_block(1024, is_training, data_format, False, False, name='conv5_3'))
                      
         (self.feed('conv2_3')
-             .upsample(target_size=46, name='f_conv2_3'))
+             .upsample(target_size=target_size_, name='f_conv2_3'))
         (self.feed('conv3_4')
-             .upsample(target_size=46, name='f_conv3_4'))
+             .upsample(target_size=target_size_, name='f_conv3_4'))
         (self.feed('conv4_6')
-             .upsample(target_size=46, name='f_conv4_6'))
+             .upsample(target_size=target_size_, name='f_conv4_6'))
         (self.feed('conv5_3')
-             .upsample(target_size=46, name='f_conv5_3'))
+             .upsample(target_size=target_size_, name='f_conv5_3'))
 
         (self.feed('f_conv2_3',
                    'f_conv3_4',
