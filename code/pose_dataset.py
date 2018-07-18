@@ -396,9 +396,9 @@ class FashionKeypoints(RNGDataFlow):
         self.clothe_class = clothe_class
         
         if is_train:
-            whole_path = os.path.join(path, 'train/train_bak.csv')
+            whole_path = os.path.join(path, 'train/train.csv')
         else:
-            whole_path = os.path.join(path, 'train/val_bak.csv')
+            whole_path = os.path.join(path, 'train/val.csv')
         self.img_path = (img_path if img_path is not None else '') + 'train/' #('train/' if is_train else 'val/')
         self.fashion = Fashion(whole_path, clothe_class)
 

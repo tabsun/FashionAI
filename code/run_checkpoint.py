@@ -21,12 +21,13 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Tensorflow Pose Estimation Graph Extractor')
     parser.add_argument('--model', type=str, default='mobilenet_thin', help='cmu / mobilenet / mobilenet_thin')
     parser.add_argument('--modelpath', type=str, default='trained/vgg_batch:96_lr:0.0005_gpus:8_368x368_blouse/model-38041')
+    parser.add_argument('--tag', type=str, default='')
     args = parser.parse_args()
 
     input_node = tf.placeholder(tf.float32, shape=(None, None, None, 3), name='image')
 
     with tf.Session(config=config) as sess:
-        net, _, last_layer = get_network(args.model, input_node, sess, trainable=False, model_path=args.modelpath)
+        net, _, last_layer = get_network(args.model, input_node, sess, clothe_class=args.tag, trainable=False, model_path=args.modelpath)
 
         tf.train.write_graph(sess.graph_def, './tmp', 'graph.pb', as_text=True)
 

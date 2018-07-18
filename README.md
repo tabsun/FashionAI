@@ -26,15 +26,31 @@ _dress_  | _outwear_ | _blouse_ | _skirt_ | _trousers_
 
 ## Experiments
 
-My result is based on vgg16, then I did following experiments about backbone contrast.
+My result is based on vgg19, then I did following experiments about backbone contrast.
 
-class   | _vgg16_  | _SE-ResNet50_ | _SE-ResNeXt50_
+class   | _vgg19_  | _SE-ResNet50_ | _SE-ResNeXt50_
 :------:|:--------:|:-------------:|:--------------:
 outwear|4.71|4.37|-
 dress|4.45|4.28|-
 blouse|4.06|4.01|-
 skirt|3.97|3.62|-
-trousers|3.91|3.68|4.94
+trousers|3.91|3.68|4.94(checking whether error)
+
+1. Multi-scale feature paramid is not an effective scheme which gives basically no difference on result;
+
+2. As many people mentioned OHEM may be useful, weighted-heatmaps/focal loss/hard retrain are no-use in my experiments;
+
+3. Coarse detection + align detection actually will ignore many hard keypoints, it needs further research; 
+
+4. In my 6 CPM stage-outputs, the last two stage do the best, but merging their results will give unstable results;
+
+5. Upsampling and heatmap-resize-in-postprocess really boost the result.
+
+6. Do not try too much before the contrast between backbone has been done!!!![IMPORTANT :(]
+
+7. Batchsize is not so important.
+
+8. ......
 
 ## Requirement
 
@@ -45,6 +61,8 @@ opencv
 scikit-image
 
 numpy
+
+python-prctl(strongly recommended)
 
 ...
 
@@ -78,6 +96,8 @@ That's all !
 
 ## Test & Submit
 
+Watch this: begine_to_test.sh
+
 Here is another shell for test.
 
 First please make sure thers exits the corresponding frozen_graph.pb under "./models/trained/%s" % clothe_type.
@@ -91,15 +111,15 @@ After test all 5 clothe_types then `python merge.py` will merge all results into
 ```shell
 >  cd code
 
->  python run.py --model="cmu" --image="../data/test_b/test.csv" --tag="blouse" --test="submit" --resolution="368x368" --scales="[1.0, (0.5,0.25,1.5), (0.5,0.75,1.5), (0.25,0.5,1.5), (0.75,0.5,1.5), (0.5,0.5,1.5)]"
+>  python run.py --modelpath="./tmp/frozen_graph.pb" --imagepath="../data/test_b" --csv="../data/test_b/test.csv" --tag="skirt" --test="submit" --inputsize='368' --resolution="368x368" --scales="[1.0, (0.5,0.25,1.5), (0.5,0.75,1.5), (0.25,0.5,1.5), (0.75,0.5,1.5), (0.5,0.5,1.5)]"
 
->  python run.py --model="cmu" --image="../data/test_b/test.csv" --tag="dress" --test="submit" --resolution="368x368" --scales="[1.0, (0.5,0.25,1.5), (0.5,0.75,1.5), (0.25,0.5,1.5), (0.75,0.5,1.5), (0.5,0.5,1.5)]"
+>  python run.py --modelpath="./tmp/frozen_graph.pb" --imagepath="../data/test_b" --csv="../data/test_b/test.csv" --tag="trousers" --test="submit" --inputsize='368' --resolution="368x368" --scales="[1.0, (0.5,0.25,1.5), (0.5,0.75,1.5), (0.25,0.5,1.5), (0.75,0.5,1.5), (0.5,0.5,1.5)]"
 
->  python run.py --model="cmu" --image="../data/test_b/test.csv" --tag="skirt" --test="submit" --resolution="368x368" --scales="[1.0, (0.5,0.25,1.5), (0.5,0.75,1.5), (0.25,0.5,1.5), (0.75,0.5,1.5), (0.5,0.5,1.5)]"
+>  python run.py --modelpath="./tmp/frozen_graph.pb" --imagepath="../data/test_b" --csv="../data/test_b/test.csv" --tag="outwear" --test="submit" --inputsize='368' --resolution="368x368" --scales="[1.0, (0.5,0.25,1.5), (0.5,0.75,1.5), (0.25,0.5,1.5), (0.75,0.5,1.5), (0.5,0.5,1.5)]"
 
->  python run.py --model="cmu" --image="../data/test_b/test.csv" --tag="trousers" --test="submit" --resolution="368x368" --scales="[1.0, (0.5,0.25,1.5), (0.5,0.75,1.5), (0.25,0.5,1.5), (0.75,0.5,1.5), (0.5,0.5,1.5)]"
+>  python run.py --modelpath="./tmp/frozen_graph.pb" --imagepath="../data/test_b" --csv="../data/test_b/test.csv" --tag="blouse" --test="submit" --inputsize='368' --resolution="368x368" --scales="[1.0, (0.5,0.25,1.5), (0.5,0.75,1.5), (0.25,0.5,1.5), (0.75,0.5,1.5), (0.5,0.5,1.5)]"
 
->  python run.py --model="cmu" --image="../data/test_b/test.csv" --tag="outwear" --test="submit" --resolution="368x368" --scales="[1.0, (0.5,0.25,1.5), (0.5,0.75,1.5), (0.25,0.5,1.5), (0.75,0.5,1.5), (0.5,0.5,1.5)]"
+>  python run.py --modelpath="./tmp/frozen_graph.pb" --imagepath="../data/test_b" --csv="../data/test_b/test.csv" --tag="dress" --test="submit" --inputsize='368' --resolution="368x368" --scales="[1.0, (0.5,0.25,1.5), (0.5,0.75,1.5), (0.25,0.5,1.5), (0.75,0.5,1.5), (0.5,0.5,1.5)]"
 
 >  cd ../submit
 

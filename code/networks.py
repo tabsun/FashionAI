@@ -10,7 +10,7 @@ from network_cmu import CmuNetwork
 
 def _get_base_path():
     if not os.environ.get('OPENPOSE_MODEL', ''):
-        return '../models'
+        return './models'
     return os.environ.get('OPENPOSE_MODEL')
 
 
@@ -92,7 +92,7 @@ def get_network(type, placeholder_input, sess_for_load=None, clothe_class='', tr
 
 def get_graph_path(model_name, clothe_class):
     dyn_graph_path = {
-        'cmu': '/data/shy/data/fashionAI/fashion_models/%s/graph/frozen_graph.pb'%clothe_class,
+        'cmu': './models/%s/graph/frozen_graph.pb'%clothe_class,
         'mobilenet_thin': './models/graph/mobilenet_thin/graph_opt.pb'
     }
     graph_path = dyn_graph_path[model_name]

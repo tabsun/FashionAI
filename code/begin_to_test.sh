@@ -1,9 +1,12 @@
 #!/bin/bash
-export CUDA_VISIBLE_DEVICES=8,9
+export CUDA_VISIBLE_DEVICES=0
+
 python run.py \
---model="cmu" \
---image="../data/test_b/test.csv" \
---tag="blouse" \
+--modelpath="./tmp/frozen_graph.pb" \
+--imagepath="../data/train" \
+--csv="../data/test_b/test.csv" \
+--tag="skirt" \
 --test="submit" \
+--inputsize='368' \
 --resolution="368x368" \
 --scales="[1.0, (0.5,0.25,1.5), (0.5,0.75,1.5), (0.25,0.5,1.5), (0.75,0.5,1.5), (0.5,0.5,1.5)]"

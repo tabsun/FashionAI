@@ -1,0 +1,1219 @@
+/usr/lib64/python2.7/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+[2018-06-25 17:33:46,691] [train] [INFO] define model+
+[2018-06-25 17:33:46,696] [pose_dataset] [INFO] dataflow img_path=/home/shy/projects/tf-openpose/data/
+[2018-06-25 17:33:49,200] [pose_dataset] [INFO] /home/shy/projects/tf-openpose/data/train/train_bak.csv dataset 11740
+[32m[0625 17:33:49 @parallel.py:178][0m [MultiProcessPrefetchData] Will fork a dataflow more than one times. This assumes the datapoints are i.i.d.
+[32m[0625 17:33:50 @parallel.py:178][0m [MultiProcessPrefetchData] Will fork a dataflow more than one times. This assumes the datapoints are i.i.d.
+[2018-06-25 17:33:50,254] [pose_dataset] [INFO] dataflow img_path=/home/shy/projects/tf-openpose/data/
+[2018-06-25 17:33:51,477] [pose_dataset] [INFO] /home/shy/projects/tf-openpose/data/train/val_bak.csv dataset 1305
+[32m[0625 17:33:51 @parallel.py:178][0m [MultiProcessPrefetchData] Will fork a dataflow more than one times. This assumes the datapoints are i.i.d.
+[32m[0625 17:33:51 @parallel.py:178][0m [MultiProcessPrefetchData] Will fork a dataflow more than one times. This assumes the datapoints are i.i.d.
+[2018-06-25 17:33:52,179] [train] [INFO] tensorboard val image: 12
+[2018-06-25 17:33:52,180] [train] [INFO] Tensor("fifo_queue_Dequeue:0", shape=(16, 368, 368, 3), dtype=float32, device=/device:GPU:0)
+[2018-06-25 17:33:52,184] [train] [INFO] Tensor("fifo_queue_Dequeue:1", shape=(16, 46, 46, 8), dtype=float32, device=/device:GPU:0)
+[2018-06-25 17:33:52,185] [train] [INFO] Tensor("fifo_queue_Dequeue:2", shape=(16, 46, 46, 16), dtype=float32, device=/device:GPU:0)
+[2018-06-25 17:35:22,606] [train] [INFO] define model-
+2018-06-25 17:35:25.161411: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2018-06-25 17:35:25.161466: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-06-25 17:35:25.161489: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2018-06-25 17:35:25.161509: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-06-25 17:35:25.161515: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2018-06-25 17:35:32.307434: I tensorflow/core/common_runtime/gpu/gpu_device.cc:955] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti
+major: 6 minor: 1 memoryClockRate (GHz) 1.582
+pciBusID 0000:04:00.0
+Total memory: 10.92GiB
+Free memory: 10.76GiB
+2018-06-25 17:35:32.554439: W tensorflow/stream_executor/cuda/cuda_driver.cc:523] A non-primary context 0x55a52850 exists before initializing the StreamExecutor. We haven't verified StreamExecutor works with that.
+2018-06-25 17:35:32.557237: I tensorflow/core/common_runtime/gpu/gpu_device.cc:955] Found device 1 with properties: 
+name: GeForce GTX 1080 Ti
+major: 6 minor: 1 memoryClockRate (GHz) 1.582
+pciBusID 0000:05:00.0
+Total memory: 10.92GiB
+Free memory: 10.76GiB
+2018-06-25 17:35:32.869500: W tensorflow/stream_executor/cuda/cuda_driver.cc:523] A non-primary context 0x55a72410 exists before initializing the StreamExecutor. We haven't verified StreamExecutor works with that.
+2018-06-25 17:35:32.871235: I tensorflow/core/common_runtime/gpu/gpu_device.cc:955] Found device 2 with properties: 
+name: GeForce GTX 1080 Ti
+major: 6 minor: 1 memoryClockRate (GHz) 1.582
+pciBusID 0000:06:00.0
+Total memory: 10.92GiB
+Free memory: 10.76GiB
+2018-06-25 17:35:33.100962: W tensorflow/stream_executor/cuda/cuda_driver.cc:523] A non-primary context 0x55b69f50 exists before initializing the StreamExecutor. We haven't verified StreamExecutor works with that.
+2018-06-25 17:35:33.102927: I tensorflow/core/common_runtime/gpu/gpu_device.cc:955] Found device 3 with properties: 
+name: GeForce GTX 1080 Ti
+major: 6 minor: 1 memoryClockRate (GHz) 1.582
+pciBusID 0000:07:00.0
+Total memory: 10.92GiB
+Free memory: 10.76GiB
+2018-06-25 17:35:33.323724: W tensorflow/stream_executor/cuda/cuda_driver.cc:523] A non-primary context 0x74f357d0 exists before initializing the StreamExecutor. We haven't verified StreamExecutor works with that.
+2018-06-25 17:35:33.325332: I tensorflow/core/common_runtime/gpu/gpu_device.cc:955] Found device 4 with properties: 
+name: GeForce GTX 1080 Ti
+major: 6 minor: 1 memoryClockRate (GHz) 1.582
+pciBusID 0000:08:00.0
+Total memory: 10.92GiB
+Free memory: 10.76GiB
+2018-06-25 17:35:33.578902: W tensorflow/stream_executor/cuda/cuda_driver.cc:523] A non-primary context 0x74f53c90 exists before initializing the StreamExecutor. We haven't verified StreamExecutor works with that.
+2018-06-25 17:35:33.580492: I tensorflow/core/common_runtime/gpu/gpu_device.cc:955] Found device 5 with properties: 
+name: GeForce GTX 1080 Ti
+major: 6 minor: 1 memoryClockRate (GHz) 1.582
+pciBusID 0000:0b:00.0
+Total memory: 10.92GiB
+Free memory: 10.76GiB
+2018-06-25 17:35:33.853140: W tensorflow/stream_executor/cuda/cuda_driver.cc:523] A non-primary context 0x55b62570 exists before initializing the StreamExecutor. We haven't verified StreamExecutor works with that.
+2018-06-25 17:35:33.854786: I tensorflow/core/common_runtime/gpu/gpu_device.cc:955] Found device 6 with properties: 
+name: GeForce GTX 1080 Ti
+major: 6 minor: 1 memoryClockRate (GHz) 1.582
+pciBusID 0000:0e:00.0
+Total memory: 10.92GiB
+Free memory: 10.76GiB
+2018-06-25 17:35:34.133023: W tensorflow/stream_executor/cuda/cuda_driver.cc:523] A non-primary context 0x55a6e560 exists before initializing the StreamExecutor. We haven't verified StreamExecutor works with that.
+2018-06-25 17:35:34.138584: I tensorflow/core/common_runtime/gpu/gpu_device.cc:955] Found device 7 with properties: 
+name: GeForce GTX 1080 Ti
+major: 6 minor: 1 memoryClockRate (GHz) 1.582
+pciBusID 0000:0d:00.0
+Total memory: 10.92GiB
+Free memory: 10.76GiB
+2018-06-25 17:35:34.207614: I tensorflow/core/common_runtime/gpu/gpu_device.cc:976] DMA: 0 1 2 3 4 5 6 7 
+2018-06-25 17:35:34.207666: I tensorflow/core/common_runtime/gpu/gpu_device.cc:986] 0:   Y Y Y Y Y Y Y Y 
+2018-06-25 17:35:34.207681: I tensorflow/core/common_runtime/gpu/gpu_device.cc:986] 1:   Y Y Y Y Y Y Y Y 
+2018-06-25 17:35:34.207692: I tensorflow/core/common_runtime/gpu/gpu_device.cc:986] 2:   Y Y Y Y Y Y Y Y 
+2018-06-25 17:35:34.207702: I tensorflow/core/common_runtime/gpu/gpu_device.cc:986] 3:   Y Y Y Y Y Y Y Y 
+2018-06-25 17:35:34.207712: I tensorflow/core/common_runtime/gpu/gpu_device.cc:986] 4:   Y Y Y Y Y Y Y Y 
+2018-06-25 17:35:34.207722: I tensorflow/core/common_runtime/gpu/gpu_device.cc:986] 5:   Y Y Y Y Y Y Y Y 
+2018-06-25 17:35:34.207731: I tensorflow/core/common_runtime/gpu/gpu_device.cc:986] 6:   Y Y Y Y Y Y Y Y 
+2018-06-25 17:35:34.207741: I tensorflow/core/common_runtime/gpu/gpu_device.cc:986] 7:   Y Y Y Y Y Y Y Y 
+2018-06-25 17:35:34.207770: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:04:00.0)
+2018-06-25 17:35:34.207785: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Creating TensorFlow device (/gpu:1) -> (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:05:00.0)
+2018-06-25 17:35:34.207795: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Creating TensorFlow device (/gpu:2) -> (device: 2, name: GeForce GTX 1080 Ti, pci bus id: 0000:06:00.0)
+2018-06-25 17:35:34.207805: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Creating TensorFlow device (/gpu:3) -> (device: 3, name: GeForce GTX 1080 Ti, pci bus id: 0000:07:00.0)
+2018-06-25 17:35:34.207832: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Creating TensorFlow device (/gpu:4) -> (device: 4, name: GeForce GTX 1080 Ti, pci bus id: 0000:08:00.0)
+2018-06-25 17:35:34.207843: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Creating TensorFlow device (/gpu:5) -> (device: 5, name: GeForce GTX 1080 Ti, pci bus id: 0000:0b:00.0)
+2018-06-25 17:35:34.207852: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Creating TensorFlow device (/gpu:6) -> (device: 6, name: GeForce GTX 1080 Ti, pci bus id: 0000:0e:00.0)
+2018-06-25 17:35:34.207862: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Creating TensorFlow device (/gpu:7) -> (device: 7, name: GeForce GTX 1080 Ti, pci bus id: 0000:0d:00.0)
+[2018-06-25 17:35:35,317] [train] [INFO] model weights initialization
+[2018-06-25 17:36:18,410] [train] [INFO] Restore pretrained weights from /home/shy/projects/tf-openpose/models/numpy/se_resnet50.npy ...
+conv4_1_3x3/bn/gamma   0 / 225
+conv4_2_1x1_increase/bn/beta   1 / 225
+conv2_1_1x1_increase/bn/gamma   2 / 225
+conv4_1_1x1_proj/kernel   3 / 225
+conv5_2_1x1_reduce/kernel   4 / 225
+conv3_2_3x3/bn/gamma   5 / 225
+conv2_3_3x3/bn/gamma   6 / 225
+conv3_4_1x1_reduce/bn/beta   7 / 225
+conv5_2_1x1_down/kernel   8 / 225
+conv3_2_1x1_down/kernel   9 / 225
+conv3_4_1x1_increase/bn/beta   10 / 225
+conv2_3_3x3/bn/beta   11 / 225
+conv5_1_1x1_down/bias   12 / 225
+conv4_4_3x3/bn/beta   13 / 225
+conv2_1_1x1_proj/bn/gamma   14 / 225
+conv3_2_1x1_down/bias   15 / 225
+conv4_6_1x1_up/kernel   16 / 225
+conv4_4_1x1_reduce/bn/gamma   17 / 225
+conv5_2_1x1_reduce/bn/gamma   18 / 225
+conv3_4_3x3/kernel   19 / 225
+conv1/7x7_s2/bn/gamma   20 / 225
+conv4_6_1x1_up/bias   21 / 225
+conv3_3_1x1_down/kernel   22 / 225
+conv4_1_1x1_reduce/kernel   23 / 225
+conv2_2_3x3/kernel   24 / 225
+conv2_1_3x3/kernel   25 / 225
+conv5_3_1x1_down/kernel   26 / 225
+conv2_1_1x1_reduce/kernel   27 / 225
+conv3_2_1x1_reduce/kernel   28 / 225
+conv4_3_3x3/bn/gamma   29 / 225
+conv4_2_1x1_up/bias   30 / 225
+conv5_1_1x1_increase/kernel   31 / 225
+dense/bias   32 / 225
+conv4_4_1x1_reduce/bn/beta   33 / 225
+conv3_1_1x1_proj/bn/gamma   34 / 225
+conv5_1_1x1_proj/kernel   35 / 225
+conv5_1_3x3/bn/beta   36 / 225
+conv5_1_1x1_up/kernel   37 / 225
+conv4_3_1x1_reduce/kernel   38 / 225
+conv4_6_1x1_reduce/bn/beta   39 / 225
+conv5_3_1x1_increase/bn/beta   40 / 225
+conv4_4_1x1_increase/kernel   41 / 225
+conv3_4_1x1_increase/kernel   42 / 225
+conv3_3_1x1_down/bias   43 / 225
+conv3_2_3x3/kernel   44 / 225
+conv5_3_1x1_increase/kernel   45 / 225
+conv5_3_3x3/bn/beta   46 / 225
+conv5_3_1x1_reduce/bn/beta   47 / 225
+conv4_6_1x1_increase/bn/beta   48 / 225
+conv2_2_1x1_reduce/bn/beta   49 / 225
+conv5_2_3x3/bn/gamma   50 / 225
+conv2_1_1x1_increase/bn/beta   51 / 225
+conv4_1_1x1_up/kernel   52 / 225
+conv3_2_1x1_up/kernel   53 / 225
+conv5_1_1x1_reduce/bn/beta   54 / 225
+conv4_4_1x1_increase/bn/gamma   55 / 225
+conv4_2_3x3/bn/gamma   56 / 225
+conv4_3_1x1_down/kernel   57 / 225
+conv4_1_3x3/bn/beta   58 / 225
+conv3_4_1x1_increase/bn/gamma   59 / 225
+conv3_3_1x1_reduce/bn/beta   60 / 225
+conv4_1_3x3/kernel   61 / 225
+conv4_3_3x3/bn/beta   62 / 225
+conv4_1_1x1_proj/bn/beta   63 / 225
+conv2_3_1x1_up/kernel   64 / 225
+conv4_5_1x1_up/bias   65 / 225
+conv4_2_1x1_up/kernel   66 / 225
+conv4_1_1x1_increase/bn/gamma   67 / 225
+conv3_4_3x3/bn/gamma   68 / 225
+conv5_1_1x1_reduce/bn/gamma   69 / 225
+conv3_1_3x3/bn/gamma   70 / 225
+conv3_2_1x1_up/bias   71 / 225
+conv2_1_1x1_down/bias   72 / 225
+conv2_2_3x3/bn/gamma   73 / 225
+conv2_1_1x1_up/kernel   74 / 225
+conv4_2_1x1_reduce/bn/gamma   75 / 225
+conv4_1_1x1_reduce/bn/beta   76 / 225
+conv3_3_1x1_up/kernel   77 / 225
+conv3_1_1x1_proj/bn/beta   78 / 225
+conv5_1_3x3/bn/gamma   79 / 225
+conv3_1_1x1_reduce/bn/beta   80 / 225
+conv5_3_3x3/kernel   81 / 225
+conv3_4_1x1_down/kernel   82 / 225
+conv4_2_1x1_reduce/kernel   83 / 225
+conv4_3_3x3/kernel   84 / 225
+conv3_4_1x1_down/bias   85 / 225
+conv2_3_1x1_reduce/bn/gamma   86 / 225
+conv4_4_3x3/bn/gamma   87 / 225
+conv1/7x7_s2/kernel   88 / 225
+conv3_3_1x1_reduce/bn/gamma   89 / 225
+conv4_1_1x1_up/bias   90 / 225
+conv2_1_1x1_increase/kernel   91 / 225
+conv5_1_1x1_down/kernel   92 / 225
+conv4_5_3x3/bn/gamma   93 / 225
+conv4_6_3x3/kernel   94 / 225
+conv4_2_1x1_down/bias   95 / 225
+conv4_3_1x1_increase/bn/gamma   96 / 225
+conv4_2_3x3/kernel   97 / 225
+conv4_2_1x1_reduce/bn/beta   98 / 225
+conv3_3_1x1_reduce/kernel   99 / 225
+conv4_4_1x1_reduce/kernel   100 / 225
+conv5_3_1x1_reduce/bn/gamma   101 / 225
+conv2_2_1x1_down/bias   102 / 225
+conv4_6_1x1_reduce/kernel   103 / 225
+conv2_3_1x1_reduce/bn/beta   104 / 225
+conv3_1_1x1_increase/bn/beta   105 / 225
+conv4_3_1x1_reduce/bn/beta   106 / 225
+conv4_6_1x1_reduce/bn/gamma   107 / 225
+conv3_1_1x1_down/kernel   108 / 225
+conv3_3_1x1_increase/bn/gamma   109 / 225
+conv5_3_1x1_increase/bn/gamma   110 / 225
+conv2_1_3x3/bn/gamma   111 / 225
+conv2_3_3x3/kernel   112 / 225
+conv4_4_1x1_up/bias   113 / 225
+conv4_2_1x1_increase/kernel   114 / 225
+conv3_4_1x1_reduce/bn/gamma   115 / 225
+conv2_2_3x3/bn/beta   11[2018-06-25 19:57:07,806] [train] [INFO] Restore pretrained weights...Done
+[2018-06-25 19:57:07,807] [train] [INFO] prepare file writer
+[2018-06-25 19:57:32,669] [train] [INFO] prepare coordinator
+[2018-06-25 19:57:33,731] [train] [INFO] Training Started.
+[2018-06-25 20:03:20,765] [train] [INFO] epoch=0.00 step=100, 4.6105 examples/sec lr=0.000100, loss=183.516, loss_ll=36.461, loss_ll_paf=61.1677, loss_ll_heat=11.7543, q=528
+[2018-06-25 20:06:14,657] [train] [INFO] epoch=0.00 step=200, 6.1429 examples/sec lr=0.000100, loss=213.061, loss_ll=42.4517, loss_ll_paf=71.7708, loss_ll_heat=13.1326, q=787
+[2018-06-25 20:08:57,920] [train] [INFO] epoch=0.00 step=300, 7.0156 examples/sec lr=0.000100, loss=192.446, loss_ll=37.9375, loss_ll_paf=63.7656, loss_ll_heat=12.1093, q=1000
+[2018-06-25 20:11:35,332] [train] [INFO] epoch=0.00 step=400, 7.6046 examples/sec lr=0.000100, loss=171.344, loss_ll=33.1267, loss_ll_paf=56.4602, loss_ll_heat=9.79314, q=1000
+[2018-06-25 20:14:14,473] [train] [INFO] epoch=0.00 step=500, 7.9941 examples/sec lr=0.000100, loss=123.218, loss_ll=23.5738, loss_ll_paf=38.3222, loss_ll_heat=8.82539, q=1000
+[2018-06-25 20:16:51,857] [train] [INFO] epoch=0.00 step=600, 8.2893 examples/sec lr=0.000100, loss=82.2454, loss_ll=15.1349, loss_ll_paf=24.7633, loss_ll_heat=5.5065, q=1000
+[2018-06-25 20:19:29,517] [train] [INFO] epoch=0.00 step=700, 8.5120 examples/sec lr=0.000100, loss=110.91, loss_ll=20.7525, loss_ll_paf=34.728, loss_ll_heat=6.77701, q=1000
+[2018-06-25 20:22:06,363] [train] [INFO] epoch=0.00 step=800, 8.6919 examples/sec lr=0.000100, loss=89.4611, loss_ll=17.0766, loss_ll_paf=29.7953, loss_ll_heat=4.35781, q=1000
+[2018-06-25 20:24:44,227] [train] [INFO] epoch=0.00 step=900, 8.8317 examples/sec lr=0.000100, loss=111.804, loss_ll=21.0016, loss_ll_paf=36.7177, loss_ll_heat=5.28554, q=1000
+[2018-06-25 20:27:22,069] [train] [INFO] epoch=0.00 step=1000, 8.9469 examples/sec lr=0.000100, loss=88.9815, loss_ll=16.6285, loss_ll_paf=28.6592, loss_ll_heat=4.59791, q=1000
+[2018-06-25 20:30:32,475] [train] [INFO] epoch=0.00 step=1100, 8.8945 examples/sec lr=0.000100, loss=81.0527, loss_ll=15.2379, loss_ll_paf=26.5676, loss_ll_heat=3.90814, q=1000
+[2018-06-25 20:33:11,602] [train] [INFO] epoch=0.00 step=1200, 8.9809 examples/sec lr=0.000100, loss=84.7304, loss_ll=15.7382, loss_ll_paf=26.5693, loss_ll_heat=4.90708, q=1000
+[2018-06-25 20:35:49,880] [train] [INFO] epoch=0.00 step=1300, 9.0587 examples/sec lr=0.000100, loss=109.587, loss_ll=20.3111, loss_ll_paf=35.6261, loss_ll_heat=4.99619, q=1000
+[2018-06-25 20:38:28,122] [train] [INFO] epoch=0.00 step=1400, 9.1265 examples/sec lr=0.000100, loss=64.3374, loss_ll=11.4315, loss_ll_paf=19.4154, loss_ll_heat=3.44763, q=1000
+[2018-06-25 20:41:05,262] [train] [INFO] epoch=0.00 step=1500, 9.1900 examples/sec lr=0.000100, loss=68.5819, loss_ll=12.8306, loss_ll_paf=23.0956, loss_ll_heat=2.56573, q=1000
+[2018-06-25 20:43:41,144] [train] [INFO] epoch=0.00 step=1600, 9.2505 examples/sec lr=0.000100, loss=86.5324, loss_ll=16.6427, loss_ll_paf=28.7408, loss_ll_heat=4.54447, q=1000
+[2018-06-25 20:46:20,697] [train] [INFO] epoch=0.00 step=1700, 9.2929 examples/sec lr=0.000100, loss=74.0777, loss_ll=12.8002, loss_ll_paf=22.2781, loss_ll_heat=3.3223, q=1000
+[2018-06-25 20:48:58,824] [train] [INFO] epoch=0.00 step=1800, 9.3352 examples/sec lr=0.000100, loss=75.2548, loss_ll=13.5844, loss_ll_paf=23.8954, loss_ll_heat=3.27328, q=1000
+[2018-06-25 20:51:34,622] [train] [INFO] epoch=0.00 step=1900, 9.3801 examples/sec lr=0.000100, loss=99.4039, loss_ll=18.4886, loss_ll_paf=32.2702, loss_ll_heat=4.70698, q=1000
+[2018-06-25 20:54:12,527] [train] [INFO] epoch=0.00 step=2000, 9.4151 examples/sec lr=0.000100, loss=40.4674, loss_ll=7.21288, loss_ll_paf=12.1554, loss_ll_heat=2.27041, q=1000
+[2018-06-25 20:57:03,873] [train] [INFO] epoch=0.00 step=2100, 9.4114 examples/sec lr=0.000100, loss=91.2465, loss_ll=17.064, loss_ll_paf=30.3585, loss_ll_heat=3.76942, q=1000
+[2018-06-25 20:59:41,870] [train] [INFO] epoch=0.00 step=2200, 9.4417 examples/sec lr=0.000100, loss=122.872, loss_ll=23.8488, loss_ll_paf=42.5914, loss_ll_heat=5.10618, q=1000
+[2018-06-25 21:02:19,304] [train] [INFO] epoch=0.00 step=2300, 9.4709 examples/sec lr=0.000100, loss=73.1867, loss_ll=12.8356, loss_ll_paf=21.7227, loss_ll_heat=3.9485, q=1000
+[2018-06-25 21:04:56,791] [train] [INFO] epoch=0.00 step=2400, 9.4978 examples/sec lr=0.000100, loss=84.7424, loss_ll=15.5581, loss_ll_paf=26.2953, loss_ll_heat=4.82099, q=1000
+[2018-06-25 21:07:34,457] [train] [INFO] epoch=0.00 step=2500, 9.5222 examples/sec lr=0.000100, loss=83.8516, loss_ll=16.3637, loss_ll_paf=28.4313, loss_ll_heat=4.29614, q=1000
+[2018-06-25 21:10:10,831] [train] [INFO] epoch=0.00 step=2600, 9.5476 examples/sec lr=0.000100, loss=55.3552, loss_ll=10.1493, loss_ll_paf=17.5189, loss_ll_heat=2.77967, q=1000
+[2018-06-25 21:12:49,128] [train] [INFO] epoch=0.00 step=2700, 9.5673 examples/sec lr=0.000100, loss=70.2449, loss_ll=12.9097, loss_ll_paf=22.8346, loss_ll_heat=2.98475, q=1000
+[2018-06-25 21:15:26,126] [train] [INFO] epoch=0.00 step=2800, 9.5882 examples/sec lr=0.000100, loss=56.1573, loss_ll=10.168, loss_ll_paf=17.2866, loss_ll_heat=3.0494, q=1000
+[2018-06-25 21:18:01,105] [train] [INFO] epoch=0.00 step=2900, 9.6119 examples/sec lr=0.000100, loss=77.7989, loss_ll=14.5153, loss_ll_paf=24.57, loss_ll_heat=4.46068, q=1000
+[2018-06-25 21:20:35,827] [train] [INFO] epoch=0.00 step=3000, 9.6345 examples/sec lr=0.000100, loss=61.7992, loss_ll=11.5071, loss_ll_paf=19.7757, loss_ll_heat=3.23856, q=1000
+[2018-06-25 21:23:26,789] [train] [INFO] epoch=0.00 step=3100, 9.6254 examples/sec lr=0.000100, loss=63.9121, loss_ll=12.0031, loss_ll_paf=20.8188, loss_ll_heat=3.18739, q=1000
+[2018-06-25 21:26:04,358] [train] [INFO] epoch=0.00 step=3200, 9.6410 examples/sec lr=0.000100, loss=75.7359, loss_ll=14.4097, loss_ll_paf=24.4975, loss_ll_heat=4.32176, q=1000
+[2018-06-25 21:28:40,020] [train] [INFO] epoch=0.00 step=3300, 9.6592 examples/sec lr=0.000100, loss=67.8227, loss_ll=11.9841, loss_ll_paf=20.9041, loss_ll_heat=3.06404, q=1000
+[2018-06-25 21:31:15,755] [train] [INFO] epoch=0.00 step=3400, 9.6762 examples/sec lr=0.000100, loss=59.1816, loss_ll=10.5851, loss_ll_paf=18.0122, loss_ll_heat=3.15799, q=1000
+[2018-06-25 21:33:51,661] [train] [INFO] epoch=0.00 step=3500, 9.6921 examples/sec lr=0.000100, loss=59.9625, loss_ll=10.939, loss_ll_paf=18.1867, loss_ll_heat=3.69126, q=1000
+[2018-06-25 21:36:28,998] [train] [INFO] epoch=0.00 step=3600, 9.7047 examples/sec lr=0.000100, loss=59.4497, loss_ll=10.4272, loss_ll_paf=18.2061, loss_ll_heat=2.64838, q=1000
+[2018-06-25 21:39:05,780] [train] [INFO] epoch=0.00 step=3700, 9.7176 examples/sec lr=0.000100, loss=78.0492, loss_ll=13.7705, loss_ll_paf=23.3962, loss_ll_heat=4.14487, q=1000
+[2018-06-25 21:41:40,701] [train] [INFO] epoch=0.00 step=3800, 9.7327 examples/sec lr=0.000100, loss=53.6406, loss_ll=9.99818, loss_ll_paf=17.4048, loss_ll_heat=2.5916, q=1000
+[2018-06-25 21:44:19,479] [train] [INFO] epoch=0.00 step=3900, 9.7413 examples/sec lr=0.000100, loss=36.1174, loss_ll=6.32544, loss_ll_paf=9.62021, loss_ll_heat=3.03067, q=1000
+[2018-06-25 21:46:57,399] [train] [INFO] epoch=0.00 step=4000, 9.7506 examples/sec lr=0.000100, loss=58.5712, loss_ll=10.5996, loss_ll_paf=17.8927, loss_ll_heat=3.30647, q=1000
+[2018-06-25 21:49:48,095] [train] [INFO] epoch=0.00 step=4100, 9.7411 examples/sec lr=0.000100, loss=63.9857, loss_ll=11.7061, loss_ll_paf=19.8874, loss_ll_heat=3.52482, q=1000
+[2018-06-25 21:52:26,585] [train] [INFO] epoch=0.00 step=4200, 9.7492 examples/sec lr=0.000100, loss=55.5211, loss_ll=10.4143, loss_ll_paf=16.8862, loss_ll_heat=3.94227, q=1000
+[2018-06-25 21:55:03,989] [train] [INFO] epoch=0.00 step=4300, 9.7585 examples/sec lr=0.000100, loss=60.8676, loss_ll=11.2627, loss_ll_paf=19.1926, loss_ll_heat=3.33268, q=1000
+[2018-06-25 21:57:40,820] [train] [INFO] epoch=0.00 step=4400, 9.7682 examples/sec lr=0.000100, loss=40.2733, loss_ll=7.02404, loss_ll_paf=11.6089, loss_ll_heat=2.43914, q=1000
+[2018-06-25 22:00:19,999] [train] [INFO] epoch=0.00 step=4500, 9.7743 examples/sec lr=0.000100, loss=34.3216, loss_ll=6.41478, loss_ll_paf=10.4587, loss_ll_heat=2.3709, q=1000
+[2018-06-25 22:02:56,071] [train] [INFO] epoch=0.00 step=4600, 9.7842 examples/sec lr=0.000100, loss=64.2634, loss_ll=11.3437, loss_ll_paf=19.6181, loss_ll_heat=3.06922, q=1000
+[2018-06-25 22:05:34,608] [train] [INFO] epoch=0.00 step=4700, 9.7906 examples/sec lr=0.000100, loss=62.5079, loss_ll=11.6799, loss_ll_paf=20.3389, loss_ll_heat=3.02089, q=1000
+[2018-06-25 22:08:10,936] [train] [INFO] epoch=0.00 step=4800, 9.7994 examples/sec lr=0.000100, loss=35.6674, loss_ll=6.29645, loss_ll_paf=10.5045, loss_ll_heat=2.08836, q=1000
+[2018-06-25 22:10:47,504] [train] [INFO] epoch=0.00 step=4900, 9.8076 examples/sec lr=0.000100, loss=25.5238, loss_ll=4.23894, loss_ll_paf=6.0824, loss_ll_heat=2.39549, q=1000
+[2018-06-25 22:13:23,963] [train] [INFO] epoch=0.00 step=5000, 9.8157 examples/sec lr=0.000100, loss=36.4133, loss_ll=5.8928, loss_ll_paf=9.18014, loss_ll_heat=2.60546, q=1000
+[2018-06-25 22:16:11,739] [train] [INFO] epoch=0.00 step=5100, 9.8100 examples/sec lr=0.000100, loss=49.7134, loss_ll=9.23494, loss_ll_paf=15.6146, loss_ll_heat=2.8553, q=1000
+[2018-06-25 22:18:49,065] [train] [INFO] epoch=0.00 step=5200, 9.8167 examples/sec lr=0.000100, loss=53.2927, loss_ll=9.22218, loss_ll_paf=15.0273, loss_ll_heat=3.41708, q=1000
+[2018-06-25 22:21:27,691] [train] [INFO] epoch=0.00 step=5300, 9.8217 examples/sec lr=0.000100, loss=48.379, loss_ll=9.19609, loss_ll_paf=15.2963, loss_ll_heat=3.09584, q=1000
+[2018-06-25 22:24:03,473] [train] [INFO] epoch=0.00 step=5400, 9.8296 examples/sec lr=0.000100, loss=47.073, loss_ll=8.65023, loss_ll_paf=14.7593, loss_ll_heat=2.54122, q=1000
+[2018-06-25 22:26:39,626] [train] [INFO] epoch=0.00 step=5500, 9.8369 examples/sec lr=0.000100, loss=49.4255, loss_ll=9.65799, loss_ll_paf=16.5287, loss_ll_heat=2.78732, q=1000
+[2018-06-25 22:29:15,639] [train] [INFO] epoch=0.00 step=5600, 9.8441 examples/sec lr=0.000100, loss=77.4191, loss_ll=14.1899, loss_ll_paf=24.4891, loss_ll_heat=3.89079, q=1000
+[2018-06-25 22:31:52,125] [train] [INFO] epoch=0.00 step=5700, 9.8505 examples/sec lr=0.000100, loss=70.056, loss_ll=13.2131, loss_ll_paf=23.7811, loss_ll_heat=2.64514, q=1000
+[2018-06-25 22:34:29,515] [train] [INFO] epoch=0.00 step=5800, 9.8558 examples/sec lr=0.000100, loss=39.9211, loss_ll=7.29454, loss_ll_paf=11.5544, loss_ll_heat=3.03467, q=1000
+[2018-06-25 22:37:07,503] [train] [INFO] epoch=0.00 step=5900, 9.8603 examples/sec lr=0.000100, loss=41.0658, loss_ll=6.80711, loss_ll_paf=11.3249, loss_ll_heat=2.28932, q=1000
+[2018-06-25 22:39:44,069] [train] [INFO] epoch=0.00 step=6000, 9.8661 examples/sec lr=0.000100, loss=37.0655, loss_ll=6.72726, loss_ll_paf=11.6035, loss_ll_heat=1.85102, q=1000
+[2018-06-25 22:42:37,400] [train] [INFO] epoch=0.00 step=6100, 9.8549 examples/sec lr=0.000100, loss=40.4744, loss_ll=7.38222, loss_ll_paf=11.5904, loss_ll_heat=3.17406, q=1000
+[2018-06-25 22:45:11,106] [train] [INFO] epoch=0.00 step=6200, 9.8634 examples/sec lr=0.000100, loss=48.7216, loss_ll=8.97153, loss_ll_paf=15.0457, loss_ll_heat=2.8974, q=1000
+[2018-06-25 22:47:48,704] [train] [INFO] epoch=0.00 step=6300, 9.8679 examples/sec lr=0.000100, loss=35.7028, loss_ll=6.25756, loss_ll_paf=10.1351, loss_ll_heat=2.37997, q=1000
+[2018-06-25 22:50:25,895] [train] [INFO] epoch=0.00 step=6400, 9.8726 examples/sec lr=0.000100, loss=58.3312, loss_ll=10.6794, loss_ll_paf=17.6758, loss_ll_heat=3.683, q=1000
+[2018-06-25 22:53:01,866] [train] [INFO] epoch=0.00 step=6500, 9.8783 examples/sec lr=0.000100, loss=61.8642, loss_ll=10.9971, loss_ll_paf=18.5107, loss_ll_heat=3.48363, q=1000
+[2018-06-25 22:55:39,016] [train] [INFO] epoch=0.00 step=6600, 9.8828 examples/sec lr=0.000100, loss=50.1344, loss_ll=9.00582, loss_ll_paf=14.8025, loss_ll_heat=3.2092, q=1000
+[2018-06-25 22:58:14,271] [train] [INFO] epoch=0.00 step=6700, 9.8888 examples/sec lr=0.000100, loss=48.7718, loss_ll=8.39704, loss_ll_paf=14.1396, loss_ll_heat=2.65451, q=1000
+[2018-06-25 23:00:49,825] [train] [INFO] epoch=0.00 step=6800, 9.8944 examples/sec lr=0.000100, loss=34.3942, loss_ll=5.48125, loss_ll_paf=8.58698, loss_ll_heat=2.37551, q=1000
+[2018-06-25 23:03:25,852] [train] [INFO] epoch=0.00 step=6900, 9.8995 examples/sec lr=0.000100, loss=55.4449, loss_ll=9.72153, loss_ll_paf=16.6475, loss_ll_heat=2.79556, q=1000
+[2018-06-25 23:06:00,856] [train] [INFO] epoch=0.00 step=7000, 9.9053 examples/sec lr=0.000100, loss=56.4016, loss_ll=10.552, loss_ll_paf=17.619, loss_ll_heat=3.48496, q=1000
+[2018-06-25 23:08:51,038] [train] [INFO] epoch=0.00 step=7100, 9.8978 examples/sec lr=0.000100, loss=49.3077, loss_ll=9.48757, loss_ll_paf=15.7678, loss_ll_heat=3.20738, q=1000
+[2018-06-25 23:11:28,303] [train] [INFO] epoch=0.00 step=7200, 9.9015 examples/sec lr=0.000100, loss=51.3854, loss_ll=9.32196, loss_ll_paf=16.1117, loss_ll_heat=2.53222, q=1000
+[2018-06-25 23:14:04,409] [train] [INFO] epoch=0.00 step=7300, 9.9061 examples/sec lr=0.000100, loss=38.1091, loss_ll=6.79438, loss_ll_paf=11.1154, loss_ll_heat=2.47333, q=1000
+[2018-06-25 23:16:41,601] [train] [INFO] epoch=0.00 step=7400, 9.9097 examples/sec lr=0.000100, loss=39.1083, loss_ll=7.07415, loss_ll_paf=11.7287, loss_ll_heat=2.41957, q=1000
+[2018-06-25 23:19:18,852] [train] [INFO] epoch=0.00 step=7500, 9.9132 examples/sec lr=0.000100, loss=58.1238, loss_ll=10.7257, loss_ll_paf=18.3882, loss_ll_heat=3.06315, q=1000
+[2018-06-25 23:21:54,922] [train] [INFO] epoch=0.00 step=7600, 9.9175 examples/sec lr=0.000100, loss=58.5197, loss_ll=10.574, loss_ll_paf=19.3403, loss_ll_heat=1.80782, q=1000
+[2018-06-25 23:24:31,365] [train] [INFO] epoch=1.00 step=7700, 9.9214 examples/sec lr=0.000100, loss=33.6622, loss_ll=5.60113, loss_ll_paf=9.31063, loss_ll_heat=1.89163, q=1000
+[2018-06-25 23:27:08,123] [train] [INFO] epoch=1.00 step=7800, 9.9249 examples/sec lr=0.000100, loss=64.2565, loss_ll=12.3233, loss_ll_paf=21.4555, loss_ll_heat=3.19118, q=1000
+[2018-06-25 23:29:46,214] [train] [INFO] epoch=1.00 step=7900, 9.9274 examples/sec lr=0.000100, loss=37.8888, loss_ll=6.49413, loss_ll_paf=10.9032, loss_ll_heat=2.08506, q=1000
+[2018-06-25 23:32:21,223] [train] [INFO] epoch=1.00 step=8000, 9.9321 examples/sec lr=0.000100, loss=53.6101, loss_ll=11.0829, loss_ll_paf=18.064, loss_ll_heat=4.10179, q=1000
+[2018-06-25 23:35:11,676] [train] [INFO] epoch=1.00 step=8100, 9.9250 examples/sec lr=0.000100, loss=53.1687, loss_ll=9.6256, loss_ll_paf=17.2163, loss_ll_heat=2.03493, q=1000
+[2018-06-25 23:37:49,667] [train] [INFO] epoch=1.00 step=8200, 9.9274 examples/sec lr=0.000100, loss=52.1972, loss_ll=9.49205, loss_ll_paf=17.0782, loss_ll_heat=1.90592, q=1000
+[2018-06-25 23:40:28,415] [train] [INFO] epoch=1.00 step=8300, 9.9292 examples/sec lr=0.000100, loss=46.8603, loss_ll=8.59103, loss_ll_paf=13.9009, loss_ll_heat=3.28117, q=1000
+[2018-06-25 23:42:58,395] [train] [INFO] epoch=1.00 step=8400, 9.9374 examples/sec lr=0.000100, loss=46.5947, loss_ll=8.55247, loss_ll_paf=14.4351, loss_ll_heat=2.66986, q=1000
+[2018-06-25 23:45:34,203] [train] [INFO] epoch=1.00 step=8500, 9.9412 examples/sec lr=0.000100, loss=62.4568, loss_ll=11.746, loss_ll_paf=20.8587, loss_ll_heat=2.63328, q=1000
+[2018-06-25 23:48:07,858] [train] [INFO] epoch=1.00 step=8600, 9.9464 examples/sec lr=0.000100, loss=78.2402, loss_ll=14.902, loss_ll_paf=26.4263, loss_ll_heat=3.37766, q=1000
+[2018-06-25 23:50:41,293] [train] [INFO] epoch=1.00 step=8700, 9.9517 examples/sec lr=0.000100, loss=59.0183, loss_ll=10.7208, loss_ll_paf=18.9349, loss_ll_heat=2.50661, q=1000
+[2018-06-25 23:53:10,841] [train] [INFO] epoch=1.00 step=8800, 9.9596 examples/sec lr=0.000100, loss=34.3789, loss_ll=6.45499, loss_ll_paf=10.998, loss_ll_heat=1.91197, q=1000
+[2018-06-25 23:55:47,184] [train] [INFO] epoch=1.00 step=8900, 9.9626 examples/sec lr=0.000100, loss=36.6195, loss_ll=6.84405, loss_ll_paf=10.521, loss_ll_heat=3.16706, q=1000
+[2018-06-25 23:58:19,799] [train] [INFO] epoch=1.00 step=9000, 9.9681 examples/sec lr=0.000100, loss=29.7556, loss_ll=5.2226, loss_ll_paf=8.69089, loss_ll_heat=1.7543, q=1000
+[2018-06-26 00:01:08,958] [train] [INFO] epoch=1.00 step=9100, 9.9622 examples/sec lr=0.000100, loss=39.7616, loss_ll=7.02963, loss_ll_paf=12.324, loss_ll_heat=1.73524, q=1000
+[2018-06-26 00:03:39,804] [train] [INFO] epoch=1.00 step=9200, 9.9688 examples/sec lr=0.000100, loss=49.416, loss_ll=8.99876, loss_ll_paf=15.4701, loss_ll_heat=2.5274, q=1000
+[2018-06-26 00:06:14,445] [train] [INFO] epoch=1.00 step=9300, 9.9727 examples/sec lr=0.000100, loss=38.6662, loss_ll=6.8335, loss_ll_paf=11.7008, loss_ll_heat=1.96624, q=1000
+[2018-06-26 00:08:45,896] [train] [INFO] epoch=1.00 step=9400, 9.9787 examples/sec lr=0.000100, loss=39.1261, loss_ll=6.96448, loss_ll_paf=11.887, loss_ll_heat=2.04194, q=1000
+[2018-06-26 00:11:12,513] [train] [INFO] epoch=1.00 step=9500, 9.9877 examples/sec lr=0.000100, loss=33.0081, loss_ll=5.61504, loss_ll_paf=9.10723, loss_ll_heat=2.12285, q=1000
+[2018-06-26 00:13:38,754] [train] [INFO] epoch=1.00 step=9600, 9.9967 examples/sec lr=0.000100, loss=44.3696, loss_ll=8.93553, loss_ll_paf=14.5169, loss_ll_heat=3.3542, q=1000
+[2018-06-26 00:16:06,066] [train] [INFO] epoch=1.00 step=9700, 10.0049 examples/sec lr=0.000100, loss=57.8126, loss_ll=11.1349, loss_ll_paf=19.2712, loss_ll_heat=2.99852, q=1000
+[2018-06-26 00:18:33,444] [train] [INFO] epoch=1.00 step=9800, 10.0130 examples/sec lr=0.000100, loss=41.7149, loss_ll=7.38468, loss_ll_paf=12.0839, loss_ll_heat=2.68541, q=1000
+[2018-06-26 00:21:03,199] [train] [INFO] epoch=1.00 step=9900, 10.0193 examples/sec lr=0.000100, loss=41.5325, loss_ll=7.58493, loss_ll_paf=12.6386, loss_ll_heat=2.53125, q=1000
+[2018-06-26 00:23:40,835] [train] [INFO] epoch=1.00 step=10000, 10.0206 examples/sec lr=0.000100, loss=42.4686, loss_ll=6.80183, loss_ll_paf=11.9164, loss_ll_heat=1.68724, q=1000
+[2018-06-26 00:26:25,414] [train] [INFO] epoch=1.00 step=10100, 10.0176 examples/sec lr=0.000100, loss=49.546, loss_ll=9.33874, loss_ll_paf=16.0826, loss_ll_heat=2.59483, q=1000
+[2018-06-26 00:28:59,626] [train] [INFO] epoch=1.00 step=10200, 10.0209 examples/sec lr=0.000100, loss=54.7398, loss_ll=10.2226, loss_ll_paf=17.754, loss_ll_heat=2.69123, q=1000
+[2018-06-26 00:31:26,973] [train] [INFO] epoch=1.00 step=10300, 10.0285 examples/sec lr=0.000100, loss=39.9367, loss_ll=7.4738, loss_ll_paf=12.6133, loss_ll_heat=2.33429, q=1000
+[2018-06-26 00:34:02,181] [train] [INFO] epoch=1.00 step=10400, 10.0311 examples/sec lr=0.000100, loss=47.1873, loss_ll=8.7157, loss_ll_paf=15.5555, loss_ll_heat=1.8759, q=1000
+[2018-06-26 00:36:32,896] [train] [INFO] epoch=1.00 step=10500, 10.0363 examples/sec lr=0.000100, loss=17.8444, loss_ll=2.84541, loss_ll_paf=4.50878, loss_ll_heat=1.18205, q=1000
+[2018-06-26 00:39:08,128] [train] [INFO] epoch=1.00 step=10600, 10.0388 examples/sec lr=0.000100, loss=49.7966, loss_ll=8.98852, loss_ll_paf=15.3867, loss_ll_heat=2.59036, q=1000
+[2018-06-26 00:41:34,596] [train] [INFO] epoch=1.00 step=10700, 10.0464 examples/sec lr=0.000100, loss=52.0508, loss_ll=9.18241, loss_ll_paf=15.5475, loss_ll_heat=2.81731, q=1000
+[2018-06-26 00:44:11,352] [train] [INFO] epoch=1.00 step=10800, 10.0479 examples/sec lr=0.000100, loss=27.4048, loss_ll=4.25929, loss_ll_paf=6.62293, loss_ll_heat=1.89565, q=1000
+[2018-06-26 00:46:49,047] [train] [INFO] epoch=1.00 step=10900, 10.0488 examples/sec lr=0.000100, loss=50.3689, loss_ll=9.31778, loss_ll_paf=16.1545, loss_ll_heat=2.48103, q=1000
+[2018-06-26 00:49:22,380] [train] [INFO] epoch=1.00 step=11000, 10.0522 examples/sec lr=0.000100, loss=44.7382, loss_ll=7.8436, loss_ll_paf=13.0765, loss_ll_heat=2.61069, q=1000
+[2018-06-26 00:52:04,461] [train] [INFO] epoch=1.00 step=11100, 10.0505 examples/sec lr=0.000100, loss=36.3382, loss_ll=6.46186, loss_ll_paf=10.7049, loss_ll_heat=2.21887, q=1000
+[2018-06-26 00:54:35,505] [train] [INFO] epoch=1.00 step=11200, 10.0551 examples/sec lr=0.000100, loss=27.654, loss_ll=5.30452, loss_ll_paf=8.42559, loss_ll_heat=2.18346, q=1000
+[2018-06-26 00:57:03,238] [train] [INFO] epoch=1.00 step=11300, 10.0615 examples/sec lr=0.000100, loss=36.9618, loss_ll=6.38914, loss_ll_paf=10.7427, loss_ll_heat=2.03556, q=1000
+[2018-06-26 00:59:29,807] [train] [INFO] epoch=1.00 step=11400, 10.0684 examples/sec lr=0.000100, loss=28.1454, loss_ll=5.24335, loss_ll_paf=8.69915, loss_ll_heat=1.78755, q=1000
+[2018-06-26 01:02:02,833] [train] [INFO] epoch=1.00 step=11500, 10.0717 examples/sec lr=0.000100, loss=40.6785, loss_ll=7.38272, loss_ll_paf=12.3354, loss_ll_heat=2.43005, q=1000
+[2018-06-26 01:04:38,381] [train] [INFO] epoch=1.00 step=11600, 10.0735 examples/sec lr=0.000100, loss=63.2904, loss_ll=11.6272, loss_ll_paf=19.2042, loss_ll_heat=4.05017, q=1000
+[2018-06-26 01:07:10,596] [train] [INFO] epoch=1.00 step=11700, 10.0771 examples/sec lr=0.000100, loss=36.952, loss_ll=6.58414, loss_ll_paf=11.053, loss_ll_heat=2.11533, q=1000
+[2018-06-26 01:09:44,609] [train] [INFO] epoch=1.00 step=11800, 10.0796 examples/sec lr=0.000100, loss=38.681, loss_ll=6.69798, loss_ll_paf=10.8783, loss_ll_heat=2.5177, q=1000
+[2018-06-26 01:12:18,787] [train] [INFO] epoch=1.00 step=11900, 10.0820 examples/sec lr=0.000100, loss=40.8792, loss_ll=7.56429, loss_ll_paf=12.0471, loss_ll_heat=3.08152, q=1000
+[2018-06-26 01:14:49,296] [train] [INFO] epoch=1.00 step=12000, 10.0864 examples/sec lr=0.000100, loss=42.6416, loss_ll=7.13544, loss_ll_paf=11.7622, loss_ll_heat=2.50863, q=1000
+[2018-06-26 01:17:27,944] [train] [INFO] epoch=1.00 step=12100, 10.0864 examples/sec lr=0.000100, loss=35.3214, loss_ll=6.06704, loss_ll_paf=9.80873, loss_ll_heat=2.32535, q=1000
+[2018-06-26 01:20:01,497] [train] [INFO] epoch=1.00 step=12200, 10.0890 examples/sec lr=0.000100, loss=56.2848, loss_ll=11.2078, loss_ll_paf=18.9959, loss_ll_heat=3.4196, q=1000
+[2018-06-26 01:22:35,334] [train] [INFO] epoch=1.00 step=12300, 10.0915 examples/sec lr=0.000100, loss=40.7236, loss_ll=7.57521, loss_ll_paf=12.9917, loss_ll_heat=2.15875, q=1000
+[2018-06-26 01:25:12,544] [train] [INFO] epoch=1.00 step=12400, 10.0922 examples/sec lr=0.000100, loss=51.9468, loss_ll=9.77647, loss_ll_paf=16.8758, loss_ll_heat=2.67714, q=1000
+[2018-06-26 01:27:39,371] [train] [INFO] epoch=1.00 step=12500, 10.0981 examples/sec lr=0.000100, loss=38.15, loss_ll=7.22614, loss_ll_paf=12.253, loss_ll_heat=2.19929, q=1000
+[2018-06-26 01:30:12,116] [train] [INFO] epoch=1.00 step=12600, 10.1010 examples/sec lr=0.000100, loss=34.8835, loss_ll=6.34369, loss_ll_paf=11.264, loss_ll_heat=1.42337, q=1000
+[2018-06-26 01:32:41,873] [train] [INFO] epoch=1.00 step=12700, 10.1054 examples/sec lr=0.000100, loss=41.9511, loss_ll=7.61471, loss_ll_paf=12.6456, loss_ll_heat=2.58378, q=1000
+[2018-06-26 01:35:08,638] [train] [INFO] epoch=1.00 step=12800, 10.1111 examples/sec lr=0.000100, loss=43.0712, loss_ll=8.22322, loss_ll_paf=14.1601, loss_ll_heat=2.2863, q=1000
+[2018-06-26 01:37:37,987] [train] [INFO] epoch=1.00 step=12900, 10.1155 examples/sec lr=0.000100, loss=42.0134, loss_ll=7.16155, loss_ll_paf=12.0653, loss_ll_heat=2.25779, q=1000
+[2018-06-26 01:40:11,924] [train] [INFO] epoch=1.00 step=13000, 10.1176 examples/sec lr=0.000100, loss=36.5908, loss_ll=6.3841, loss_ll_paf=10.3658, loss_ll_heat=2.40242, q=1000
+[2018-06-26 01:42:53,543] [train] [INFO] epoch=1.00 step=13100, 10.1159 examples/sec lr=0.000100, loss=38.3293, loss_ll=6.67817, loss_ll_paf=10.9394, loss_ll_heat=2.41689, q=1000
+[2018-06-26 01:45:25,765] [train] [INFO] epoch=1.00 step=13200, 10.1188 examples/sec lr=0.000100, loss=43.6706, loss_ll=8.34415, loss_ll_paf=13.8372, loss_ll_heat=2.85107, q=1000
+[2018-06-26 01:47:58,276] [train] [INFO] epoch=1.00 step=13300, 10.1215 examples/sec lr=0.000100, loss=34.8752, loss_ll=6.57028, loss_ll_paf=11.2457, loss_ll_heat=1.89486, q=1000
+[2018-06-26 01:50:27,849] [train] [INFO] epoch=1.00 step=13400, 10.1256 examples/sec lr=0.000100, loss=43.1658, loss_ll=7.72845, loss_ll_paf=12.1109, loss_ll_heat=3.34595, q=1000
+[2018-06-26 01:52:56,536] [train] [INFO] epoch=1.00 step=13500, 10.1300 examples/sec lr=0.000100, loss=38.9614, loss_ll=7.25823, loss_ll_paf=12.4208, loss_ll_heat=2.09569, q=1000
+[2018-06-26 01:55:33,355] [train] [INFO] epoch=1.00 step=13600, 10.1305 examples/sec lr=0.000100, loss=70.9369, loss_ll=13.2865, loss_ll_paf=23.0524, loss_ll_heat=3.52069, q=1000
+[2018-06-26 01:58:05,183] [train] [INFO] epoch=1.00 step=13700, 10.1334 examples/sec lr=0.000100, loss=51.968, loss_ll=9.71401, loss_ll_paf=16.604, loss_ll_heat=2.82399, q=1000
+[2018-06-26 02:00:32,693] [train] [INFO] epoch=1.00 step=13800, 10.1382 examples/sec lr=0.000100, loss=29.5003, loss_ll=5.4113, loss_ll_paf=8.90041, loss_ll_heat=1.92218, q=1000
+[2018-06-26 02:02:59,657] [train] [INFO] epoch=1.00 step=13900, 10.1432 examples/sec lr=0.000100, loss=72.2168, loss_ll=13.5483, loss_ll_paf=24.0933, loss_ll_heat=3.00342, q=1000
+[2018-06-26 02:05:36,676] [train] [INFO] epoch=1.00 step=14000, 10.1436 examples/sec lr=0.000100, loss=43.684, loss_ll=8.41706, loss_ll_paf=14.3982, loss_ll_heat=2.43587, q=1000
+[2018-06-26 02:08:25,258] [train] [INFO] epoch=1.00 step=14100, 10.1386 examples/sec lr=0.000100, loss=45.612, loss_ll=8.16982, loss_ll_paf=14.0673, loss_ll_heat=2.27235, q=1000
+[2018-06-26 02:10:56,875] [train] [INFO] epoch=1.00 step=14200, 10.1414 examples/sec lr=0.000100, loss=52.7146, loss_ll=9.12585, loss_ll_paf=15.0629, loss_ll_heat=3.18883, q=1000
+[2018-06-26 02:13:28,097] [train] [INFO] epoch=1.00 step=14300, 10.1444 examples/sec lr=0.000100, loss=41.5429, loss_ll=7.81988, loss_ll_paf=13.6006, loss_ll_heat=2.03914, q=1000
+[2018-06-26 02:15:55,644] [train] [INFO] epoch=1.00 step=14400, 10.1489 examples/sec lr=0.000100, loss=52.5342, loss_ll=9.52829, loss_ll_paf=16.6077, loss_ll_heat=2.4489, q=1000
+[2018-06-26 02:18:23,431] [train] [INFO] epoch=1.00 step=14500, 10.1533 examples/sec lr=0.000100, loss=54.572, loss_ll=10.311, loss_ll_paf=17.7186, loss_ll_heat=2.90329, q=1000
+[2018-06-26 02:20:51,454] [train] [INFO] epoch=1.00 step=14600, 10.1575 examples/sec lr=0.000100, loss=40.6027, loss_ll=7.50468, loss_ll_paf=12.5107, loss_ll_heat=2.49866, q=1000
+[2018-06-26 02:23:29,176] [train] [INFO] epoch=1.00 step=14700, 10.1574 examples/sec lr=0.000100, loss=42.7538, loss_ll=7.87582, loss_ll_paf=13.0003, loss_ll_heat=2.75132, q=1000
+[2018-06-26 02:26:03,570] [train] [INFO] epoch=1.00 step=14800, 10.1588 examples/sec lr=0.000100, loss=63.7192, loss_ll=11.8843, loss_ll_paf=19.6896, loss_ll_heat=4.07896, q=1000
+[2018-06-26 02:28:31,984] [train] [INFO] epoch=1.00 step=14900, 10.1627 examples/sec lr=0.000100, loss=36.8403, loss_ll=6.99483, loss_ll_paf=11.977, loss_ll_heat=2.0127, q=1000
+[2018-06-26 02:31:01,486] [train] [INFO] epoch=1.00 step=15000, 10.1662 examples/sec lr=0.000100, loss=47.3762, loss_ll=8.93539, loss_ll_paf=15.1605, loss_ll_heat=2.71026, q=1000
+[2018-06-26 02:33:43,577] [train] [INFO] epoch=1.00 step=15100, 10.1641 examples/sec lr=0.000100, loss=44.8608, loss_ll=7.92612, loss_ll_paf=13.0702, loss_ll_heat=2.78201, q=1000
+[2018-06-26 02:36:10,884] [train] [INFO] epoch=1.00 step=15200, 10.1684 examples/sec lr=0.000100, loss=32.3924, loss_ll=6.24473, loss_ll_paf=10.6725, loss_ll_heat=1.81696, q=1000
+[2018-06-26 02:38:36,761] [train] [INFO] epoch=2.00 step=15300, 10.1733 examples/sec lr=0.000100, loss=47.1114, loss_ll=8.52759, loss_ll_paf=14.6163, loss_ll_heat=2.43894, q=1000
+[2018-06-26 02:41:08,184] [train] [INFO] epoch=2.00 step=15400, 10.1757 examples/sec lr=0.000100, loss=37.9471, loss_ll=7.3358, loss_ll_paf=12.5616, loss_ll_heat=2.11004, q=1000
+[2018-06-26 02:43:34,071] [train] [INFO] epoch=2.00 step=15500, 10.1805 examples/sec lr=0.000100, loss=35.8958, loss_ll=6.97471, loss_ll_paf=11.6537, loss_ll_heat=2.29572, q=1000
+[2018-06-26 02:46:09,199] [train] [INFO] epoch=2.00 step=15600, 10.1813 examples/sec lr=0.000100, loss=39.0659, loss_ll=7.03328, loss_ll_paf=12.0758, loss_ll_heat=1.99071, q=1000
+[2018-06-26 02:48:35,757] [train] [INFO] epoch=2.00 step=15700, 10.1857 examples/sec lr=0.000100, loss=28.3362, loss_ll=4.9791, loss_ll_paf=7.29587, loss_ll_heat=2.66233, q=1000
+[2018-06-26 02:51:02,920] [train] [INFO] epoch=2.00 step=15800, 10.1898 examples/sec lr=0.000100, loss=53.762, loss_ll=9.75671, loss_ll_paf=17.3378, loss_ll_heat=2.17564, q=1000
+[2018-06-26 02:53:30,234] [train] [INFO] epoch=2.00 step=15900, 10.1937 examples/sec lr=0.000100, loss=44.1844, loss_ll=8.12642, loss_ll_paf=13.853, loss_ll_heat=2.39982, q=1000
+[2018-06-26 02:55:56,778] [train] [INFO] epoch=2.00 step=16000, 10.1980 examples/sec lr=0.000100, loss=23.414, loss_ll=4.22783, loss_ll_paf=7.1638, loss_ll_heat=1.29186, q=1000
+[2018-06-26 02:58:45,938] [train] [INFO] epoch=2.00 step=16100, 10.1930 examples/sec lr=0.000100, loss=46.1153, loss_ll=8.27258, loss_ll_paf=14.6716, loss_ll_heat=1.87356, q=1000
+[2018-06-26 03:01:11,837] [train] [INFO] epoch=2.00 step=16200, 10.1975 examples/sec lr=0.000100, loss=33.4475, loss_ll=6.33359, loss_ll_paf=10.1404, loss_ll_heat=2.52679, q=1000
+[2018-06-26 03:03:42,682] [train] [INFO] epoch=2.00 step=16300, 10.1999 examples/sec lr=0.000100, loss=30.5622, loss_ll=5.43653, loss_ll_paf=8.58491, loss_ll_heat=2.28815, q=1000
+[2018-06-26 03:06:11,454] [train] [INFO] epoch=2.00 step=16400, 10.2031 examples/sec lr=0.000100, loss=50.1488, loss_ll=9.47581, loss_ll_paf=17.016, loss_ll_heat=1.93564, q=1000
+[2018-06-26 03:08:41,418] [train] [INFO] epoch=2.00 step=16500, 10.2058 examples/sec lr=0.000100, loss=25.583, loss_ll=4.58675, loss_ll_paf=7.31242, loss_ll_heat=1.86107, q=1000
+[2018-06-26 03:11:10,349] [train] [INFO] epoch=2.00 step=16600, 10.2089 examples/sec lr=0.000100, loss=25.7822, loss_ll=4.61001, loss_ll_paf=7.45598, loss_ll_heat=1.76404, q=1000
+[2018-06-26 03:13:39,139] [train] [INFO] epoch=2.00 step=16700, 10.2120 examples/sec lr=0.000100, loss=29.0939, loss_ll=5.2587, loss_ll_paf=8.728, loss_ll_heat=1.78941, q=1000
+[2018-06-26 03:16:06,953] [train] [INFO] epoch=2.00 step=16800, 10.2154 examples/sec lr=0.000100, loss=45.6084, loss_ll=8.19175, loss_ll_paf=14.2074, loss_ll_heat=2.17607, q=1000
+[2018-06-26 03:18:42,209] [train] [INFO] epoch=2.00 step=16900, 10.2159 examples/sec lr=0.000100, loss=61.9563, loss_ll=11.7821, loss_ll_paf=19.3154, loss_ll_heat=4.24879, q=1000
+[2018-06-26 03:21:08,551] [train] [INFO] epoch=2.00 step=17000, 10.2199 examples/sec lr=0.000100, loss=29.5815, loss_ll=4.97271, loss_ll_paf=8.28846, loss_ll_heat=1.65697, q=1000
+[2018-06-26 03:23:50,665] [train] [INFO] epoch=2.00 step=17100, 10.2178 examples/sec lr=0.000100, loss=32.3653, loss_ll=5.45894, loss_ll_paf=8.79987, loss_ll_heat=2.11802, q=1000
+[2018-06-26 03:26:19,757] [train] [INFO] epoch=2.00 step=17200, 10.2206 examples/sec lr=0.000100, loss=42.3506, loss_ll=7.20417, loss_ll_paf=12.0717, loss_ll_heat=2.33663, q=1000
+[2018-06-26 03:28:48,017] [train] [INFO] epoch=2.00 step=17300, 10.2237 examples/sec lr=0.000100, loss=34.6637, loss_ll=5.89252, loss_ll_paf=9.77487, loss_ll_heat=2.01016, q=1000
+[2018-06-26 03:31:15,704] [train] [INFO] epoch=2.00 step=17400, 10.2270 examples/sec lr=0.000100, loss=48.71, loss_ll=8.90217, loss_ll_paf=14.9418, loss_ll_heat=2.86253, q=1000
+[2018-06-26 03:33:43,209] [train] [INFO] epoch=2.00 step=17500, 10.2304 examples/sec lr=0.000100, loss=32.8871, loss_ll=5.34518, loss_ll_paf=8.85715, loss_ll_heat=1.83322, q=1000
+[2018-06-26 03:36:09,880] [train] [INFO] epoch=2.00 step=17600, 10.2340 examples/sec lr=0.000100, loss=41.7932, loss_ll=8.03163, loss_ll_paf=13.7725, loss_ll_heat=2.29075, q=1000
+[2018-06-26 03:38:38,047] [train] [INFO] epoch=2.00 step=17700, 10.2370 examples/sec lr=0.000100, loss=29.5262, loss_ll=5.39873, loss_ll_paf=8.76851, loss_ll_heat=2.02895, q=1000
+[2018-06-26 03:41:05,860] [train] [INFO] epoch=2.00 step=17800, 10.2401 examples/sec lr=0.000100, loss=39.7223, loss_ll=7.05597, loss_ll_paf=12.4071, loss_ll_heat=1.7048, q=1000
+[2018-06-26 03:43:35,749] [train] [INFO] epoch=2.00 step=17900, 10.2425 examples/sec lr=0.000100, loss=28.8441, loss_ll=5.07399, loss_ll_paf=8.53887, loss_ll_heat=1.60912, q=1000
+[2018-06-26 03:46:03,753] [train] [INFO] epoch=2.00 step=18000, 10.2455 examples/sec lr=0.000100, loss=60.4466, loss_ll=10.7084, loss_ll_paf=18.3896, loss_ll_heat=3.0273, q=1000
+[2018-06-26 03:48:49,815] [train] [INFO] epoch=2.00 step=18100, 10.2419 examples/sec lr=0.000100, loss=30.6351, loss_ll=5.93439, loss_ll_paf=10.1573, loss_ll_heat=1.7115, q=1000
+[2018-06-26 03:51:17,507] [train] [INFO] epoch=2.00 step=18200, 10.2449 examples/sec lr=0.000100, loss=33.0947, loss_ll=5.61144, loss_ll_paf=8.9342, loss_ll_heat=2.28868, q=1000
+[2018-06-26 03:53:49,782] [train] [INFO] epoch=2.00 step=18300, 10.2463 examples/sec lr=0.000100, loss=37.8761, loss_ll=6.4844, loss_ll_paf=10.3882, loss_ll_heat=2.58057, q=1000
+[2018-06-26 03:56:21,697] [train] [INFO] epoch=2.00 step=18400, 10.2479 examples/sec lr=0.000100, loss=34.2423, loss_ll=6.41328, loss_ll_paf=10.6523, loss_ll_heat=2.17425, q=1000
+[2018-06-26 03:58:55,316] [train] [INFO] epoch=2.00 step=18500, 10.2487 examples/sec lr=0.000100, loss=30.272, loss_ll=5.05239, loss_ll_paf=8.22338, loss_ll_heat=1.88141, q=1000
+[2018-06-26 04:01:24,307] [train] [INFO] epoch=2.00 step=18600, 10.2513 examples/sec lr=0.000100, loss=59.6313, loss_ll=11.2012, loss_ll_paf=19.535, loss_ll_heat=2.86732, q=1000
+[2018-06-26 04:03:53,550] [train] [INFO] epoch=2.00 step=18700, 10.2537 examples/sec lr=0.000100, loss=46.4953, loss_ll=8.45503, loss_ll_paf=14.3302, loss_ll_heat=2.57987, q=1000
+[2018-06-26 04:06:19,884] [train] [INFO] epoch=2.00 step=18800, 10.2571 examples/sec lr=0.000100, loss=29.827, loss_ll=5.23546, loss_ll_paf=8.35302, loss_ll_heat=2.11789, q=1000
+[2018-06-26 04:08:55,925] [train] [INFO] epoch=2.00 step=18900, 10.2570 examples/sec lr=0.000100, loss=39.3355, loss_ll=7.57821, loss_ll_paf=12.8753, loss_ll_heat=2.28112, q=1000
+[2018-06-26 04:11:28,539] [train] [INFO] epoch=2.00 step=19000, 10.2582 examples/sec lr=0.000100, loss=35.8506, loss_ll=6.56429, loss_ll_paf=11.0639, loss_ll_heat=2.06464, q=1000
+[2018-06-26 04:14:10,284] [train] [INFO] epoch=2.00 step=19100, 10.2562 examples/sec lr=0.000100, loss=36.8119, loss_ll=6.87348, loss_ll_paf=11.4019, loss_ll_heat=2.34503, q=1000
+[2018-06-26 04:16:43,174] [train] [INFO] epoch=2.00 step=19200, 10.2573 examples/sec lr=0.000100, loss=23.3932, loss_ll=4.28837, loss_ll_paf=6.69211, loss_ll_heat=1.88464, q=1000
+[2018-06-26 04:19:20,470] [train] [INFO] epoch=2.00 step=19300, 10.2568 examples/sec lr=0.000100, loss=34.9118, loss_ll=6.17549, loss_ll_paf=9.45333, loss_ll_heat=2.89765, q=1000
+[2018-06-26 04:21:52,782] [train] [INFO] epoch=2.00 step=19400, 10.2581 examples/sec lr=0.000100, loss=51.6313, loss_ll=10.0239, loss_ll_paf=17.2105, loss_ll_heat=2.83736, q=1000
+[2018-06-26 04:24:20,865] [train] [INFO] epoch=2.00 step=19500, 10.2608 examples/sec lr=0.000100, loss=41.393, loss_ll=7.636, loss_ll_paf=13.2501, loss_ll_heat=2.02196, q=1000
+[2018-06-26 04:26:50,650] [train] [INFO] epoch=2.00 step=19600, 10.2628 examples/sec lr=0.000100, loss=34.9668, loss_ll=6.21847, loss_ll_paf=10.2626, loss_ll_heat=2.17429, q=1000
+[2018-06-26 04:29:28,626] [train] [INFO] epoch=2.00 step=19700, 10.2621 examples/sec lr=0.000100, loss=36.235, loss_ll=6.38041, loss_ll_paf=10.8778, loss_ll_heat=1.883, q=1000
+[2018-06-26 04:31:59,251] [train] [INFO] epoch=2.00 step=19800, 10.2639 examples/sec lr=0.000100, loss=31.9587, loss_ll=5.45774, loss_ll_paf=8.8843, loss_ll_heat=2.03118, q=1000
+[2018-06-26 04:34:27,252] [train] [INFO] epoch=2.00 step=19900, 10.2665 examples/sec lr=0.000100, loss=37.3025, loss_ll=7.26783, loss_ll_paf=12.4127, loss_ll_heat=2.12299, q=1000
+[2018-06-26 04:37:00,642] [train] [INFO] epoch=2.00 step=20000, 10.2673 examples/sec lr=0.000100, loss=35.7533, loss_ll=6.20784, loss_ll_paf=10.3686, loss_ll_heat=2.0471, q=1000
+[2018-06-26 04:39:42,150] [train] [INFO] epoch=2.00 step=20100, 10.2654 examples/sec lr=0.000100, loss=38.0229, loss_ll=6.51604, loss_ll_paf=10.8017, loss_ll_heat=2.23037, q=1000
+[2018-06-26 04:42:16,463] [train] [INFO] epoch=2.00 step=20200, 10.2659 examples/sec lr=0.000100, loss=27.3401, loss_ll=4.85681, loss_ll_paf=7.65403, loss_ll_heat=2.05958, q=1000
+[2018-06-26 04:44:43,217] [train] [INFO] epoch=2.00 step=20300, 10.2689 examples/sec lr=0.000100, loss=31.0464, loss_ll=5.57218, loss_ll_paf=9.51389, loss_ll_heat=1.63047, q=1000
+[2018-06-26 04:47:10,850] [train] [INFO] epoch=2.00 step=20400, 10.2715 examples/sec lr=0.000100, loss=49.2149, loss_ll=9.1873, loss_ll_paf=15.8144, loss_ll_heat=2.56017, q=1000
+[2018-06-26 04:49:45,201] [train] [INFO] epoch=2.00 step=20500, 10.2720 examples/sec lr=0.000100, loss=26.7178, loss_ll=4.91531, loss_ll_paf=8.15292, loss_ll_heat=1.67769, q=1000
+[2018-06-26 04:52:18,383] [train] [INFO] epoch=2.00 step=20600, 10.2728 examples/sec lr=0.000100, loss=25.2633, loss_ll=4.74783, loss_ll_paf=7.83526, loss_ll_heat=1.66041, q=1000
+[2018-06-26 04:54:47,459] [train] [INFO] epoch=2.00 step=20700, 10.2750 examples/sec lr=0.000100, loss=50.8301, loss_ll=9.9247, loss_ll_paf=17.886, loss_ll_heat=1.96341, q=1000
+[2018-06-26 04:57:20,781] [train] [INFO] epoch=2.00 step=20800, 10.2757 examples/sec lr=0.000100, loss=40.5607, loss_ll=7.96631, loss_ll_paf=13.2739, loss_ll_heat=2.65877, q=1000
+[2018-06-26 04:59:54,439] [train] [INFO] epoch=2.00 step=20900, 10.2764 examples/sec lr=0.000100, loss=31.8165, loss_ll=5.81316, loss_ll_paf=9.5978, loss_ll_heat=2.02851, q=1000
+[2018-06-26 05:02:20,453] [train] [INFO] epoch=2.00 step=21000, 10.2794 examples/sec lr=0.000100, loss=34.7053, loss_ll=6.31351, loss_ll_paf=10.4031, loss_ll_heat=2.2239, q=1000
+[2018-06-26 05:05:01,877] [train] [INFO] epoch=2.00 step=21100, 10.2776 examples/sec lr=0.000100, loss=37.8904, loss_ll=6.8512, loss_ll_paf=11.8174, loss_ll_heat=1.88503, q=1000
+[2018-06-26 05:07:29,470] [train] [INFO] epoch=2.00 step=21200, 10.2801 examples/sec lr=0.000100, loss=24.1155, loss_ll=4.16574, loss_ll_paf=6.53009, loss_ll_heat=1.8014, q=1000
+[2018-06-26 05:10:01,987] [train] [INFO] epoch=2.00 step=21300, 10.2811 examples/sec lr=0.000100, loss=36.9334, loss_ll=6.391, loss_ll_paf=10.8152, loss_ll_heat=1.96678, q=1000
+[2018-06-26 05:12:37,122] [train] [INFO] epoch=2.00 step=21400, 10.2812 examples/sec lr=0.000100, loss=27.5086, loss_ll=5.47727, loss_ll_paf=8.81378, loss_ll_heat=2.14076, q=1000
+[2018-06-26 05:15:06,219] [train] [INFO] epoch=2.00 step=21500, 10.2832 examples/sec lr=0.000100, loss=24.3712, loss_ll=4.29523, loss_ll_paf=6.80281, loss_ll_heat=1.78766, q=1000
+[2018-06-26 05:17:37,421] [train] [INFO] epoch=2.00 step=21600, 10.2846 examples/sec lr=0.000100, loss=41.2554, loss_ll=7.38007, loss_ll_paf=13.1136, loss_ll_heat=1.64655, q=1000
+[2018-06-26 05:20:05,208] [train] [INFO] epoch=2.00 step=21700, 10.2870 examples/sec lr=0.000100, loss=34.0143, loss_ll=6.49556, loss_ll_paf=11.0205, loss_ll_heat=1.97067, q=1000
+[2018-06-26 05:22:30,657] [train] [INFO] epoch=2.00 step=21800, 10.2900 examples/sec lr=0.000100, loss=22.167, loss_ll=4.05808, loss_ll_paf=6.04863, loss_ll_heat=2.06752, q=1000
+[2018-06-26 05:24:57,881] [train] [INFO] epoch=2.00 step=21900, 10.2925 examples/sec lr=0.000100, loss=31.314, loss_ll=6.1491, loss_ll_paf=10.842, loss_ll_heat=1.4562, q=1000
+[2018-06-26 05:27:30,488] [train] [INFO] epoch=2.00 step=22000, 10.2934 examples/sec lr=0.000100, loss=37.9515, loss_ll=6.78696, loss_ll_paf=11.219, loss_ll_heat=2.35495, q=1000
+[2018-06-26 05:30:16,642] [train] [INFO] epoch=2.00 step=22100, 10.2902 examples/sec lr=0.000100, loss=19.7885, loss_ll=3.31931, loss_ll_paf=4.75463, loss_ll_heat=1.88398, q=1000
+[2018-06-26 05:32:51,327] [train] [INFO] epoch=2.00 step=22200, 10.2904 examples/sec lr=0.000100, loss=39.1776, loss_ll=6.8091, loss_ll_paf=11.3137, loss_ll_heat=2.30454, q=1000
+[2018-06-26 05:35:29,341] [train] [INFO] epoch=2.00 step=22300, 10.2897 examples/sec lr=0.000100, loss=22.6982, loss_ll=4.10859, loss_ll_paf=5.73299, loss_ll_heat=2.48419, q=1000
+[2018-06-26 05:38:05,367] [train] [INFO] epoch=2.00 step=22400, 10.2895 examples/sec lr=0.000100, loss=33.9377, loss_ll=6.00975, loss_ll_paf=9.70296, loss_ll_heat=2.31653, q=1000
+[2018-06-26 05:40:36,611] [train] [INFO] epoch=2.00 step=22500, 10.2907 examples/sec lr=0.000100, loss=22.4183, loss_ll=3.72948, loss_ll_paf=5.44372, loss_ll_heat=2.01524, q=1000
+[2018-06-26 05:43:08,590] [train] [INFO] epoch=2.00 step=22600, 10.2918 examples/sec lr=0.000100, loss=37.52, loss_ll=7.13567, loss_ll_paf=12.3864, loss_ll_heat=1.88489, q=1000
+[2018-06-26 05:45:36,221] [train] [INFO] epoch=2.00 step=22700, 10.2941 examples/sec lr=0.000100, loss=40.9883, loss_ll=7.01674, loss_ll_paf=12.1705, loss_ll_heat=1.86295, q=1000
+[2018-06-26 05:48:06,438] [train] [INFO] epoch=2.00 step=22800, 10.2956 examples/sec lr=0.000100, loss=44.842, loss_ll=8.3467, loss_ll_paf=14.1343, loss_ll_heat=2.55907, q=1000
+[2018-06-26 05:50:37,929] [train] [INFO] epoch=3.00 step=22900, 10.2967 examples/sec lr=0.000100, loss=24.2998, loss_ll=4.29496, loss_ll_paf=7.00868, loss_ll_heat=1.58125, q=1000
+[2018-06-26 05:53:08,630] [train] [INFO] epoch=3.00 step=23000, 10.2981 examples/sec lr=0.000100, loss=21.3242, loss_ll=3.73052, loss_ll_paf=5.7705, loss_ll_heat=1.69053, q=1000
+[2018-06-26 05:55:49,888] [train] [INFO] epoch=3.00 step=23100, 10.2964 examples/sec lr=0.000100, loss=35.9838, loss_ll=6.66038, loss_ll_paf=10.948, loss_ll_heat=2.37278, q=1000
+[2018-06-26 05:58:16,749] [train] [INFO] epoch=3.00 step=23200, 10.2988 examples/sec lr=0.000100, loss=31.737, loss_ll=5.06432, loss_ll_paf=8.31687, loss_ll_heat=1.81177, q=1000
+[2018-06-26 06:00:43,405] [train] [INFO] epoch=3.00 step=23300, 10.3013 examples/sec lr=0.000100, loss=34.2854, loss_ll=6.00252, loss_ll_paf=9.72473, loss_ll_heat=2.28032, q=1000
+[2018-06-26 06:03:11,243] [train] [INFO] epoch=3.00 step=23400, 10.3034 examples/sec lr=0.000100, loss=26.2991, loss_ll=4.77328, loss_ll_paf=7.46781, loss_ll_heat=2.07875, q=1000
+[2018-06-26 06:05:38,551] [train] [INFO] epoch=3.00 step=23500, 10.3057 examples/sec lr=0.000100, loss=42.0323, loss_ll=8.06393, loss_ll_paf=13.6969, loss_ll_heat=2.43097, q=1000
+[2018-06-26 06:08:13,058] [train] [INFO] epoch=3.00 step=23600, 10.3059 examples/sec lr=0.000100, loss=28.1581, loss_ll=5.44665, loss_ll_paf=9.27704, loss_ll_heat=1.61625, q=1000
+[2018-06-26 06:10:48,302] [train] [INFO] epoch=3.00 step=23700, 10.3059 examples/sec lr=0.000100, loss=22.0338, loss_ll=4.15614, loss_ll_paf=6.86062, loss_ll_heat=1.45166, q=1000
+[2018-06-26 06:13:16,919] [train] [INFO] epoch=3.00 step=23800, 10.3077 examples/sec lr=0.000100, loss=23.5014, loss_ll=4.19199, loss_ll_paf=6.81769, loss_ll_heat=1.56629, q=1000
+[2018-06-26 06:15:44,257] [train] [INFO] epoch=3.00 step=23900, 10.3099 examples/sec lr=0.000100, loss=20.4379, loss_ll=3.39466, loss_ll_paf=5.35182, loss_ll_heat=1.43751, q=1000
+[2018-06-26 06:18:11,236] [train] [INFO] epoch=3.00 step=24000, 10.3122 examples/sec lr=0.000100, loss=26.9672, loss_ll=4.60633, loss_ll_paf=6.79043, loss_ll_heat=2.42223, q=1000
+[2018-06-26 06:20:58,011] [train] [INFO] epoch=3.00 step=24100, 10.3090 examples/sec lr=0.000100, loss=42.018, loss_ll=6.9905, loss_ll_paf=12.3182, loss_ll_heat=1.66278, q=1000
+[2018-06-26 06:23:27,681] [train] [INFO] epoch=3.00 step=24200, 10.3105 examples/sec lr=0.000100, loss=42.801, loss_ll=7.71295, loss_ll_paf=13.1081, loss_ll_heat=2.31782, q=1000
+[2018-06-26 06:26:01,095] [train] [INFO] epoch=3.00 step=24300, 10.3110 examples/sec lr=0.000100, loss=36.1549, loss_ll=6.50619, loss_ll_paf=10.855, loss_ll_heat=2.15736, q=1000
+[2018-06-26 06:28:33,787] [train] [INFO] epoch=3.00 step=24400, 10.3117 examples/sec lr=0.000100, loss=19.8854, loss_ll=3.65676, loss_ll_paf=5.59754, loss_ll_heat=1.71598, q=1000
+[2018-06-26 06:31:08,271] [train] [INFO] epoch=3.00 step=24500, 10.3118 examples/sec lr=0.000100, loss=27.7756, loss_ll=4.62753, loss_ll_paf=7.00083, loss_ll_heat=2.25423, q=1000
+[2018-06-26 06:33:35,817] [train] [INFO] epoch=3.00 step=24600, 10.3139 examples/sec lr=0.000100, loss=28.5826, loss_ll=5.31351, loss_ll_paf=8.89837, loss_ll_heat=1.72865, q=1000
+[2018-06-26 06:36:05,203] [train] [INFO] epoch=3.00 step=24700, 10.3154 examples/sec lr=0.000100, loss=30.8423, loss_ll=5.88714, loss_ll_paf=10.4407, loss_ll_heat=1.33357, q=1000
+[2018-06-26 06:38:38,196] [train] [INFO] epoch=3.00 step=24800, 10.3160 examples/sec lr=0.000100, loss=41.739, loss_ll=7.94711, loss_ll_paf=13.4845, loss_ll_heat=2.40973, q=1000
+[2018-06-26 06:41:12,130] [train] [INFO] epoch=3.00 step=24900, 10.3163 examples/sec lr=0.000100, loss=30.5966, loss_ll=5.65665, loss_ll_paf=9.60672, loss_ll_heat=1.70659, q=1000
+[2018-06-26 06:43:42,236] [train] [INFO] epoch=3.00 step=25000, 10.3177 examples/sec lr=0.000100, loss=30.0003, loss_ll=5.86358, loss_ll_paf=9.83858, loss_ll_heat=1.88858, q=1000
+[2018-06-26 06:46:22,688] [train] [INFO] epoch=3.00 step=25100, 10.3162 examples/sec lr=0.000100, loss=39.1746, loss_ll=7.20406, loss_ll_paf=12.6842, loss_ll_heat=1.72394, q=1000
+[2018-06-26 06:48:52,782] [train] [INFO] epoch=3.00 step=25200, 10.3175 examples/sec lr=0.000100, loss=34.7791, loss_ll=6.05192, loss_ll_paf=10.2625, loss_ll_heat=1.84137, q=1000
+[2018-06-26 06:51:24,162] [train] [INFO] epoch=3.00 step=25300, 10.3185 examples/sec lr=0.000100, loss=31.3708, loss_ll=5.27212, loss_ll_paf=8.40136, loss_ll_heat=2.14287, q=1000
+[2018-06-26 06:53:54,313] [train] [INFO] epoch=3.00 step=25400, 10.3198 examples/sec lr=0.000100, loss=25.5805, loss_ll=4.47279, loss_ll_paf=7.29143, loss_ll_heat=1.65414, q=1000
+[2018-06-26 06:56:27,583] [train] [INFO] epoch=3.00 step=25500, 10.3203 examples/sec lr=0.000100, loss=30.2018, loss_ll=5.27646, loss_ll_paf=8.31335, loss_ll_heat=2.23957, q=1000
+[2018-06-26 06:59:03,028] [train] [INFO] epoch=3.00 step=25600, 10.3202 examples/sec lr=0.000100, loss=29.9197, loss_ll=5.19814, loss_ll_paf=8.8362, loss_ll_heat=1.56007, q=1000
+[2018-06-26 07:01:29,548] [train] [INFO] epoch=3.00 step=25700, 10.3224 examples/sec lr=0.000100, loss=32.4329, loss_ll=5.56563, loss_ll_paf=9.21648, loss_ll_heat=1.91478, q=1000
+[2018-06-26 07:03:59,531] [train] [INFO] epoch=3.00 step=25800, 10.3237 examples/sec lr=0.000100, loss=25.7808, loss_ll=4.8734, loss_ll_paf=8.14849, loss_ll_heat=1.5983, q=1000
+[2018-06-26 07:06:27,736] [train] [INFO] epoch=3.00 step=25900, 10.3254 examples/sec lr=0.000100, loss=16.0891, loss_ll=2.63152, loss_ll_paf=3.86836, loss_ll_heat=1.39468, q=1000
+[2018-06-26 07:08:57,427] [train] [INFO] epoch=3.00 step=26000, 10.3268 examples/sec lr=0.000100, loss=37.4159, loss_ll=6.85023, loss_ll_paf=11.6125, loss_ll_heat=2.08792, q=1000
+[2018-06-26 07:11:38,835] [train] [INFO] epoch=3.00 step=26100, 10.3251 examples/sec lr=0.000100, loss=32.8746, loss_ll=5.90715, loss_ll_paf=10.0657, loss_ll_heat=1.74857, q=1000
+[2018-06-26 07:14:04,052] [train] [INFO] epoch=3.00 step=26200, 10.3276 examples/sec lr=0.000100, loss=42.0308, loss_ll=7.98775, loss_ll_paf=13.5824, loss_ll_heat=2.3931, q=1000
+[2018-06-26 07:16:31,966] [train] [INFO] epoch=3.00 step=26300, 10.3294 examples/sec lr=0.000100, loss=19.0137, loss_ll=3.42107, loss_ll_paf=5.27876, loss_ll_heat=1.56338, q=1000
+[2018-06-26 07:19:04,559] [train] [INFO] epoch=3.00 step=26400, 10.3299 examples/sec lr=0.000100, loss=17.5099, loss_ll=3.12771, loss_ll_paf=4.56236, loss_ll_heat=1.69307, q=1000
+[2018-06-26 07:21:33,372] [train] [INFO] epoch=3.00 step=26500, 10.3315 examples/sec lr=0.000100, loss=28.6724, loss_ll=5.24706, loss_ll_paf=8.58636, loss_ll_heat=1.90776, q=1000
+[2018-06-26 07:24:08,358] [train] [INFO] epoch=3.00 step=26600, 10.3314 examples/sec lr=0.000100, loss=47.9486, loss_ll=9.25999, loss_ll_paf=16.3774, loss_ll_heat=2.14259, q=1000
+[2018-06-26 07:26:45,011] [train] [INFO] epoch=3.00 step=26700, 10.3310 examples/sec lr=0.000100, loss=25.4546, loss_ll=3.98334, loss_ll_paf=6.35449, loss_ll_heat=1.61219, q=1000
+[2018-06-26 07:29:19,522] [train] [INFO] epoch=3.00 step=26800, 10.3311 examples/sec lr=0.000100, loss=40.3048, loss_ll=6.93972, loss_ll_paf=11.2383, loss_ll_heat=2.64111, q=1000
+[2018-06-26 07:31:48,805] [train] [INFO] epoch=3.00 step=26900, 10.3325 examples/sec lr=0.000100, loss=28.2502, loss_ll=5.28117, loss_ll_paf=8.89286, loss_ll_heat=1.66948, q=1000
+[2018-06-26 07:34:20,371] [train] [INFO] epoch=3.00 step=27000, 10.3333 examples/sec lr=0.000100, loss=40.6537, loss_ll=7.07245, loss_ll_paf=12.3534, loss_ll_heat=1.79147, q=1000
+[2018-06-26 07:37:05,668] [train] [INFO] epoch=3.00 step=27100, 10.3307 examples/sec lr=0.000100, loss=45.1515, loss_ll=8.31005, loss_ll_paf=14.4181, loss_ll_heat=2.20194, q=1000
+[2018-06-26 07:39:36,034] [train] [INFO] epoch=3.00 step=27200, 10.3318 examples/sec lr=0.000100, loss=47.7406, loss_ll=7.70283, loss_ll_paf=12.6107, loss_ll_heat=2.79498, q=1000
+[2018-06-26 07:42:04,341] [train] [INFO] epoch=3.00 step=27300, 10.3334 examples/sec lr=0.000100, loss=19.7805, loss_ll=3.46307, loss_ll_paf=5.3414, loss_ll_heat=1.58474, q=1000
+[2018-06-26 07:44:33,067] [train] [INFO] epoch=3.00 step=27400, 10.3349 examples/sec lr=0.000100, loss=21.6517, loss_ll=3.78966, loss_ll_paf=6.38081, loss_ll_heat=1.19852, q=1000
+[2018-06-26 07:47:08,537] [train] [INFO] epoch=3.00 step=27500, 10.3348 examples/sec lr=0.000100, loss=25.3343, loss_ll=4.26713, loss_ll_paf=6.82016, loss_ll_heat=1.7141, q=1000
+[2018-06-26 07:49:36,843] [train] [INFO] epoch=3.00 step=27600, 10.3363 examples/sec lr=0.000100, loss=26.1688, loss_ll=4.18566, loss_ll_paf=6.2181, loss_ll_heat=2.15322, q=1000
+[2018-06-26 07:52:04,101] [train] [INFO] epoch=3.00 step=27700, 10.3381 examples/sec lr=0.000100, loss=34.7449, loss_ll=6.04407, loss_ll_paf=10.0694, loss_ll_heat=2.01873, q=1000
+[2018-06-26 07:54:33,203] [train] [INFO] epoch=3.00 step=27800, 10.3395 examples/sec lr=0.000100, loss=41.9027, loss_ll=7.18713, loss_ll_paf=12.0112, loss_ll_heat=2.36305, q=1000
+[2018-06-26 07:57:09,610] [train] [INFO] epoch=3.00 step=27900, 10.3391 examples/sec lr=0.000100, loss=24.4805, loss_ll=4.4758, loss_ll_paf=7.10482, loss_ll_heat=1.84679, q=1000
+[2018-06-26 07:59:41,906] [train] [INFO] epoch=3.00 step=28000, 10.3397 examples/sec lr=0.000100, loss=56.5468, loss_ll=10.7378, loss_ll_paf=18.7494, loss_ll_heat=2.72619, q=1000
+[2018-06-26 08:02:32,373] [train] [INFO] epoch=3.00 step=28100, 10.3360 examples/sec lr=0.000100, loss=23.9375, loss_ll=4.21807, loss_ll_paf=6.91125, loss_ll_heat=1.52489, q=1000
+[2018-06-26 08:05:04,999] [train] [INFO] epoch=3.00 step=28200, 10.3365 examples/sec lr=0.000100, loss=44.7672, loss_ll=7.97407, loss_ll_paf=13.7818, loss_ll_heat=2.16633, q=1000
+[2018-06-26 08:07:37,610] [train] [INFO] epoch=3.00 step=28300, 10.3370 examples/sec lr=0.000100, loss=37.4482, loss_ll=7.32042, loss_ll_paf=12.0261, loss_ll_heat=2.6147, q=1000
+[2018-06-26 08:10:06,081] [train] [INFO] epoch=3.00 step=28400, 10.3385 examples/sec lr=0.000100, loss=37.8404, loss_ll=6.79496, loss_ll_paf=11.5862, loss_ll_heat=2.0037, q=1000
+[2018-06-26 08:12:36,179] [train] [INFO] epoch=3.00 step=28500, 10.3396 examples/sec lr=0.000100, loss=21.6344, loss_ll=3.91221, loss_ll_paf=6.34623, loss_ll_heat=1.4782, q=1000
+[2018-06-26 08:15:09,797] [train] [INFO] epoch=3.00 step=28600, 10.3398 examples/sec lr=0.000100, loss=31.0551, loss_ll=5.88055, loss_ll_paf=10.1296, loss_ll_heat=1.63151, q=1000
+[2018-06-26 08:17:45,140] [train] [INFO] epoch=3.00 step=28700, 10.3397 examples/sec lr=0.000100, loss=47.8675, loss_ll=9.06273, loss_ll_paf=15.6948, loss_ll_heat=2.43062, q=1000
+[2018-06-26 08:20:20,982] [train] [INFO] epoch=3.00 step=28800, 10.3394 examples/sec lr=0.000100, loss=39.7471, loss_ll=7.60622, loss_ll_paf=12.7733, loss_ll_heat=2.43912, q=1000
+[2018-06-26 08:22:48,467] [train] [INFO] epoch=3.00 step=28900, 10.3411 examples/sec lr=0.000100, loss=33.4736, loss_ll=6.22327, loss_ll_paf=10.6971, loss_ll_heat=1.74941, q=1000
+[2018-06-26 08:25:17,072] [train] [INFO] epoch=3.00 step=29000, 10.3425 examples/sec lr=0.000100, loss=29.3002, loss_ll=5.54451, loss_ll_paf=9.30097, loss_ll_heat=1.78805, q=1000
+[2018-06-26 08:27:57,912] [train] [INFO] epoch=3.00 step=29100, 10.3411 examples/sec lr=0.000100, loss=39.1418, loss_ll=6.84772, loss_ll_paf=11.7937, loss_ll_heat=1.90176, q=1000
+[2018-06-26 08:30:30,295] [train] [INFO] epoch=3.00 step=29200, 10.3416 examples/sec lr=0.000100, loss=36.8867, loss_ll=6.43786, loss_ll_paf=10.3817, loss_ll_heat=2.49399, q=1000
+[2018-06-26 08:32:57,134] [train] [INFO] epoch=3.00 step=29300, 10.3434 examples/sec lr=0.000100, loss=42.856, loss_ll=7.79489, loss_ll_paf=13.4862, loss_ll_heat=2.10355, q=1000
+[2018-06-26 08:35:29,213] [train] [INFO] epoch=3.00 step=29400, 10.3440 examples/sec lr=0.000100, loss=19.3363, loss_ll=3.40598, loss_ll_paf=5.48362, loss_ll_heat=1.32835, q=1000
+[2018-06-26 08:38:03,093] [train] [INFO] epoch=3.00 step=29500, 10.3442 examples/sec lr=0.000100, loss=23.4771, loss_ll=4.40269, loss_ll_paf=7.05828, loss_ll_heat=1.7471, q=1000
+[2018-06-26 08:40:33,473] [train] [INFO] epoch=3.00 step=29600, 10.3452 examples/sec lr=0.000100, loss=39.7693, loss_ll=7.39469, loss_ll_paf=12.9978, loss_ll_heat=1.79154, q=1000
+[2018-06-26 08:43:06,141] [train] [INFO] epoch=3.00 step=29700, 10.3456 examples/sec lr=0.000100, loss=38.0176, loss_ll=6.97764, loss_ll_paf=11.7758, loss_ll_heat=2.17945, q=1000
+[2018-06-26 08:45:41,752] [train] [INFO] epoch=3.00 step=29800, 10.3454 examples/sec lr=0.000100, loss=38.799, loss_ll=7.45005, loss_ll_paf=12.9862, loss_ll_heat=1.91393, q=1000
+[2018-06-26 08:48:15,469] [train] [INFO] epoch=3.00 step=29900, 10.3456 examples/sec lr=0.000100, loss=33.8942, loss_ll=5.9441, loss_ll_paf=9.63435, loss_ll_heat=2.25385, q=1000
+[2018-06-26 08:50:50,922] [train] [INFO] epoch=3.00 step=30000, 10.3455 examples/sec lr=0.000033, loss=32.8431, loss_ll=6.15172, loss_ll_paf=10.1461, loss_ll_heat=2.15736, q=1000
+[2018-06-26 08:53:38,977] [train] [INFO] epoch=3.00 step=30100, 10.3425 examples/sec lr=0.000033, loss=37.9936, loss_ll=7.34903, loss_ll_paf=12.5683, loss_ll_heat=2.12972, q=1000
+[2018-06-26 08:56:12,696] [train] [INFO] epoch=3.00 step=30200, 10.3427 examples/sec lr=0.000033, loss=17.8806, loss_ll=3.21622, loss_ll_paf=4.83398, loss_ll_heat=1.59845, q=1000
+[2018-06-26 08:58:47,146] [train] [INFO] epoch=3.00 step=30300, 10.3428 examples/sec lr=0.000033, loss=33.3729, loss_ll=6.19331, loss_ll_paf=10.2906, loss_ll_heat=2.09603, q=1000
+[2018-06-26 09:01:17,169] [train] [INFO] epoch=3.00 step=30400, 10.3438 examples/sec lr=0.000033, loss=16.6451, loss_ll=3.05311, loss_ll_paf=4.44688, loss_ll_heat=1.65935, q=1000
+[2018-06-26 09:03:49,448] [train] [INFO] epoch=4.00 step=30500, 10.3443 examples/sec lr=0.000033, loss=20.6633, loss_ll=3.79114, loss_ll_paf=6.21371, loss_ll_heat=1.36857, q=1000
+[2018-06-26 09:06:21,947] [train] [INFO] epoch=4.00 step=30600, 10.3448 examples/sec lr=0.000033, loss=26.855, loss_ll=5.25918, loss_ll_paf=8.44547, loss_ll_heat=2.0729, q=1000
+[2018-06-26 09:08:51,794] [train] [INFO] epoch=4.00 step=30700, 10.3458 examples/sec lr=0.000033, loss=29.7848, loss_ll=5.1309, loss_ll_paf=9.06248, loss_ll_heat=1.19932, q=1000
+[2018-06-26 09:11:23,384] [train] [INFO] epoch=4.00 step=30800, 10.3465 examples/sec lr=0.000033, loss=29.7767, loss_ll=5.53938, loss_ll_paf=8.96085, loss_ll_heat=2.11792, q=1000
+[2018-06-26 09:13:53,693] [train] [INFO] epoch=4.00 step=30900, 10.3474 examples/sec lr=0.000033, loss=19.0073, loss_ll=3.48569, loss_ll_paf=5.68251, loss_ll_heat=1.28886, q=1000
+[2018-06-26 09:16:25,474] [train] [INFO] epoch=4.00 step=31000, 10.3480 examples/sec lr=0.000033, loss=28.5235, loss_ll=5.52848, loss_ll_paf=9.51582, loss_ll_heat=1.54115, q=1000
+[2018-06-26 09:19:05,538] [train] [INFO] epoch=4.00 step=31100, 10.3469 examples/sec lr=0.000033, loss=23.7221, loss_ll=4.32457, loss_ll_paf=7.28628, loss_ll_heat=1.36285, q=1000
+[2018-06-26 09:21:36,192] [train] [INFO] epoch=4.00 step=31200, 10.3477 examples/sec lr=0.000033, loss=17.2936, loss_ll=3.09777, loss_ll_paf=4.49942, loss_ll_heat=1.69611, q=1000
+[2018-06-26 09:24:06,207] [train] [INFO] epoch=4.00 step=31300, 10.3487 examples/sec lr=0.000033, loss=18.811, loss_ll=3.38611, loss_ll_paf=5.03566, loss_ll_heat=1.73655, q=1000
+[2018-06-26 09:26:36,562] [train] [INFO] epoch=4.00 step=31400, 10.3496 examples/sec lr=0.000033, loss=31.187, loss_ll=5.7218, loss_ll_paf=10.0857, loss_ll_heat=1.35789, q=1000
+[2018-06-26 09:29:05,846] [train] [INFO] epoch=4.00 step=31500, 10.3508 examples/sec lr=0.000033, loss=23.5712, loss_ll=4.43136, loss_ll_paf=7.39052, loss_ll_heat=1.4722, q=1000
+[2018-06-26 09:31:33,775] [train] [INFO] epoch=4.00 step=31600, 10.3522 examples/sec lr=0.000033, loss=24.4932, loss_ll=3.87273, loss_ll_paf=6.57548, loss_ll_heat=1.16998, q=1000
+[2018-06-26 09:34:03,652] [train] [INFO] epoch=4.00 step=31700, 10.3532 examples/sec lr=0.000033, loss=29.7743, loss_ll=5.57645, loss_ll_paf=9.4827, loss_ll_heat=1.67019, q=1000
+[2018-06-26 09:36:33,443] [train] [INFO] epoch=4.00 step=31800, 10.3542 examples/sec lr=0.000033, loss=35.4778, loss_ll=6.59534, loss_ll_paf=10.8727, loss_ll_heat=2.31795, q=1000
+[2018-06-26 09:39:04,496] [train] [INFO] epoch=4.00 step=31900, 10.3549 examples/sec lr=0.000033, loss=36.2231, loss_ll=6.77258, loss_ll_paf=11.5698, loss_ll_heat=1.97532, q=1000
+[2018-06-26 09:41:36,418] [train] [INFO] epoch=4.00 step=32000, 10.3554 examples/sec lr=0.000033, loss=33.0476, loss_ll=5.75038, loss_ll_paf=9.45669, loss_ll_heat=2.04406, q=1000
+[2018-06-26 09:44:21,666] [train] [INFO] epoch=4.00 step=32100, 10.3532 examples/sec lr=0.000033, loss=40.3714, loss_ll=7.23229, loss_ll_paf=12.7565, loss_ll_heat=1.70812, q=1000
+[2018-06-26 09:46:50,596] [train] [INFO] epoch=4.00 step=32200, 10.3544 examples/sec lr=0.000033, loss=33.3285, loss_ll=5.67601, loss_ll_paf=9.24996, loss_ll_heat=2.10206, q=1000
+[2018-06-26 09:49:22,039] [train] [INFO] epoch=4.00 step=32300, 10.3550 examples/sec lr=0.000033, loss=21.8811, loss_ll=3.69442, loss_ll_paf=6.02282, loss_ll_heat=1.36601, q=1000
+[2018-06-26 09:51:52,129] [train] [INFO] epoch=4.00 step=32400, 10.3559 examples/sec lr=0.000033, loss=21.3444, loss_ll=3.67454, loss_ll_paf=6.13032, loss_ll_heat=1.21877, q=1000
+[2018-06-26 09:54:20,052] [train] [INFO] epoch=4.00 step=32500, 10.3573 examples/sec lr=0.000033, loss=22.0474, loss_ll=4.03183, loss_ll_paf=6.67313, loss_ll_heat=1.39054, q=1000
+[2018-06-26 09:56:52,509] [train] [INFO] epoch=4.00 step=32600, 10.3577 examples/sec lr=0.000033, loss=24.6565, loss_ll=4.47317, loss_ll_paf=7.05235, loss_ll_heat=1.89398, q=1000
+[2018-06-26 09:59:19,218] [train] [INFO] epoch=4.00 step=32700, 10.3593 examples/sec lr=0.000033, loss=17.3038, loss_ll=3.11861, loss_ll_paf=4.59012, loss_ll_heat=1.64709, q=1000
+[2018-06-26 10:01:48,469] [train] [INFO] epoch=4.00 step=32800, 10.3603 examples/sec lr=0.000033, loss=23.3986, loss_ll=4.18655, loss_ll_paf=6.70804, loss_ll_heat=1.66506, q=1000
+[2018-06-26 10:04:15,816] [train] [INFO] epoch=4.00 step=32900, 10.3618 examples/sec lr=0.000033, loss=26.091, loss_ll=5.17604, loss_ll_paf=8.84582, loss_ll_heat=1.50627, q=1000
+[2018-06-26 10:06:45,066] [train] [INFO] epoch=4.00 step=33000, 10.3628 examples/sec lr=0.000033, loss=18.6931, loss_ll=3.48855, loss_ll_paf=5.12058, loss_ll_heat=1.85651, q=1000
+[2018-06-26 10:09:28,026] [train] [INFO] epoch=4.00 step=33100, 10.3611 examples/sec lr=0.000033, loss=29.8022, loss_ll=5.08876, loss_ll_paf=8.28763, loss_ll_heat=1.88988, q=1000
+[2018-06-26 10:11:58,131] [train] [INFO] epoch=4.00 step=33200, 10.3620 examples/sec lr=0.000033, loss=25.0699, loss_ll=4.71011, loss_ll_paf=7.62147, loss_ll_heat=1.79876, q=1000
+[2018-06-26 10:14:26,944] [train] [INFO] epoch=4.00 step=33300, 10.3631 examples/sec lr=0.000033, loss=33.4641, loss_ll=5.87419, loss_ll_paf=9.95666, loss_ll_heat=1.79172, q=1000
+[2018-06-26 10:16:56,053] [train] [INFO] epoch=4.00 step=33400, 10.3642 examples/sec lr=0.000033, loss=18.7152, loss_ll=3.1912, loss_ll_paf=4.86723, loss_ll_heat=1.51517, q=1000
+[2018-06-26 10:19:25,966] [train] [INFO] epoch=4.00 step=33500, 10.3651 examples/sec lr=0.000033, loss=25.8615, loss_ll=4.81725, loss_ll_paf=8.27933, loss_ll_heat=1.35517, q=1000
+[2018-06-26 10:21:55,149] [train] [INFO] epoch=4.00 step=33600, 10.3661 examples/sec lr=0.000033, loss=30.3543, loss_ll=5.77208, loss_ll_paf=10.6524, loss_ll_heat=0.891727, q=1000
+[2018-06-26 10:24:21,243] [train] [INFO] epoch=4.00 step=33700, 10.3677 examples/sec lr=0.000033, loss=35.4901, loss_ll=6.61469, loss_ll_paf=10.7172, loss_ll_heat=2.51212, q=1000
+[2018-06-26 10:26:49,117] [train] [INFO] epoch=4.00 step=33800, 10.3690 examples/sec lr=0.000033, loss=21.4973, loss_ll=3.7858, loss_ll_paf=5.92533, loss_ll_heat=1.64626, q=1000
+[2018-06-26 10:29:18,748] [train] [INFO] epoch=4.00 step=33900, 10.3699 examples/sec lr=0.000033, loss=27.8583, loss_ll=4.91397, loss_ll_paf=8.4458, loss_ll_heat=1.38214, q=1000
+[2018-06-26 10:31:46,096] [train] [INFO] epoch=4.00 step=34000, 10.3713 examples/sec lr=0.000033, loss=20.3294, loss_ll=3.80308, loss_ll_paf=6.36911, loss_ll_heat=1.23705, q=1000
+[2018-06-26 10:34:26,046] [train] [INFO] epoch=4.00 step=34100, 10.3702 examples/sec lr=0.000033, loss=30.5638, loss_ll=5.74807, loss_ll_paf=10.0345, loss_ll_heat=1.46165, q=1000
+[2018-06-26 10:36:52,774] [train] [INFO] epoch=4.00 step=34200, 10.3717 examples/sec lr=0.000033, loss=38.7095, loss_ll=6.95258, loss_ll_paf=11.6705, loss_ll_heat=2.23468, q=1000
+[2018-06-26 10:39:21,301] [train] [INFO] epoch=4.00 step=34300, 10.3728 examples/sec lr=0.000033, loss=30.4537, loss_ll=5.75084, loss_ll_paf=9.49528, loss_ll_heat=2.0064, q=1000
+[2018-06-26 10:41:51,700] [train] [INFO] epoch=4.00 step=34400, 10.3736 examples/sec lr=0.000033, loss=21.9018, loss_ll=4.03381, loss_ll_paf=6.42249, loss_ll_heat=1.64512, q=1000
+[2018-06-26 10:44:17,121] [train] [INFO] epoch=4.00 step=34500, 10.3753 examples/sec lr=0.000033, loss=28.0781, loss_ll=4.95835, loss_ll_paf=7.77549, loss_ll_heat=2.1412, q=1000
+[2018-06-26 10:46:44,342] [train] [INFO] epoch=4.00 step=34600, 10.3766 examples/sec lr=0.000033, loss=29.692, loss_ll=5.36072, loss_ll_paf=9.54054, loss_ll_heat=1.18091, q=1000
+[2018-06-26 10:49:12,128] [train] [INFO] epoch=4.00 step=34700, 10.3779 examples/sec lr=0.000033, loss=18.9499, loss_ll=3.35345, loss_ll_paf=5.06455, loss_ll_heat=1.64235, q=1000
+[2018-06-26 10:51:40,976] [train] [INFO] epoch=4.00 step=34800, 10.3789 examples/sec lr=0.000033, loss=25.3927, loss_ll=4.85706, loss_ll_paf=8.10488, loss_ll_heat=1.60925, q=1000
+[2018-06-26 10:54:06,838] [train] [INFO] epoch=4.00 step=34900, 10.3805 examples/sec lr=0.000033, loss=29.048, loss_ll=5.18881, loss_ll_paf=8.39334, loss_ll_heat=1.98427, q=1000
+[2018-06-26 10:56:34,035] [train] [INFO] epoch=4.00 step=35000, 10.3818 examples/sec lr=0.000033, loss=20.1097, loss_ll=3.69596, loss_ll_paf=5.65004, loss_ll_heat=1.74187, q=1000
+[2018-06-26 10:59:16,782] [train] [INFO] epoch=4.00 step=35100, 10.3802 examples/sec lr=0.000033, loss=23.4059, loss_ll=4.09415, loss_ll_paf=7.02855, loss_ll_heat=1.15975, q=1000
+[2018-06-26 11:01:48,298] [train] [INFO] epoch=4.00 step=35200, 10.3807 examples/sec lr=0.000033, loss=23.9023, loss_ll=3.94427, loss_ll_paf=5.96187, loss_ll_heat=1.92667, q=1000
+[2018-06-26 11:04:18,331] [train] [INFO] epoch=4.00 step=35300, 10.3815 examples/sec lr=0.000033, loss=22.0654, loss_ll=4.12058, loss_ll_paf=6.80806, loss_ll_heat=1.4331, q=1000
+[2018-06-26 11:06:44,874] [train] [INFO] epoch=4.00 step=35400, 10.3829 examples/sec lr=0.000033, loss=27.0411, loss_ll=5.07014, loss_ll_paf=8.31257, loss_ll_heat=1.82771, q=1000
+[2018-06-26 11:09:11,656] [train] [INFO] epoch=4.00 step=35500, 10.3843 examples/sec lr=0.000033, loss=21.2273, loss_ll=3.79778, loss_ll_paf=6.36447, loss_ll_heat=1.23109, q=1000
+[2018-06-26 11:11:39,517] [train] [INFO] epoch=4.00 step=35600, 10.3855 examples/sec lr=0.000033, loss=10.3893, loss_ll=1.77931, loss_ll_paf=2.6545, loss_ll_heat=0.904119, q=1000
+[2018-06-26 11:14:06,709] [train] [INFO] epoch=4.00 step=35700, 10.3868 examples/sec lr=0.000033, loss=19.543, loss_ll=3.40966, loss_ll_paf=5.34274, loss_ll_heat=1.47658, q=1000
+[2018-06-26 11:16:35,308] [train] [INFO] epoch=4.00 step=35800, 10.3878 examples/sec lr=0.000033, loss=18.2106, loss_ll=3.46055, loss_ll_paf=5.04102, loss_ll_heat=1.88008, q=1000
+[2018-06-26 11:19:05,071] [train] [INFO] epoch=4.00 step=35900, 10.3886 examples/sec lr=0.000033, loss=32.5626, loss_ll=6.14774, loss_ll_paf=10.1047, loss_ll_heat=2.19078, q=1000
+[2018-06-26 11:21:31,627] [train] [INFO] epoch=4.00 step=36000, 10.3900 examples/sec lr=0.000033, loss=34.2677, loss_ll=6.1885, loss_ll_paf=10.6148, loss_ll_heat=1.76216, q=1000
+[2018-06-26 11:24:21,641] [train] [INFO] epoch=4.00 step=36100, 10.3870 examples/sec lr=0.000033, loss=21.1365, loss_ll=3.71264, loss_ll_paf=6.14068, loss_ll_heat=1.2846, q=1000
+[2018-06-26 11:26:57,922] [train] [INFO] epoch=4.00 step=36200, 10.3866 examples/sec lr=0.000033, loss=28.7507, loss_ll=5.50404, loss_ll_paf=9.14094, loss_ll_heat=1.86713, q=1000
+[2018-06-26 11:29:36,488] [train] [INFO] epoch=4.00 step=36300, 10.3858 examples/sec lr=0.000033, loss=24.2998, loss_ll=4.51031, loss_ll_paf=7.23599, loss_ll_heat=1.78462, q=1000
+[2018-06-26 11:32:12,022] [train] [INFO] epoch=4.00 step=36400, 10.3855 examples/sec lr=0.000033, loss=27.0071, loss_ll=4.95636, loss_ll_paf=8.23533, loss_ll_heat=1.67738, q=1000
+[2018-06-26 11:34:46,500] [train] [INFO] epoch=4.00 step=36500, 10.3854 examples/sec lr=0.000033, loss=26.5184, loss_ll=4.95745, loss_ll_paf=8.43772, loss_ll_heat=1.47718, q=1000
+[2018-06-26 11:37:13,371] [train] [INFO] epoch=4.00 step=36600, 10.3867 examples/sec lr=0.000033, loss=26.3066, loss_ll=4.61177, loss_ll_paf=7.65329, loss_ll_heat=1.57025, q=1000
+[2018-06-26 11:39:41,911] [train] [INFO] epoch=4.00 step=36700, 10.3877 examples/sec lr=0.000033, loss=20.5668, loss_ll=3.51361, loss_ll_paf=5.60981, loss_ll_heat=1.4174, q=1000
+[2018-06-26 11:42:11,216] [train] [INFO] epoch=4.00 step=36800, 10.3886 examples/sec lr=0.000033, loss=31.0801, loss_ll=5.91695, loss_ll_paf=9.94923, loss_ll_heat=1.88467, q=1000
+[2018-06-26 11:44:40,205] [train] [INFO] epoch=4.00 step=36900, 10.3895 examples/sec lr=0.000033, loss=25.4779, loss_ll=4.67301, loss_ll_paf=7.38064, loss_ll_heat=1.96537, q=1000
+[2018-06-26 11:47:06,411] [train] [INFO] epoch=4.00 step=37000, 10.3909 examples/sec lr=0.000033, loss=28.2902, loss_ll=5.03638, loss_ll_paf=8.3518, loss_ll_heat=1.72095, q=1000
+[2018-06-26 11:49:51,129] [train] [INFO] epoch=4.00 step=37100, 10.3890 examples/sec lr=0.000033, loss=18.4774, loss_ll=3.33044, loss_ll_paf=5.42703, loss_ll_heat=1.23385, q=1000
+[2018-06-26 11:52:18,743] [train] [INFO] epoch=4.00 step=37200, 10.3902 examples/sec lr=0.000033, loss=24.4532, loss_ll=4.49624, loss_ll_paf=7.90727, loss_ll_heat=1.08521, q=1000
+[2018-06-26 11:54:48,954] [train] [INFO] epoch=4.00 step=37300, 10.3908 examples/sec lr=0.000033, loss=21.0259, loss_ll=3.82972, loss_ll_paf=5.85214, loss_ll_heat=1.8073, q=1000
+[2018-06-26 11:57:17,854] [train] [INFO] epoch=4.00 step=37400, 10.3918 examples/sec lr=0.000033, loss=27.9662, loss_ll=5.17305, loss_ll_paf=8.64689, loss_ll_heat=1.69921, q=1000
+[2018-06-26 11:59:50,180] [train] [INFO] epoch=4.00 step=37500, 10.3920 examples/sec lr=0.000033, loss=17.7787, loss_ll=3.60162, loss_ll_paf=6.00497, loss_ll_heat=1.19827, q=1000
+[2018-06-26 12:02:16,527] [train] [INFO] epoch=4.00 step=37600, 10.3934 examples/sec lr=0.000033, loss=40.1464, loss_ll=7.52198, loss_ll_paf=13.3067, loss_ll_heat=1.7373, q=1000
+[2018-06-26 12:04:46,565] [train] [INFO] epoch=4.00 step=37700, 10.3941 examples/sec lr=0.000033, loss=42.1166, loss_ll=7.82745, loss_ll_paf=13.0443, loss_ll_heat=2.61061, q=1000
+[2018-06-26 12:07:18,411] [train] [INFO] epoch=4.00 step=37800, 10.3945 examples/sec lr=0.000033, loss=27.207, loss_ll=4.27535, loss_ll_paf=6.98912, loss_ll_heat=1.56158, q=1000
+[2018-06-26 12:09:45,269] [train] [INFO] epoch=4.00 step=37900, 10.3957 examples/sec lr=0.000033, loss=16.9411, loss_ll=2.97863, loss_ll_paf=4.61619, loss_ll_heat=1.34106, q=1000
+[2018-06-26 12:12:13,557] [train] [INFO] epoch=4.00 step=38000, 10.3967 examples/sec lr=0.000033, loss=15.3468, loss_ll=2.70618, loss_ll_paf=4.24278, loss_ll_heat=1.16957, q=1000
+[2018-06-26 12:14:51,522] [train] [INFO] epoch=5.00 step=38100, 10.3960 examples/sec lr=0.000033, loss=24.0721, loss_ll=4.38977, loss_ll_paf=7.56367, loss_ll_heat=1.21588, q=1000
+[2018-06-26 12:17:20,591] [train] [INFO] epoch=5.00 step=38200, 10.3969 examples/sec lr=0.000033, loss=25.6906, loss_ll=4.55126, loss_ll_paf=7.46381, loss_ll_heat=1.63871, q=1000
+[2018-06-26 12:19:47,837] [train] [INFO] epoch=5.00 step=38300, 10.3981 examples/sec lr=0.000033, loss=40.8462, loss_ll=7.74853, loss_ll_paf=13.1708, loss_ll_heat=2.32622, q=1000
+[2018-06-26 12:22:14,172] [train] [INFO] epoch=5.00 step=38400, 10.3994 examples/sec lr=0.000033, loss=22.3571, loss_ll=3.8633, loss_ll_paf=6.46208, loss_ll_heat=1.26451, q=1000
+[2018-06-26 12:24:43,071] [train] [INFO] epoch=5.00 step=38500, 10.4003 examples/sec lr=0.000033, loss=17.2275, loss_ll=3.1037, loss_ll_paf=4.71096, loss_ll_heat=1.49645, q=1000
+[2018-06-26 12:27:13,634] [train] [INFO] epoch=5.00 step=38600, 10.4008 examples/sec lr=0.000033, loss=42.768, loss_ll=8.03045, loss_ll_paf=13.89, loss_ll_heat=2.1709, q=1000
+[2018-06-26 12:29:40,995] [train] [INFO] epoch=5.00 step=38700, 10.4020 examples/sec lr=0.000033, loss=26.8003, loss_ll=4.61747, loss_ll_paf=7.51346, loss_ll_heat=1.72148, q=1000
+[2018-06-26 12:32:07,770] [train] [INFO] epoch=5.00 step=38800, 10.4032 examples/sec lr=0.000033, loss=20.1637, loss_ll=3.70487, loss_ll_paf=5.72025, loss_ll_heat=1.68949, q=1000
+[2018-06-26 12:34:33,653] [train] [INFO] epoch=5.00 step=38900, 10.4046 examples/sec lr=0.000033, loss=18.8321, loss_ll=3.12225, loss_ll_paf=4.9473, loss_ll_heat=1.29719, q=1000
+[2018-06-26 12:37:02,361] [train] [INFO] epoch=5.00 step=39000, 10.4054 examples/sec lr=0.000033, loss=15.1013, loss_ll=2.66728, loss_ll_paf=3.8986, loss_ll_heat=1.43597, q=1000
+[2018-06-26 12:39:47,975] [train] [INFO] epoch=5.00 step=39100, 10.4034 examples/sec lr=0.000033, loss=21.4616, loss_ll=4.0161, loss_ll_paf=6.43596, loss_ll_heat=1.59624, q=1000
+[2018-06-26 12:42:16,017] [train] [INFO] epoch=5.00 step=39200, 10.4044 examples/sec lr=0.000033, loss=20.7721, loss_ll=3.75486, loss_ll_paf=5.9202, loss_ll_heat=1.58952, q=1000
+[2018-06-26 12:44:46,498] [train] [INFO] epoch=5.00 step=39300, 10.4050 examples/sec lr=0.000033, loss=22.1759, loss_ll=3.88064, loss_ll_paf=6.17956, loss_ll_heat=1.58172, q=1000
+[2018-06-26 12:47:14,738] [train] [INFO] epoch=5.00 step=39400, 10.4059 examples/sec lr=0.000033, loss=42.3792, loss_ll=7.7366, loss_ll_paf=13.0959, loss_ll_heat=2.37732, q=1000
+[2018-06-26 12:49:42,434] [train] [INFO] epoch=5.00 step=39500, 10.4069 examples/sec lr=0.000033, loss=25.6325, loss_ll=4.37911, loss_ll_paf=7.38685, loss_ll_heat=1.37137, q=1000
+[2018-06-26 12:52:09,940] [train] [INFO] epoch=5.00 step=39600, 10.4080 examples/sec lr=0.000033, loss=21.6235, loss_ll=4.00664, loss_ll_paf=6.54725, loss_ll_heat=1.46603, q=1000
+[2018-06-26 12:54:38,221] [train] [INFO] epoch=5.00 step=39700, 10.4089 examples/sec lr=0.000033, loss=26.3262, loss_ll=4.15735, loss_ll_paf=6.94145, loss_ll_heat=1.37325, q=1000
+[2018-06-26 12:57:05,952] [train] [INFO] epoch=5.00 step=39800, 10.4100 examples/sec lr=0.000033, loss=22.9619, loss_ll=3.94289, loss_ll_paf=6.41967, loss_ll_heat=1.46612, q=1000
+[2018-06-26 12:59:35,212] [train] [INFO] epoch=5.00 step=39900, 10.4107 examples/sec lr=0.000033, loss=19.1441, loss_ll=3.2868, loss_ll_paf=5.34638, loss_ll_heat=1.22722, q=1000
+[2018-06-26 13:02:04,186] [train] [INFO] epoch=5.00 step=40000, 10.4115 examples/sec lr=0.000033, loss=23.3433, loss_ll=4.20888, loss_ll_paf=6.84915, loss_ll_heat=1.56861, q=1000
+[2018-06-26 13:04:43,544] [train] [INFO] epoch=5.00 step=40100, 10.4105 examples/sec lr=0.000033, loss=32.7656, loss_ll=6.39798, loss_ll_paf=11.0811, loss_ll_heat=1.71481, q=1000
+[2018-06-26 13:07:11,676] [train] [INFO] epoch=5.00 step=40200, 10.4115 examples/sec lr=0.000033, loss=24.4682, loss_ll=4.20109, loss_ll_paf=6.91776, loss_ll_heat=1.48443, q=1000
+[2018-06-26 13:09:38,644] [train] [INFO] epoch=5.00 step=40300, 10.4126 examples/sec lr=0.000033, loss=17.6708, loss_ll=3.09927, loss_ll_paf=4.82018, loss_ll_heat=1.37836, q=1000
+[2018-06-26 13:12:07,745] [train] [INFO] epoch=5.00 step=40400, 10.4134 examples/sec lr=0.000033, loss=31.4701, loss_ll=5.73396, loss_ll_paf=9.41925, loss_ll_heat=2.04867, q=1000
+[2018-06-26 13:14:34,373] [train] [INFO] epoch=5.00 step=40500, 10.4146 examples/sec lr=0.000033, loss=24.4932, loss_ll=4.61065, loss_ll_paf=8.08547, loss_ll_heat=1.13583, q=1000
+[2018-06-26 13:17:02,017] [train] [INFO] epoch=5.00 step=40600, 10.4156 examples/sec lr=0.000033, loss=30.4118, loss_ll=5.55659, loss_ll_paf=9.1144, loss_ll_heat=1.99877, q=1000
+[2018-06-26 13:19:35,708] [train] [INFO] epoch=5.00 step=40700, 10.4155 examples/sec lr=0.000033, loss=22.4299, loss_ll=4.29013, loss_ll_paf=6.73465, loss_ll_heat=1.84562, q=1000
+[2018-06-26 13:22:06,143] [train] [INFO] epoch=5.00 step=40800, 10.4161 examples/sec lr=0.000033, loss=33.7067, loss_ll=5.83096, loss_ll_paf=9.5165, loss_ll_heat=2.14541, q=1000
+[2018-06-26 13:24:35,723] [train] [INFO] epoch=5.00 step=40900, 10.4167 examples/sec lr=0.000033, loss=21.3663, loss_ll=3.93873, loss_ll_paf=6.72298, loss_ll_heat=1.15447, q=1000
+[2018-06-26 13:27:05,291] [train] [INFO] epoch=5.00 step=41000, 10.4174 examples/sec lr=0.000033, loss=17.9601, loss_ll=3.06243, loss_ll_paf=4.98247, loss_ll_heat=1.14239, q=1000
+[2018-06-26 13:29:47,472] [train] [INFO] epoch=5.00 step=41100, 10.4160 examples/sec lr=0.000033, loss=15.9947, loss_ll=3.10096, loss_ll_paf=5.15623, loss_ll_heat=1.04568, q=1000
+[2018-06-26 13:32:14,715] [train] [INFO] epoch=5.00 step=41200, 10.4170 examples/sec lr=0.000033, loss=39.0506, loss_ll=6.64881, loss_ll_paf=11.9109, loss_ll_heat=1.38671, q=1000
+[2018-06-26 13:34:44,603] [train] [INFO] epoch=5.00 step=41300, 10.4176 examples/sec lr=0.000033, loss=27.2425, loss_ll=5.0254, loss_ll_paf=8.48281, loss_ll_heat=1.56798, q=1000
+[2018-06-26 13:37:11,108] [train] [INFO] epoch=5.00 step=41400, 10.4188 examples/sec lr=0.000033, loss=18.9868, loss_ll=3.53041, loss_ll_paf=5.90791, loss_ll_heat=1.15291, q=1000
+[2018-06-26 13:39:39,878] [train] [INFO] epoch=5.00 step=41500, 10.4196 examples/sec lr=0.000033, loss=18.5659, loss_ll=3.37484, loss_ll_paf=5.59265, loss_ll_heat=1.15703, q=1000
+[2018-06-26 13:42:07,803] [train] [INFO] epoch=5.00 step=41600, 10.4205 examples/sec lr=0.000033, loss=17.6265, loss_ll=3.07865, loss_ll_paf=4.94079, loss_ll_heat=1.21651, q=1000
+[2018-06-26 13:44:40,095] [train] [INFO] epoch=5.00 step=41700, 10.4207 examples/sec lr=0.000033, loss=23.2665, loss_ll=3.94211, loss_ll_paf=6.18862, loss_ll_heat=1.6956, q=1000
+[2018-06-26 13:47:09,556] [train] [INFO] epoch=5.00 step=41800, 10.4214 examples/sec lr=0.000033, loss=20.8498, loss_ll=3.66714, loss_ll_paf=5.98466, loss_ll_heat=1.34962, q=1000
+[2018-06-26 13:49:42,701] [train] [INFO] epoch=5.00 step=41900, 10.4214 examples/sec lr=0.000033, loss=25.5753, loss_ll=4.37768, loss_ll_paf=7.22741, loss_ll_heat=1.52794, q=1000
+[2018-06-26 13:52:19,814] [train] [INFO] epoch=5.00 step=42000, 10.4209 examples/sec lr=0.000033, loss=13.3453, loss_ll=2.4557, loss_ll_paf=3.78603, loss_ll_heat=1.12538, q=1000
+[2018-06-26 13:55:08,109] [train] [INFO] epoch=5.00 step=42100, 10.4185 examples/sec lr=0.000033, loss=19.5683, loss_ll=3.44576, loss_ll_paf=5.66016, loss_ll_heat=1.23135, q=1000
+[2018-06-26 13:57:44,148] [train] [INFO] epoch=5.00 step=42200, 10.4181 examples/sec lr=0.000033, loss=35.5709, loss_ll=6.78656, loss_ll_paf=11.9736, loss_ll_heat=1.59951, q=1000
+[2018-06-26 14:00:19,986] [train] [INFO] epoch=5.00 step=42300, 10.4177 examples/sec lr=0.000033, loss=24.0717, loss_ll=4.60425, loss_ll_paf=7.94091, loss_ll_heat=1.2676, q=1000
+[2018-06-26 14:02:48,529] [train] [INFO] epoch=5.00 step=42400, 10.4185 examples/sec lr=0.000033, loss=21.2431, loss_ll=3.86155, loss_ll_paf=6.50985, loss_ll_heat=1.21325, q=1000
+[2018-06-26 14:05:15,031] [train] [INFO] epoch=5.00 step=42500, 10.4197 examples/sec lr=0.000033, loss=16.744, loss_ll=3.05143, loss_ll_paf=5.06304, loss_ll_heat=1.03982, q=1000
+[2018-06-26 14:07:47,390] [train] [INFO] epoch=5.00 step=42600, 10.4198 examples/sec lr=0.000033, loss=19.8688, loss_ll=3.64185, loss_ll_paf=5.73555, loss_ll_heat=1.54815, q=1000
+[2018-06-26 14:10:22,440] [train] [INFO] epoch=5.00 step=42700, 10.4196 examples/sec lr=0.000033, loss=13.567, loss_ll=2.50894, loss_ll_paf=3.8183, loss_ll_heat=1.19957, q=1000
+[2018-06-26 14:12:50,021] [train] [INFO] epoch=5.00 step=42800, 10.4206 examples/sec lr=0.000033, loss=15.5641, loss_ll=2.75833, loss_ll_paf=4.58839, loss_ll_heat=0.928259, q=1000
+[2018-06-26 14:15:19,414] [train] [INFO] epoch=5.00 step=42900, 10.4212 examples/sec lr=0.000033, loss=40.0836, loss_ll=7.85264, loss_ll_paf=13.3428, loss_ll_heat=2.36253, q=1000
+[2018-06-26 14:17:51,972] [train] [INFO] epoch=5.00 step=43000, 10.4214 examples/sec lr=0.000033, loss=23.0219, loss_ll=4.34996, loss_ll_paf=6.81542, loss_ll_heat=1.88451, q=1000
+[2018-06-26 14:20:36,228] [train] [INFO] epoch=5.00 step=43100, 10.4197 examples/sec lr=0.000033, loss=19.3894, loss_ll=3.45648, loss_ll_paf=5.90541, loss_ll_heat=1.00756, q=1000
+[2018-06-26 14:23:04,148] [train] [INFO] epoch=5.00 step=43200, 10.4206 examples/sec lr=0.000033, loss=18.4283, loss_ll=3.4908, loss_ll_paf=5.44989, loss_ll_heat=1.53172, q=1000
+[2018-06-26 14:25:33,703] [train] [INFO] epoch=5.00 step=43300, 10.4212 examples/sec lr=0.000033, loss=27.3577, loss_ll=5.32764, loss_ll_paf=9.21916, loss_ll_heat=1.43611, q=1000
+[2018-06-26 14:28:04,884] [train] [INFO] epoch=5.00 step=43400, 10.4216 examples/sec lr=0.000033, loss=36.6683, loss_ll=6.86452, loss_ll_paf=11.7745, loss_ll_heat=1.95455, q=1000
+[2018-06-26 14:30:42,119] [train] [INFO] epoch=5.00 step=43500, 10.4210 examples/sec lr=0.000033, loss=22.3387, loss_ll=4.20592, loss_ll_paf=7.04675, loss_ll_heat=1.36508, q=1000
+[2018-06-26 14:33:21,346] [train] [INFO] epoch=5.00 step=43600, 10.4201 examples/sec lr=0.000033, loss=10.6479, loss_ll=1.90642, loss_ll_paf=2.9118, loss_ll_heat=0.901046, q=1000
+[2018-06-26 14:35:59,659] [train] [INFO] epoch=5.00 step=43700, 10.4193 examples/sec lr=0.000033, loss=38.7304, loss_ll=6.80016, loss_ll_paf=10.905, loss_ll_heat=2.69535, q=1000
+[2018-06-26 14:38:39,786] [train] [INFO] epoch=5.00 step=43800, 10.4183 examples/sec lr=0.000033, loss=26.6603, loss_ll=4.32519, loss_ll_paf=6.85688, loss_ll_heat=1.79349, q=1000
+[2018-06-26 14:41:18,057] [train] [INFO] epoch=5.00 step=43900, 10.4176 examples/sec lr=0.000033, loss=24.4056, loss_ll=4.59313, loss_ll_paf=7.64734, loss_ll_heat=1.53892, q=1000
+[2018-06-26 14:43:58,162] [train] [INFO] epoch=5.00 step=44000, 10.4166 examples/sec lr=0.000033, loss=17.4602, loss_ll=3.18937, loss_ll_paf=5.53188, loss_ll_heat=0.846859, q=1000
+[2018-06-26 14:46:48,607] [train] [INFO] epoch=5.00 step=44100, 10.4140 examples/sec lr=0.000033, loss=39.3688, loss_ll=7.21972, loss_ll_paf=12.8595, loss_ll_heat=1.57996, q=1000
+[2018-06-26 14:49:25,004] [train] [INFO] epoch=5.00 step=44200, 10.4136 examples/sec lr=0.000033, loss=32.2117, loss_ll=5.80205, loss_ll_paf=9.73857, loss_ll_heat=1.86554, q=1000
+[2018-06-26 14:52:02,455] [train] [INFO] epoch=5.00 step=44300, 10.4130 examples/sec lr=0.000033, loss=23.9278, loss_ll=4.40795, loss_ll_paf=7.2547, loss_ll_heat=1.56119, q=1000
+[2018-06-26 14:54:39,911] [train] [INFO] epoch=5.00 step=44400, 10.4124 examples/sec lr=0.000033, loss=20.9192, loss_ll=3.78323, loss_ll_paf=5.86707, loss_ll_heat=1.69939, q=1000
+[2018-06-26 14:57:12,986] [train] [INFO] epoch=5.00 step=44500, 10.4125 examples/sec lr=0.000033, loss=28.5495, loss_ll=5.33216, loss_ll_paf=8.92396, loss_ll_heat=1.74036, q=1000
+[2018-06-26 14:59:42,572] [train] [INFO] epoch=5.00 step=44600, 10.4131 examples/sec lr=0.000033, loss=41.7281, loss_ll=7.74816, loss_ll_paf=13.4025, loss_ll_heat=2.09387, q=1000
+[2018-06-26 15:02:12,780] [train] [INFO] epoch=5.00 step=44700, 10.4137 examples/sec lr=0.000033, loss=28.807, loss_ll=5.08256, loss_ll_paf=8.51173, loss_ll_heat=1.6534, q=1000
+[2018-06-26 15:04:39,216] [train] [INFO] epoch=5.00 step=44800, 10.4147 examples/sec lr=0.000033, loss=23.9339, loss_ll=4.33973, loss_ll_paf=6.68117, loss_ll_heat=1.99829, q=1000
+[2018-06-26 15:07:09,499] [train] [INFO] epoch=5.00 step=44900, 10.4153 examples/sec lr=0.000033, loss=23.7269, loss_ll=4.63572, loss_ll_paf=7.59688, loss_ll_heat=1.67457, q=1000
+[2018-06-26 15:09:39,496] [train] [INFO] epoch=5.00 step=45000, 10.4158 examples/sec lr=0.000033, loss=24.2519, loss_ll=4.70702, loss_ll_paf=7.58874, loss_ll_heat=1.8253, q=1000
+[2018-06-26 15:12:18,251] [train] [INFO] epoch=5.00 step=45100, 10.4150 examples/sec lr=0.000033, loss=38.5137, loss_ll=7.34365, loss_ll_paf=12.3709, loss_ll_heat=2.31643, q=1000
+[2018-06-26 15:14:49,538] [train] [INFO] epoch=5.00 step=45200, 10.4154 examples/sec lr=0.000033, loss=17.6402, loss_ll=3.08165, loss_ll_paf=4.72522, loss_ll_heat=1.43808, q=1000
+[2018-06-26 15:17:16,416] [train] [INFO] epoch=5.00 step=45300, 10.4164 examples/sec lr=0.000033, loss=11.0511, loss_ll=1.8479, loss_ll_paf=2.90539, loss_ll_heat=0.790412, q=1000
+[2018-06-26 15:19:43,946] [train] [INFO] epoch=5.00 step=45400, 10.4173 examples/sec lr=0.000033, loss=25.0854, loss_ll=4.61088, loss_ll_paf=7.54372, loss_ll_heat=1.67803, q=1000
+[2018-06-26 15:22:13,981] [train] [INFO] epoch=5.00 step=45500, 10.4178 examples/sec lr=0.000033, loss=44.4926, loss_ll=8.36864, loss_ll_paf=13.7961, loss_ll_heat=2.94114, q=1000
+[2018-06-26 15:24:40,375] [train] [INFO] epoch=5.00 step=45600, 10.4189 examples/sec lr=0.000033, loss=25.3808, loss_ll=4.70848, loss_ll_paf=7.91532, loss_ll_heat=1.50163, q=1000
+[2018-06-26 15:27:07,094] [train] [INFO] epoch=6.00 step=45700, 10.4199 examples/sec lr=0.000033, loss=26.8723, loss_ll=4.74724, loss_ll_paf=7.93444, loss_ll_heat=1.56003, q=1000
+[2018-06-26 15:29:34,612] [train] [INFO] epoch=6.00 step=45800, 10.4208 examples/sec lr=0.000033, loss=18.4251, loss_ll=3.34946, loss_ll_paf=5.02864, loss_ll_heat=1.67029, q=1000
+[2018-06-26 15:32:04,960] [train] [INFO] epoch=6.00 step=45900, 10.4213 examples/sec lr=0.000033, loss=19.332, loss_ll=3.70596, loss_ll_paf=5.92977, loss_ll_heat=1.48214, q=1000
+[2018-06-26 15:34:41,023] [train] [INFO] epoch=6.00 step=46000, 10.4209 examples/sec lr=0.000033, loss=25.1223, loss_ll=4.39805, loss_ll_paf=6.90332, loss_ll_heat=1.89278, q=1000
+[2018-06-26 15:37:28,161] [train] [INFO] epoch=6.00 step=46100, 10.4189 examples/sec lr=0.000033, loss=16.4033, loss_ll=3.01204, loss_ll_paf=4.70627, loss_ll_heat=1.31782, q=1000
+[2018-06-26 15:40:02,698] [train] [INFO] epoch=6.00 step=46200, 10.4188 examples/sec lr=0.000033, loss=16.5902, loss_ll=2.92789, loss_ll_paf=4.3275, loss_ll_heat=1.52828, q=1000
+[2018-06-26 15:42:37,726] [train] [INFO] epoch=6.00 step=46300, 10.4185 examples/sec lr=0.000033, loss=17.7644, loss_ll=3.32357, loss_ll_paf=5.14064, loss_ll_heat=1.5065, q=1000
+[2018-06-26 15:45:04,106] [train] [INFO] epoch=6.00 step=46400, 10.4196 examples/sec lr=0.000033, loss=23.7957, loss_ll=4.65217, loss_ll_paf=7.92743, loss_ll_heat=1.3769, q=1000
+[2018-06-26 15:47:36,704] [train] [INFO] epoch=6.00 step=46500, 10.4197 examples/sec lr=0.000033, loss=11.8989, loss_ll=2.17955, loss_ll_paf=3.13596, loss_ll_heat=1.22314, q=1000
+[2018-06-26 15:50:04,141] [train] [INFO] epoch=6.00 step=46600, 10.4206 examples/sec lr=0.000033, loss=22.4862, loss_ll=4.02233, loss_ll_paf=6.16084, loss_ll_heat=1.88383, q=1000
+[2018-06-26 15:52:29,476] [train] [INFO] epoch=6.00 step=46700, 10.4218 examples/sec lr=0.000033, loss=19.037, loss_ll=3.12133, loss_ll_paf=4.9464, loss_ll_heat=1.29625, q=1000
+[2018-06-26 15:55:01,550] [train] [INFO] epoch=6.00 step=46800, 10.4220 examples/sec lr=0.000033, loss=28.278, loss_ll=5.08767, loss_ll_paf=8.31714, loss_ll_heat=1.8582, q=1000
+[2018-06-26 15:57:26,619] [train] [INFO] epoch=6.00 step=46900, 10.4233 examples/sec lr=0.000033, loss=16.7989, loss_ll=2.92047, loss_ll_paf=4.99053, loss_ll_heat=0.850414, q=1000
+[2018-06-26 15:59:55,272] [train] [INFO] epoch=6.00 step=47000, 10.4240 examples/sec lr=0.000033, loss=28.3763, loss_ll=4.90641, loss_ll_paf=8.01379, loss_ll_heat=1.79903, q=1000
+[2018-06-26 16:02:33,257] [train] [INFO] epoch=6.00 step=47100, 10.4233 examples/sec lr=0.000033, loss=29.3798, loss_ll=5.21219, loss_ll_paf=8.52988, loss_ll_heat=1.8945, q=1000
+[2018-06-26 16:05:08,506] [train] [INFO] epoch=6.00 step=47200, 10.4231 examples/sec lr=0.000033, loss=19.5041, loss_ll=3.48873, loss_ll_paf=5.36823, loss_ll_heat=1.60924, q=1000
+[2018-06-26 16:07:53,959] [train] [INFO] epoch=6.00 step=47300, 10.4213 examples/sec lr=0.000033, loss=24.338, loss_ll=4.59029, loss_ll_paf=7.60277, loss_ll_heat=1.57782, q=1000
+[2018-06-26 16:10:37,938] [train] [INFO] epoch=6.00 step=47400, 10.4198 examples/sec lr=0.000033, loss=22.9797, loss_ll=3.95228, loss_ll_paf=6.21679, loss_ll_heat=1.68777, q=1000
+[2018-06-26 16:13:21,017] [train] [INFO] epoch=6.00 step=47500, 10.4185 examples/sec lr=0.000033, loss=16.2149, loss_ll=2.43733, loss_ll_paf=3.95056, loss_ll_heat=0.924109, q=1000
+[2018-06-26 16:15:57,348] [train] [INFO] epoch=6.00 step=47600, 10.4181 examples/sec lr=0.000033, loss=13.581, loss_ll=2.43821, loss_ll_paf=3.64298, loss_ll_heat=1.23343, q=1000
+[2018-06-26 16:18:27,900] [train] [INFO] epoch=6.00 step=47700, 10.4185 examples/sec lr=0.000033, loss=19.3914, loss_ll=3.80351, loss_ll_paf=5.82141, loss_ll_heat=1.78561, q=1000
+[2018-06-26 16:20:59,731] [train] [INFO] epoch=6.00 step=47800, 10.4188 examples/sec lr=0.000033, loss=13.2744, loss_ll=2.37502, loss_ll_paf=3.65148, loss_ll_heat=1.09855, q=1000
+[2018-06-26 16:23:30,886] [train] [INFO] epoch=6.00 step=47900, 10.4191 examples/sec lr=0.000033, loss=16.6047, loss_ll=2.87923, loss_ll_paf=4.3095, loss_ll_heat=1.44896, q=1000
+[2018-06-26 16:26:12,454] [train] [INFO] epoch=6.00 step=48000, 10.4180 examples/sec lr=0.000033, loss=23.0714, loss_ll=4.14195, loss_ll_paf=6.51263, loss_ll_heat=1.77127, q=1000
+[2018-06-26 16:29:10,954] [train] [INFO] epoch=6.00 step=48100, 10.4145 examples/sec lr=0.000033, loss=20.5881, loss_ll=3.60705, loss_ll_paf=5.95634, loss_ll_heat=1.25775, q=1000
+[2018-06-26 16:31:54,297] [train] [INFO] epoch=6.00 step=48200, 10.4131 examples/sec lr=0.000033, loss=21.17, loss_ll=4.04101, loss_ll_paf=6.40956, loss_ll_heat=1.67245, q=1000
+[2018-06-26 16:34:34,815] [train] [INFO] epoch=6.00 step=48300, 10.4121 examples/sec lr=0.000033, loss=23.9292, loss_ll=4.38412, loss_ll_paf=6.88598, loss_ll_heat=1.88225, q=1000
+[2018-06-26 16:37:05,723] [train] [INFO] epoch=6.00 step=48400, 10.4125 examples/sec lr=0.000033, loss=34.7362, loss_ll=6.25169, loss_ll_paf=10.8185, loss_ll_heat=1.68484, q=1000
+[2018-06-26 16:39:35,778] [train] [INFO] epoch=6.00 step=48500, 10.4130 examples/sec lr=0.000033, loss=22.3593, loss_ll=4.14272, loss_ll_paf=6.78341, loss_ll_heat=1.50203, q=1000
+[2018-06-26 16:42:02,486] [train] [INFO] epoch=6.00 step=48600, 10.4140 examples/sec lr=0.000033, loss=16.932, loss_ll=3.01222, loss_ll_paf=4.82634, loss_ll_heat=1.1981, q=1000
+[2018-06-26 16:44:28,282] [train] [INFO] epoch=6.00 step=48700, 10.4151 examples/sec lr=0.000033, loss=17.5741, loss_ll=3.33841, loss_ll_paf=5.34005, loss_ll_heat=1.33676, q=1000
+[2018-06-26 16:46:55,174] [train] [INFO] epoch=6.00 step=48800, 10.4160 examples/sec lr=0.000033, loss=24.4316, loss_ll=4.7666, loss_ll_paf=8.44973, loss_ll_heat=1.08347, q=1000
+[2018-06-26 16:49:20,920] [train] [INFO] epoch=6.00 step=48900, 10.4171 examples/sec lr=0.000033, loss=20.5587, loss_ll=3.80277, loss_ll_paf=6.46764, loss_ll_heat=1.1379, q=1000
+[2018-06-26 16:51:55,546] [train] [INFO] epoch=6.00 step=49000, 10.4170 examples/sec lr=0.000033, loss=25.6791, loss_ll=4.6463, loss_ll_paf=7.73704, loss_ll_heat=1.55557, q=1000
+[2018-06-26 16:54:46,393] [train] [INFO] epoch=6.00 step=49100, 10.4146 examples/sec lr=0.000033, loss=22.1958, loss_ll=3.86037, loss_ll_paf=6.24099, loss_ll_heat=1.47975, q=1000
+[2018-06-26 16:57:27,063] [train] [INFO] epoch=6.00 step=49200, 10.4136 examples/sec lr=0.000033, loss=19.2626, loss_ll=3.58091, loss_ll_paf=6.26023, loss_ll_heat=0.901594, q=1000
+[2018-06-26 17:00:02,798] [train] [INFO] epoch=6.00 step=49300, 10.4133 examples/sec lr=0.000033, loss=29.7563, loss_ll=5.2567, loss_ll_paf=8.95474, loss_ll_heat=1.55866, q=1000
+[2018-06-26 17:02:34,649] [train] [INFO] epoch=6.00 step=49400, 10.4136 examples/sec lr=0.000033, loss=28.6058, loss_ll=4.9335, loss_ll_paf=7.95041, loss_ll_heat=1.9166, q=1000
+[2018-06-26 17:05:02,993] [train] [INFO] epoch=6.00 step=49500, 10.4143 examples/sec lr=0.000033, loss=16.5114, loss_ll=3.17413, loss_ll_paf=5.09684, loss_ll_heat=1.25142, q=1000
+[2018-06-26 17:07:28,830] [train] [INFO] epoch=6.00 step=49600, 10.4154 examples/sec lr=0.000033, loss=12.8561, loss_ll=2.28136, loss_ll_paf=3.37538, loss_ll_heat=1.18735, q=1000
+[2018-06-26 17:09:53,399] [train] [INFO] epoch=6.00 step=49700, 10.4166 examples/sec lr=0.000033, loss=20.6811, loss_ll=3.8172, loss_ll_paf=6.04911, loss_ll_heat=1.58529, q=1000
+[2018-06-26 17:12:21,681] [train] [INFO] epoch=6.00 step=49800, 10.4173 examples/sec lr=0.000033, loss=26.8188, loss_ll=5.05608, loss_ll_paf=8.25886, loss_ll_heat=1.8533, q=1000
+[2018-06-26 17:14:48,727] [train] [INFO] epoch=6.00 step=49900, 10.4182 examples/sec lr=0.000033, loss=14.6672, loss_ll=2.60634, loss_ll_paf=4.09137, loss_ll_heat=1.12131, q=1000
+[2018-06-26 17:17:13,443] [train] [INFO] epoch=6.00 step=50000, 10.4194 examples/sec lr=0.000033, loss=18.547, loss_ll=3.44085, loss_ll_paf=5.1631, loss_ll_heat=1.71861, q=1000
+[2018-06-26 17:19:55,535] [train] [INFO] epoch=6.00 step=50100, 10.4183 examples/sec lr=0.000033, loss=32.2419, loss_ll=5.50741, loss_ll_paf=9.2198, loss_ll_heat=1.79503, q=1000
+[2018-06-26 17:22:23,585] [train] [INFO] epoch=6.00 step=50200, 10.4190 examples/sec lr=0.000033, loss=24.2241, loss_ll=4.42645, loss_ll_paf=7.77529, loss_ll_heat=1.07762, q=1000
+[2018-06-26 17:24:51,809] [train] [INFO] epoch=6.00 step=50300, 10.4197 examples/sec lr=0.000033, loss=20.7554, loss_ll=3.36836, loss_ll_paf=5.52497, loss_ll_heat=1.21176, q=1000
+[2018-06-26 17:27:24,244] [train] [INFO] epoch=6.00 step=50400, 10.4199 examples/sec lr=0.000033, loss=27.8946, loss_ll=5.03115, loss_ll_paf=8.29088, loss_ll_heat=1.77143, q=1000
+[2018-06-26 17:29:52,019] [train] [INFO] epoch=6.00 step=50500, 10.4207 examples/sec lr=0.000033, loss=22.7789, loss_ll=3.98912, loss_ll_paf=6.48451, loss_ll_heat=1.49374, q=1000
+[2018-06-26 17:32:21,642] [train] [INFO] epoch=6.00 step=50600, 10.4212 examples/sec lr=0.000033, loss=45.2046, loss_ll=8.59852, loss_ll_paf=14.9, loss_ll_heat=2.297, q=1000
+[2018-06-26 17:34:54,564] [train] [INFO] epoch=6.00 step=50700, 10.4213 examples/sec lr=0.000033, loss=14.2016, loss_ll=2.56433, loss_ll_paf=4.18758, loss_ll_heat=0.941077, q=1000
+[2018-06-26 17:37:23,492] [train] [INFO] epoch=6.00 step=50800, 10.4219 examples/sec lr=0.000033, loss=11.4598, loss_ll=2.21432, loss_ll_paf=3.70279, loss_ll_heat=0.725844, q=1000
+[2018-06-26 17:39:52,248] [train] [INFO] epoch=6.00 step=50900, 10.4225 examples/sec lr=0.000033, loss=22.5737, loss_ll=4.07333, loss_ll_paf=6.98134, loss_ll_heat=1.16531, q=1000
+[2018-06-26 17:42:18,044] [train] [INFO] epoch=6.00 step=51000, 10.4235 examples/sec lr=0.000033, loss=26.2674, loss_ll=4.96696, loss_ll_paf=7.73298, loss_ll_heat=2.20093, q=1000
+[2018-06-26 17:44:58,133] [train] [INFO] epoch=6.00 step=51100, 10.4227 examples/sec lr=0.000033, loss=30.5449, loss_ll=5.48073, loss_ll_paf=9.05548, loss_ll_heat=1.90597, q=1000
+[2018-06-26 17:47:29,929] [train] [INFO] epoch=6.00 step=51200, 10.4229 examples/sec lr=0.000033, loss=16.5293, loss_ll=3.08599, loss_ll_paf=5.14297, loss_ll_heat=1.02901, q=1000
+[2018-06-26 17:49:59,556] [train] [INFO] epoch=6.00 step=51300, 10.4234 examples/sec lr=0.000033, loss=30.2342, loss_ll=5.94049, loss_ll_paf=9.43395, loss_ll_heat=2.44703, q=1000
+[2018-06-26 17:52:26,746] [train] [INFO] epoch=6.00 step=51400, 10.4242 examples/sec lr=0.000033, loss=26.685, loss_ll=4.89258, loss_ll_paf=8.2908, loss_ll_heat=1.49437, q=1000
+[2018-06-26 17:54:55,697] [train] [INFO] epoch=6.00 step=51500, 10.4248 examples/sec lr=0.000033, loss=15.9706, loss_ll=2.87552, loss_ll_paf=4.50668, loss_ll_heat=1.24435, q=1000
+[2018-06-26 17:57:26,363] [train] [INFO] epoch=6.00 step=51600, 10.4252 examples/sec lr=0.000033, loss=20.6406, loss_ll=3.80987, loss_ll_paf=6.49262, loss_ll_heat=1.12713, q=1000
+[2018-06-26 17:59:55,175] [train] [INFO] epoch=6.00 step=51700, 10.4258 examples/sec lr=0.000033, loss=29.0506, loss_ll=5.51205, loss_ll_paf=9.08114, loss_ll_heat=1.94296, q=1000
+[2018-06-26 18:02:26,089] [train] [INFO] epoch=6.00 step=51800, 10.4262 examples/sec lr=0.000033, loss=15.9907, loss_ll=3.11114, loss_ll_paf=5.04182, loss_ll_heat=1.18047, q=1000
+[2018-06-26 18:04:55,591] [train] [INFO] epoch=6.00 step=51900, 10.4267 examples/sec lr=0.000033, loss=15.7019, loss_ll=2.77907, loss_ll_paf=4.22481, loss_ll_heat=1.33332, q=1000
+[2018-06-26 18:07:28,748] [train] [INFO] epoch=6.00 step=52000, 10.4267 examples/sec lr=0.000033, loss=32.4334, loss_ll=5.77935, loss_ll_paf=9.46321, loss_ll_heat=2.09548, q=1000
+[2018-06-26 18:10:07,239] [train] [INFO] epoch=6.00 step=52100, 10.4261 examples/sec lr=0.000033, loss=15.8631, loss_ll=2.91403, loss_ll_paf=4.34911, loss_ll_heat=1.47894, q=1000
+[2018-06-26 18:12:33,919] [train] [INFO] epoch=6.00 step=52200, 10.4269 examples/sec lr=0.000033, loss=16.768, loss_ll=2.76539, loss_ll_paf=4.2964, loss_ll_heat=1.23439, q=1000
+[2018-06-26 18:15:03,105] [train] [INFO] epoch=6.00 step=52300, 10.4275 examples/sec lr=0.000033, loss=19.2881, loss_ll=3.35762, loss_ll_paf=5.4105, loss_ll_heat=1.30475, q=1000
+[2018-06-26 18:17:36,235] [train] [INFO] epoch=6.00 step=52400, 10.4275 examples/sec lr=0.000033, loss=19.6343, loss_ll=3.71144, loss_ll_paf=6.2199, loss_ll_heat=1.20298, q=1000
+[2018-06-26 18:20:05,764] [train] [INFO] epoch=6.00 step=52500, 10.4280 examples/sec lr=0.000033, loss=34.2636, loss_ll=5.70476, loss_ll_paf=9.59526, loss_ll_heat=1.81425, q=1000
+[2018-06-26 18:22:33,604] [train] [INFO] epoch=6.00 step=52600, 10.4288 examples/sec lr=0.000033, loss=13.9829, loss_ll=2.29872, loss_ll_paf=3.78776, loss_ll_heat=0.809669, q=1000
+[2018-06-26 18:25:05,102] [train] [INFO] epoch=6.00 step=52700, 10.4290 examples/sec lr=0.000033, loss=9.2893, loss_ll=1.66387, loss_ll_paf=2.45784, loss_ll_heat=0.869905, q=1000
+[2018-06-26 18:27:32,545] [train] [INFO] epoch=6.00 step=52800, 10.4298 examples/sec lr=0.000033, loss=24.2308, loss_ll=4.44531, loss_ll_paf=7.5674, loss_ll_heat=1.32323, q=1000
+[2018-06-26 18:30:01,027] [train] [INFO] epoch=6.00 step=52900, 10.4304 examples/sec lr=0.000033, loss=20.9997, loss_ll=3.61809, loss_ll_paf=5.9506, loss_ll_heat=1.28558, q=1000
+[2018-06-26 18:32:28,945] [train] [INFO] epoch=6.00 step=53000, 10.4311 examples/sec lr=0.000033, loss=23.975, loss_ll=4.28125, loss_ll_paf=7.02802, loss_ll_heat=1.53448, q=1000
+[2018-06-26 18:35:08,760] [train] [INFO] epoch=6.00 step=53100, 10.4303 examples/sec lr=0.000033, loss=21.7244, loss_ll=3.86345, loss_ll_paf=6.28738, loss_ll_heat=1.43951, q=1000
+[2018-06-26 18:37:42,356] [train] [INFO] epoch=6.00 step=53200, 10.4303 examples/sec lr=0.000033, loss=25.8447, loss_ll=4.76337, loss_ll_paf=7.81179, loss_ll_heat=1.71494, q=1000
+[2018-06-26 18:40:09,298] [train] [INFO] epoch=7.00 step=53300, 10.4311 examples/sec lr=0.000033, loss=19.3457, loss_ll=3.73306, loss_ll_paf=6.26802, loss_ll_heat=1.19809, q=1000
+[2018-06-26 18:42:38,489] [train] [INFO] epoch=7.00 step=53400, 10.4316 examples/sec lr=0.000033, loss=16.8008, loss_ll=2.94384, loss_ll_paf=4.4115, loss_ll_heat=1.47619, q=1000
+[2018-06-26 18:45:05,744] [train] [INFO] epoch=7.00 step=53500, 10.4324 examples/sec lr=0.000033, loss=14.8023, loss_ll=2.74012, loss_ll_paf=4.15955, loss_ll_heat=1.3207, q=1000
+[2018-06-26 18:47:32,988] [train] [INFO] epoch=7.00 step=53600, 10.4332 examples/sec lr=0.000033, loss=12.512, loss_ll=2.12442, loss_ll_paf=3.04143, loss_ll_heat=1.20741, q=1000
+[2018-06-26 18:50:09,128] [train] [INFO] epoch=7.00 step=53700, 10.4328 examples/sec lr=0.000033, loss=31.3748, loss_ll=5.40184, loss_ll_paf=9.58265, loss_ll_heat=1.22103, q=1000
+[2018-06-26 18:52:37,798] [train] [INFO] epoch=7.00 step=53800, 10.4334 examples/sec lr=0.000033, loss=20.1206, loss_ll=3.76332, loss_ll_paf=6.18901, loss_ll_heat=1.33762, q=1000
+[2018-06-26 18:55:09,217] [train] [INFO] epoch=7.00 step=53900, 10.4337 examples/sec lr=0.000033, loss=22.8809, loss_ll=3.58767, loss_ll_paf=5.90706, loss_ll_heat=1.26827, q=1000
+[2018-06-26 18:57:36,426] [train] [INFO] epoch=7.00 step=54000, 10.4344 examples/sec lr=0.000033, loss=25.8731, loss_ll=4.76153, loss_ll_paf=7.74153, loss_ll_heat=1.78153, q=1000
+[2018-06-26 19:00:16,187] [train] [INFO] epoch=7.00 step=54100, 10.4336 examples/sec lr=0.000033, loss=16.6871, loss_ll=3.01538, loss_ll_paf=4.65068, loss_ll_heat=1.38008, q=1000
+[2018-06-26 19:02:41,429] [train] [INFO] epoch=7.00 step=54200, 10.4347 examples/sec lr=0.000033, loss=28.6238, loss_ll=5.14123, loss_ll_paf=8.67923, loss_ll_heat=1.60323, q=1000
+[2018-06-26 19:05:10,386] [train] [INFO] epoch=7.00 step=54300, 10.4352 examples/sec lr=0.000033, loss=18.1046, loss_ll=3.3606, loss_ll_paf=5.3658, loss_ll_heat=1.35539, q=1000
+[2018-06-26 19:07:39,074] [train] [INFO] epoch=7.00 step=54400, 10.4358 examples/sec lr=0.000033, loss=24.6013, loss_ll=4.56038, loss_ll_paf=7.13313, loss_ll_heat=1.98763, q=1000
+[2018-06-26 19:10:10,460] [train] [INFO] epoch=7.00 step=54500, 10.4360 examples/sec lr=0.000033, loss=22.1433, loss_ll=3.86658, loss_ll_paf=6.5639, loss_ll_heat=1.16925, q=1000
+[2018-06-26 19:12:37,410] [train] [INFO] epoch=7.00 step=54600, 10.4368 examples/sec lr=0.000033, loss=20.1686, loss_ll=3.53902, loss_ll_paf=5.58823, loss_ll_heat=1.4898, q=1000
+[2018-06-26 19:15:05,350] [train] [INFO] epoch=7.00 step=54700, 10.4375 examples/sec lr=0.000033, loss=14.7999, loss_ll=2.79213, loss_ll_paf=4.45096, loss_ll_heat=1.13331, q=1000
+[2018-06-26 19:17:33,536] [train] [INFO] epoch=7.00 step=54800, 10.4381 examples/sec lr=0.000033, loss=20.9901, loss_ll=3.87007, loss_ll_paf=6.09834, loss_ll_heat=1.64179, q=1000
+[2018-06-26 19:20:02,083] [train] [INFO] epoch=7.00 step=54900, 10.4387 examples/sec lr=0.000033, loss=20.1758, loss_ll=3.59289, loss_ll_paf=5.45515, loss_ll_heat=1.73062, q=1000
+[2018-06-26 19:22:30,213] [train] [INFO] epoch=7.00 step=55000, 10.4393 examples/sec lr=0.000033, loss=19.5696, loss_ll=3.38462, loss_ll_paf=5.23662, loss_ll_heat=1.53263, q=1000
+[2018-06-26 19:25:11,738] [train] [INFO] epoch=7.00 step=55100, 10.4383 examples/sec lr=0.000033, loss=12.8413, loss_ll=2.32346, loss_ll_paf=3.6156, loss_ll_heat=1.03132, q=1000
+[2018-06-26 19:27:41,793] [train] [INFO] epoch=7.00 step=55200, 10.4387 examples/sec lr=0.000033, loss=18.8467, loss_ll=3.22507, loss_ll_paf=5.50305, loss_ll_heat=0.947102, q=1000
+[2018-06-26 19:30:09,615] [train] [INFO] epoch=7.00 step=55300, 10.4394 examples/sec lr=0.000033, loss=22.3259, loss_ll=3.97049, loss_ll_paf=6.3934, loss_ll_heat=1.54757, q=1000
+[2018-06-26 19:32:35,813] [train] [INFO] epoch=7.00 step=55400, 10.4403 examples/sec lr=0.000033, loss=28.7388, loss_ll=5.18976, loss_ll_paf=9.10639, loss_ll_heat=1.27313, q=1000
+[2018-06-26 19:35:10,784] [train] [INFO] epoch=7.00 step=55500, 10.4401 examples/sec lr=0.000033, loss=36.4012, loss_ll=7.31212, loss_ll_paf=13.2236, loss_ll_heat=1.40063, q=1000
+[2018-06-26 19:37:48,299] [train] [INFO] epoch=7.00 step=55600, 10.4395 examples/sec lr=0.000033, loss=22.9528, loss_ll=4.12722, loss_ll_paf=6.75506, loss_ll_heat=1.49939, q=1000
+[2018-06-26 19:40:26,244] [train] [INFO] epoch=7.00 step=55700, 10.4390 examples/sec lr=0.000033, loss=39.566, loss_ll=7.72907, loss_ll_paf=13.2139, loss_ll_heat=2.24423, q=1000
+[2018-06-26 19:43:04,670] [train] [INFO] epoch=7.00 step=55800, 10.4383 examples/sec lr=0.000033, loss=16.9932, loss_ll=3.26157, loss_ll_paf=5.02354, loss_ll_heat=1.4996, q=1000
+[2018-06-26 19:45:44,128] [train] [INFO] epoch=7.00 step=55900, 10.4376 examples/sec lr=0.000033, loss=18.9183, loss_ll=3.43614, loss_ll_paf=5.61055, loss_ll_heat=1.26173, q=1000
+[2018-06-26 19:48:24,078] [train] [INFO] epoch=7.00 step=56000, 10.4368 examples/sec lr=0.000033, loss=19.6279, loss_ll=3.33776, loss_ll_paf=5.25091, loss_ll_heat=1.42461, q=1000
+[2018-06-26 19:51:04,595] [train] [INFO] epoch=7.00 step=56100, 10.4359 examples/sec lr=0.000033, loss=23.4291, loss_ll=4.29712, loss_ll_paf=7.06746, loss_ll_heat=1.52679, q=1000
+[2018-06-26 19:53:34,963] [train] [INFO] epoch=7.00 step=56200, 10.4362 examples/sec lr=0.000033, loss=19.7239, loss_ll=3.709, loss_ll_paf=6.02572, loss_ll_heat=1.39229, q=1000
+[2018-06-26 19:56:11,868] [train] [INFO] epoch=7.00 step=56300, 10.4358 examples/sec lr=0.000033, loss=19.4741, loss_ll=3.53761, loss_ll_paf=5.97194, loss_ll_heat=1.10328, q=1000
+[2018-06-26 19:58:50,201] [train] [INFO] epoch=7.00 step=56400, 10.4352 examples/sec lr=0.000033, loss=25.4929, loss_ll=4.28341, loss_ll_paf=6.74997, loss_ll_heat=1.81684, q=1000
+[2018-06-26 20:01:27,441] [train] [INFO] epoch=7.00 step=56500, 10.4347 examples/sec lr=0.000033, loss=20.7661, loss_ll=4.01866, loss_ll_paf=6.4828, loss_ll_heat=1.55452, q=1000
+[2018-06-26 20:04:07,639] [train] [INFO] epoch=7.00 step=56600, 10.4339 examples/sec lr=0.000033, loss=24.1811, loss_ll=4.06915, loss_ll_paf=6.64688, loss_ll_heat=1.49143, q=1000
+[2018-06-26 20:06:45,595] [train] [INFO] epoch=7.00 step=56700, 10.4334 examples/sec lr=0.000033, loss=25.8949, loss_ll=4.63558, loss_ll_paf=7.62894, loss_ll_heat=1.64222, q=1000
+[2018-06-26 20:09:19,162] [train] [INFO] epoch=7.00 step=56800, 10.4333 examples/sec lr=0.000033, loss=18.0637, loss_ll=3.34106, loss_ll_paf=5.37199, loss_ll_heat=1.31013, q=1000
+[2018-06-26 20:11:51,841] [train] [INFO] epoch=7.00 step=56900, 10.4334 examples/sec lr=0.000033, loss=16.8053, loss_ll=3.06337, loss_ll_paf=4.71658, loss_ll_heat=1.41017, q=1000
+[2018-06-26 20:14:22,952] [train] [INFO] epoch=7.00 step=57000, 10.4337 examples/sec lr=0.000033, loss=15.346, loss_ll=2.81036, loss_ll_paf=4.17754, loss_ll_heat=1.44318, q=1000
+[2018-06-26 20:17:06,140] [train] [INFO] epoch=7.00 step=57100, 10.4325 examples/sec lr=0.000033, loss=31.4085, loss_ll=5.77478, loss_ll_paf=9.5902, loss_ll_heat=1.95936, q=1000
+[2018-06-26 20:19:35,444] [train] [INFO] epoch=7.00 step=57200, 10.4330 examples/sec lr=0.000033, loss=17.625, loss_ll=3.30057, loss_ll_paf=5.41907, loss_ll_heat=1.18206, q=1000
+[2018-06-26 20:22:05,664] [train] [INFO] epoch=7.00 step=57300, 10.4334 examples/sec lr=0.000033, loss=26.3441, loss_ll=4.85712, loss_ll_paf=8.59388, loss_ll_heat=1.12036, q=1000
+[2018-06-26 20:24:33,434] [train] [INFO] epoch=7.00 step=57400, 10.4340 examples/sec lr=0.000033, loss=23.4752, loss_ll=4.21097, loss_ll_paf=7.01106, loss_ll_heat=1.41088, q=1000
+[2018-06-26 20:27:02,656] [train] [INFO] epoch=7.00 step=57500, 10.4345 examples/sec lr=0.000033, loss=15.635, loss_ll=2.59087, loss_ll_paf=4.10371, loss_ll_heat=1.07804, q=1000
+[2018-06-26 20:29:31,819] [train] [INFO] epoch=7.00 step=57600, 10.4350 examples/sec lr=0.000033, loss=16.92, loss_ll=3.03905, loss_ll_paf=4.94701, loss_ll_heat=1.1311, q=1000
+[2018-06-26 20:32:05,311] [train] [INFO] epoch=7.00 step=57700, 10.4350 examples/sec lr=0.000033, loss=16.6869, loss_ll=3.04853, loss_ll_paf=5.24068, loss_ll_heat=0.856387, q=1000
+[2018-06-26 20:34:35,760] [train] [INFO] epoch=7.00 step=57800, 10.4353 examples/sec lr=0.000033, loss=24.8026, loss_ll=4.72992, loss_ll_paf=8.013, loss_ll_heat=1.44684, q=1000
+[2018-06-26 20:37:07,571] [train] [INFO] epoch=7.00 step=57900, 10.4355 examples/sec lr=0.000033, loss=25.427, loss_ll=4.26829, loss_ll_paf=7.15992, loss_ll_heat=1.37666, q=1000
+[2018-06-26 20:39:39,141] [train] [INFO] epoch=7.00 step=58000, 10.4357 examples/sec lr=0.000033, loss=20.1079, loss_ll=3.75816, loss_ll_paf=6.49149, loss_ll_heat=1.02484, q=1000
+[2018-06-26 20:42:20,512] [train] [INFO] epoch=7.00 step=58100, 10.4348 examples/sec lr=0.000033, loss=29.9271, loss_ll=5.26946, loss_ll_paf=8.68661, loss_ll_heat=1.85231, q=1000
+[2018-06-26 20:44:49,995] [train] [INFO] epoch=7.00 step=58200, 10.4352 examples/sec lr=0.000033, loss=16.7532, loss_ll=2.95729, loss_ll_paf=4.70059, loss_ll_heat=1.21399, q=1000
+[2018-06-26 20:47:20,472] [train] [INFO] epoch=7.00 step=58300, 10.4356 examples/sec lr=0.000033, loss=22.5761, loss_ll=4.3618, loss_ll_paf=7.45413, loss_ll_heat=1.26946, q=1000
+[2018-06-26 20:49:51,285] [train] [INFO] epoch=7.00 step=58400, 10.4358 examples/sec lr=0.000033, loss=13.2317, loss_ll=2.30473, loss_ll_paf=3.67758, loss_ll_heat=0.931882, q=1000
+[2018-06-26 20:52:19,992] [train] [INFO] epoch=7.00 step=58500, 10.4364 examples/sec lr=0.000033, loss=19.6814, loss_ll=3.66039, loss_ll_paf=5.62218, loss_ll_heat=1.69859, q=1000
+[2018-06-26 20:54:49,065] [train] [INFO] epoch=7.00 step=58600, 10.4369 examples/sec lr=0.000033, loss=21.7079, loss_ll=4.02514, loss_ll_paf=6.74187, loss_ll_heat=1.30841, q=1000
+[2018-06-26 20:57:19,590] [train] [INFO] epoch=7.00 step=58700, 10.4372 examples/sec lr=0.000033, loss=17.9892, loss_ll=2.75132, loss_ll_paf=4.4192, loss_ll_heat=1.08343, q=1000
+[2018-06-26 20:59:47,837] [train] [INFO] epoch=7.00 step=58800, 10.4378 examples/sec lr=0.000033, loss=18.069, loss_ll=3.36803, loss_ll_paf=5.70646, loss_ll_heat=1.02961, q=1000
+[2018-06-26 21:02:18,771] [train] [INFO] epoch=7.00 step=58900, 10.4381 examples/sec lr=0.000033, loss=23.1361, loss_ll=4.22363, loss_ll_paf=7.19184, loss_ll_heat=1.25542, q=1000
+[2018-06-26 21:04:48,167] [train] [INFO] epoch=7.00 step=59000, 10.4385 examples/sec lr=0.000033, loss=30.3523, loss_ll=5.51167, loss_ll_paf=9.38092, loss_ll_heat=1.64242, q=1000
+[2018-06-26 21:07:30,402] [train] [INFO] epoch=7.00 step=59100, 10.4375 examples/sec lr=0.000033, loss=14.0921, loss_ll=2.46548, loss_ll_paf=3.8382, loss_ll_heat=1.09276, q=1000
+[2018-06-26 21:10:01,833] [train] [INFO] epoch=7.00 step=59200, 10.4377 examples/sec lr=0.000033, loss=24.2384, loss_ll=4.09022, loss_ll_paf=6.97577, loss_ll_heat=1.20467, q=1000
+[2018-06-26 21:12:30,574] [train] [INFO] epoch=7.00 step=59300, 10.4382 examples/sec lr=0.000033, loss=24.9821, loss_ll=4.66278, loss_ll_paf=8.01614, loss_ll_heat=1.30943, q=1000
+[2018-06-26 21:15:01,065] [train] [INFO] epoch=7.00 step=59400, 10.4385 examples/sec lr=0.000033, loss=18.9535, loss_ll=3.64477, loss_ll_paf=6.08348, loss_ll_heat=1.20606, q=1000
+[2018-06-26 21:17:32,464] [train] [INFO] epoch=7.00 step=59500, 10.4387 examples/sec lr=0.000033, loss=25.0106, loss_ll=4.76208, loss_ll_paf=7.96304, loss_ll_heat=1.56113, q=1000
+[2018-06-26 21:20:01,361] [train] [INFO] epoch=7.00 step=59600, 10.4392 examples/sec lr=0.000033, loss=37.8844, loss_ll=6.82885, loss_ll_paf=12.3159, loss_ll_heat=1.34181, q=1000
+[2018-06-26 21:22:30,075] [train] [INFO] epoch=7.00 step=59700, 10.4398 examples/sec lr=0.000033, loss=15.5742, loss_ll=2.9034, loss_ll_paf=4.50057, loss_ll_heat=1.30623, q=1000
+[2018-06-26 21:24:59,582] [train] [INFO] epoch=7.00 step=59800, 10.4402 examples/sec lr=0.000033, loss=20.8136, loss_ll=3.81766, loss_ll_paf=6.2551, loss_ll_heat=1.38021, q=1000
+[2018-06-26 21:27:29,320] [train] [INFO] epoch=7.00 step=59900, 10.4406 examples/sec lr=0.000033, loss=16.5036, loss_ll=3.11325, loss_ll_paf=5.11518, loss_ll_heat=1.11132, q=1000
+[2018-06-26 21:30:00,856] [train] [INFO] epoch=7.00 step=60000, 10.4408 examples/sec lr=0.000011, loss=14.7952, loss_ll=2.64392, loss_ll_paf=4.27219, loss_ll_heat=1.01565, q=1000
+[2018-06-26 21:32:45,922] [train] [INFO] epoch=7.00 step=60100, 10.4394 examples/sec lr=0.000011, loss=15.1577, loss_ll=2.61535, loss_ll_paf=3.92621, loss_ll_heat=1.30449, q=1000
+[2018-06-26 21:35:18,817] [train] [INFO] epoch=7.00 step=60200, 10.4395 examples/sec lr=0.000011, loss=22.6984, loss_ll=3.88551, loss_ll_paf=6.36623, loss_ll_heat=1.40479, q=1000
+[2018-06-26 21:37:50,847] [train] [INFO] epoch=7.00 step=60300, 10.4396 examples/sec lr=0.000011, loss=19.1392, loss_ll=2.99192, loss_ll_paf=4.53257, loss_ll_heat=1.45127, q=1000
+[2018-06-26 21:40:24,082] [train] [INFO] epoch=7.00 step=60400, 10.4396 examples/sec lr=0.000011, loss=16.9362, loss_ll=2.99247, loss_ll_paf=4.86867, loss_ll_heat=1.11626, q=1000
+[2018-06-26 21:43:04,634] [train] [INFO] epoch=7.00 step=60500, 10.4388 examples/sec lr=0.000011, loss=17.8536, loss_ll=2.85759, loss_ll_paf=4.55601, loss_ll_heat=1.15918, q=1000
+[2018-06-26 21:45:48,298] [train] [INFO] epoch=7.00 step=60600, 10.4376 examples/sec lr=0.000011, loss=22.1356, loss_ll=4.30921, loss_ll_paf=6.95354, loss_ll_heat=1.66487, q=1000
+[2018-06-26 21:48:27,022] [train] [INFO] epoch=7.00 step=60700, 10.4370 examples/sec lr=0.000011, loss=14.5232, loss_ll=2.29309, loss_ll_paf=3.3802, loss_ll_heat=1.20599, q=1000
+[2018-06-26 21:51:09,112] [train] [INFO] epoch=7.00 step=60800, 10.4360 examples/sec lr=0.000011, loss=13.9819, loss_ll=2.51093, loss_ll_paf=3.80108, loss_ll_heat=1.22078, q=1000
+[2018-06-26 21:53:49,909] [train] [INFO] epoch=8.00 step=60900, 10.4352 examples/sec lr=0.000011, loss=26.6498, loss_ll=4.78702, loss_ll_paf=8.33512, loss_ll_heat=1.23893, q=1000
+[2018-06-26 21:56:30,686] [train] [INFO] epoch=8.00 step=61000, 10.4344 examples/sec lr=0.000011, loss=31.5844, loss_ll=5.82564, loss_ll_paf=9.69429, loss_ll_heat=1.95698, q=1000
+[2018-06-26 21:59:23,447] [train] [INFO] epoch=8.00 step=61100, 10.4322 examples/sec lr=0.000011, loss=17.8356, loss_ll=3.0633, loss_ll_paf=5.10687, loss_ll_heat=1.01973, q=1000
+[2018-06-26 22:02:03,377] [train] [INFO] epoch=8.00 step=61200, 10.4315 examples/sec lr=0.000011, loss=24.929, loss_ll=4.37018, loss_ll_paf=7.45925, loss_ll_heat=1.28111, q=1000
+[2018-06-26 22:04:44,853] [train] [INFO] epoch=8.00 step=61300, 10.4306 examples/sec lr=0.000011, loss=12.319, loss_ll=2.00995, loss_ll_paf=3.092, loss_ll_heat=0.927898, q=1000
+[2018-06-26 22:07:23,790] [train] [INFO] epoch=8.00 step=61400, 10.4300 examples/sec lr=0.000011, loss=19.8215, loss_ll=3.63991, loss_ll_paf=5.79952, loss_ll_heat=1.48029, q=1000
+[2018-06-26 22:09:57,881] [train] [INFO] epoch=8.00 step=61500, 10.4299 examples/sec lr=0.000011, loss=14.5062, loss_ll=2.68343, loss_ll_paf=4.09796, loss_ll_heat=1.2689, q=1000
+[2018-06-26 22:12:32,691] [train] [INFO] epoch=8.00 step=61600, 10.4297 examples/sec lr=0.000011, loss=14.6012, loss_ll=2.92849, loss_ll_paf=4.9151, loss_ll_heat=0.941893, q=1000
+[2018-06-26 22:15:03,364] [train] [INFO] epoch=8.00 step=61700, 10.4300 examples/sec lr=0.000011, loss=9.27336, loss_ll=1.61961, loss_ll_paf=2.37938, loss_ll_heat=0.859842, q=1000
+[2018-06-26 22:17:35,542] [train] [INFO] epoch=8.00 step=61800, 10.4302 examples/sec lr=0.000011, loss=30.5795, loss_ll=5.89458, loss_ll_paf=10.145, loss_ll_heat=1.6442, q=1000
+[2018-06-26 22:20:03,547] [train] [INFO] epoch=8.00 step=61900, 10.4308 examples/sec lr=0.000011, loss=15.0952, loss_ll=2.65258, loss_ll_paf=4.3552, loss_ll_heat=0.949958, q=1000
+[2018-06-26 22:22:34,245] [train] [INFO] epoch=8.00 step=62000, 10.4311 examples/sec lr=0.000011, loss=16.8732, loss_ll=3.05763, loss_ll_paf=5.24482, loss_ll_heat=0.870448, q=1000
+[2018-06-26 22:25:17,968] [train] [INFO] epoch=8.00 step=62100, 10.4299 examples/sec lr=0.000011, loss=12.4166, loss_ll=2.34478, loss_ll_paf=3.51506, loss_ll_heat=1.17449, q=1000
+[2018-06-26 22:27:46,415] [train] [INFO] epoch=8.00 step=62200, 10.4305 examples/sec lr=0.000011, loss=10.7651, loss_ll=1.92745, loss_ll_paf=2.92522, loss_ll_heat=0.929688, q=1000
+[2018-06-26 22:30:17,255] [train] [INFO] epoch=8.00 step=62300, 10.4308 examples/sec lr=0.000011, loss=20.5931, loss_ll=3.6658, loss_ll_paf=5.68675, loss_ll_heat=1.64485, q=1000
+[2018-06-26 22:32:46,969] [train] [INFO] epoch=8.00 step=62400, 10.4312 examples/sec lr=0.000011, loss=22.7031, loss_ll=4.01907, loss_ll_paf=6.56157, loss_ll_heat=1.47656, q=1000
+[2018-06-26 22:35:20,508] [train] [INFO] epoch=8.00 step=62500, 10.4311 examples/sec lr=0.000011, loss=31.4712, loss_ll=5.83423, loss_ll_paf=10.1472, loss_ll_heat=1.52131, q=1000
+[2018-06-26 22:37:50,799] [train] [INFO] epoch=8.00 step=62600, 10.4315 examples/sec lr=0.000011, loss=12.0976, loss_ll=2.26649, loss_ll_paf=3.48436, loss_ll_heat=1.04861, q=1000
+[2018-06-26 22:40:22,793] [train] [INFO] epoch=8.00 step=62700, 10.4316 examples/sec lr=0.000011, loss=16.7836, loss_ll=3.13069, loss_ll_paf=5.23598, loss_ll_heat=1.0254, q=1000
+[2018-06-26 22:42:49,723] [train] [INFO] epoch=8.00 step=62800, 10.4323 examples/sec lr=0.000011, loss=21.1931, loss_ll=3.98854, loss_ll_paf=6.51645, loss_ll_heat=1.46063, q=1000
+[2018-06-26 22:45:21,573] [train] [INFO] epoch=8.00 step=62900, 10.4325 examples/sec lr=0.000011, loss=17.6224, loss_ll=3.3208, loss_ll_paf=5.84287, loss_ll_heat=0.79874, q=1000
+[2018-06-26 22:47:52,024] [train] [INFO] epoch=8.00 step=63000, 10.4328 examples/sec lr=0.000011, loss=23.2592, loss_ll=4.66342, loss_ll_paf=7.73533, loss_ll_heat=1.59152, q=1000
+[2018-06-26 22:50:33,205] [train] [INFO] epoch=8.00 step=63100, 10.4320 examples/sec lr=0.000011, loss=21.2087, loss_ll=4.09782, loss_ll_paf=6.8735, loss_ll_heat=1.32214, q=1000
+[2018-06-26 22:53:01,521] [train] [INFO] epoch=8.00 step=63200, 10.4325 examples/sec lr=0.000011, loss=28.7585, loss_ll=5.38592, loss_ll_paf=9.53193, loss_ll_heat=1.2399, q=1000
+[2018-06-26 22:55:30,990] [train] [INFO] epoch=8.00 step=63300, 10.4329 examples/sec lr=0.000011, loss=17.0104, loss_ll=3.22699, loss_ll_paf=5.39909, loss_ll_heat=1.0549, q=1000
+[2018-06-26 22:58:00,307] [train] [INFO] epoch=8.00 step=63400, 10.4334 examples/sec lr=0.000011, loss=26.2571, loss_ll=5.33503, loss_ll_paf=8.6452, loss_ll_heat=2.02487, q=1000
+[2018-06-26 23:00:28,234] [train] [INFO] epoch=8.00 step=63500, 10.4339 examples/sec lr=0.000011, loss=22.0381, loss_ll=3.9827, loss_ll_paf=6.58256, loss_ll_heat=1.38283, q=1000
+[2018-06-26 23:02:56,486] [train] [INFO] epoch=8.00 step=63600, 10.4345 examples/sec lr=0.000011, loss=9.27024, loss_ll=1.61246, loss_ll_paf=2.38934, loss_ll_heat=0.835585, q=1000
+[2018-06-26 23:05:23,794] [train] [INFO] epoch=8.00 step=63700, 10.4351 examples/sec lr=0.000011, loss=28.7565, loss_ll=5.36423, loss_ll_paf=9.35015, loss_ll_heat=1.3783, q=1000
+[2018-06-26 23:07:52,624] [train] [INFO] epoch=8.00 step=63800, 10.4356 examples/sec lr=0.000011, loss=30.9429, loss_ll=5.95992, loss_ll_paf=9.73249, loss_ll_heat=2.18736, q=1000
+[2018-06-26 23:10:23,429] [train] [INFO] epoch=8.00 step=63900, 10.4359 examples/sec lr=0.000011, loss=11.7981, loss_ll=2.2478, loss_ll_paf=3.37055, loss_ll_heat=1.12505, q=1000
+[2018-06-26 23:12:52,045] [train] [INFO] epoch=8.00 step=64000, 10.4364 examples/sec lr=0.000011, loss=12.5121, loss_ll=2.42876, loss_ll_paf=3.78404, loss_ll_heat=1.07348, q=1000
+[2018-06-26 23:15:34,963] [train] [INFO] epoch=8.00 step=64100, 10.4354 examples/sec lr=0.000011, loss=21.1162, loss_ll=4.17082, loss_ll_paf=6.7874, loss_ll_heat=1.55424, q=1000
+[2018-06-26 23:18:03,888] [train] [INFO] epoch=8.00 step=64200, 10.4358 examples/sec lr=0.000011, loss=26.6574, loss_ll=5.13191, loss_ll_paf=8.83267, loss_ll_heat=1.43114, q=1000
+[2018-06-26 23:20:34,489] [train] [INFO] epoch=8.00 step=64300, 10.4361 examples/sec lr=0.000011, loss=17.2454, loss_ll=3.09091, loss_ll_paf=5.29265, loss_ll_heat=0.889158, q=1000
+[2018-06-26 23:23:02,182] [train] [INFO] epoch=8.00 step=64400, 10.4367 examples/sec lr=0.000011, loss=17.3841, loss_ll=3.23928, loss_ll_paf=5.62178, loss_ll_heat=0.856779, q=1000
+[2018-06-26 23:25:28,418] [train] [INFO] epoch=8.00 step=64500, 10.4375 examples/sec lr=0.000011, loss=18.1648, loss_ll=3.08559, loss_ll_paf=5.06557, loss_ll_heat=1.1056, q=1000
+[2018-06-26 23:27:58,148] [train] [INFO] epoch=8.00 step=64600, 10.4378 examples/sec lr=0.000011, loss=25.1638, loss_ll=4.65886, loss_ll_paf=7.8977, loss_ll_heat=1.42002, q=1000
+[2018-06-26 23:30:25,670] [train] [INFO] epoch=8.00 step=64700, 10.4384 examples/sec lr=0.000011, loss=13.0312, loss_ll=2.2694, loss_ll_paf=3.68596, loss_ll_heat=0.852845, q=1000
+[2018-06-26 23:32:55,290] [train] [INFO] epoch=8.00 step=64800, 10.4388 examples/sec lr=0.000011, loss=19.9608, loss_ll=3.27476, loss_ll_paf=5.11237, loss_ll_heat=1.43715, q=1000
+[2018-06-26 23:35:24,415] [train] [INFO] epoch=8.00 step=64900, 10.4393 examples/sec lr=0.000011, loss=14.8893, loss_ll=2.79416, loss_ll_paf=4.7105, loss_ll_heat=0.877831, q=1000
+[2018-06-26 23:37:53,358] [train] [INFO] epoch=8.00 step=65000, 10.4397 examples/sec lr=0.000011, loss=14.5666, loss_ll=2.77184, loss_ll_paf=4.05706, loss_ll_heat=1.48662, q=1000
+[2018-06-26 23:40:32,147] [train] [INFO] epoch=8.00 step=65100, 10.4391 examples/sec lr=0.000011, loss=15.095, loss_ll=2.82529, loss_ll_paf=4.65571, loss_ll_heat=0.994868, q=1000
+[2018-06-26 23:43:00,638] [train] [INFO] epoch=8.00 step=65200, 10.4396 examples/sec lr=0.000011, loss=17.1209, loss_ll=2.9889, loss_ll_paf=4.78498, loss_ll_heat=1.19281, q=1000
+[2018-06-26 23:45:29,031] [train] [INFO] epoch=8.00 step=65300, 10.4401 examples/sec lr=0.000011, loss=18.3544, loss_ll=3.55226, loss_ll_paf=5.60632, loss_ll_heat=1.49819, q=1000
+[2018-06-26 23:47:55,708] [train] [INFO] epoch=8.00 step=65400, 10.4408 examples/sec lr=0.000011, loss=23.7618, loss_ll=4.56378, loss_ll_paf=7.50745, loss_ll_heat=1.62012, q=1000
+[2018-06-26 23:50:26,654] [train] [INFO] epoch=8.00 step=65500, 10.4411 examples/sec lr=0.000011, loss=9.28668, loss_ll=1.73026, loss_ll_paf=2.61015, loss_ll_heat=0.850362, q=1000
+[2018-06-26 23:52:53,207] [train] [INFO] epoch=8.00 step=65600, 10.4418 examples/sec lr=0.000011, loss=17.2582, loss_ll=3.1274, loss_ll_paf=4.91912, loss_ll_heat=1.33569, q=1000
+[2018-06-26 23:55:19,085] [train] [INFO] epoch=8.00 step=65700, 10.4425 examples/sec lr=0.000011, loss=15.9529, loss_ll=2.87306, loss_ll_paf=4.30145, loss_ll_heat=1.44466, q=1000
+[2018-06-26 23:57:47,832] [train] [INFO] epoch=8.00 step=65800, 10.4430 examples/sec lr=0.000011, loss=14.5878, loss_ll=2.38993, loss_ll_paf=4.11326, loss_ll_heat=0.666605, q=1000
+[2018-06-27 00:00:18,076] [train] [INFO] epoch=8.00 step=65900, 10.4433 examples/sec lr=0.000011, loss=20.2414, loss_ll=3.77741, loss_ll_paf=6.28449, loss_ll_heat=1.27032, q=1000
+[2018-06-27 00:02:47,122] [train] [INFO] epoch=8.00 step=66000, 10.4437 examples/sec lr=0.000011, loss=15.162, loss_ll=2.82074, loss_ll_paf=4.43097, loss_ll_heat=1.21052, q=1000
+[2018-06-27 00:05:25,530] [train] [INFO] epoch=8.00 step=66100, 10.4432 examples/sec lr=0.000011, loss=12.6703, loss_ll=2.31512, loss_ll_paf=3.49423, loss_ll_heat=1.13601, q=1000
+[2018-06-27 00:07:53,989] [train] [INFO] epoch=8.00 step=66200, 10.4437 examples/sec lr=0.000011, loss=24.3139, loss_ll=4.16727, loss_ll_paf=7.11639, loss_ll_heat=1.21815, q=1000
+[2018-06-27 00:10:24,668] [train] [INFO] epoch=8.00 step=66300, 10.4439 examples/sec lr=0.000011, loss=22.8333, loss_ll=3.79713, loss_ll_paf=6.37514, loss_ll_heat=1.21913, q=1000
+[2018-06-27 00:12:53,289] [train] [INFO] epoch=8.00 step=66400, 10.4444 examples/sec lr=0.000011, loss=21.192, loss_ll=4.1881, loss_ll_paf=6.82051, loss_ll_heat=1.55568, q=1000
+[2018-06-27 00:15:18,518] [train] [INFO] epoch=8.00 step=66500, 10.4452 examples/sec lr=0.000011, loss=16.7577, loss_ll=2.82685, loss_ll_paf=4.54617, loss_ll_heat=1.10754, q=1000
+[2018-06-27 00:17:45,623] [train] [INFO] epoch=8.00 step=66600, 10.4458 examples/sec lr=0.000011, loss=15.2357, loss_ll=2.79561, loss_ll_paf=4.65592, loss_ll_heat=0.935292, q=1000
+[2018-06-27 00:20:18,009] [train] [INFO] epoch=8.00 step=66700, 10.4459 examples/sec lr=0.000011, loss=17.2666, loss_ll=3.17636, loss_ll_paf=5.36765, loss_ll_heat=0.985061, q=1000
+[2018-06-27 00:22:46,206] [train] [INFO] epoch=8.00 step=66800, 10.4464 examples/sec lr=0.000011, loss=19.3192, loss_ll=3.5949, loss_ll_paf=6.11805, loss_ll_heat=1.07175, q=1000
+[2018-06-27 00:25:14,274] [train] [INFO] epoch=8.00 step=66900, 10.4469 examples/sec lr=0.000011, loss=17.4233, loss_ll=3.24031, loss_ll_paf=5.55648, loss_ll_heat=0.924138, q=1000
+[2018-06-27 00:27:43,057] [train] [INFO] epoch=8.00 step=67000, 10.4474 examples/sec lr=0.000011, loss=24.0911, loss_ll=3.94734, loss_ll_paf=6.65308, loss_ll_heat=1.2416, q=1000
+[2018-06-27 00:30:23,377] [train] [INFO] epoch=8.00 step=67100, 10.4467 examples/sec lr=0.000011, loss=17.9323, loss_ll=3.35267, loss_ll_paf=5.68415, loss_ll_heat=1.02119, q=1000
+[2018-06-27 00:32:52,974] [train] [INFO] epoch=8.00 step=67200, 10.4470 examples/sec lr=0.000011, loss=7.28661, loss_ll=1.34042, loss_ll_paf=2.07144, loss_ll_heat=0.609402, q=1000
+[2018-06-27 00:35:22,743] [train] [INFO] epoch=8.00 step=67300, 10.4474 examples/sec lr=0.000011, loss=28.0125, loss_ll=5.05843, loss_ll_paf=8.66814, loss_ll_heat=1.44872, q=1000
+[2018-06-27 00:37:53,533] [train] [INFO] epoch=8.00 step=67400, 10.4476 examples/sec lr=0.000011, loss=12.7928, loss_ll=2.11579, loss_ll_paf=3.45051, loss_ll_heat=0.781078, q=1000
+[2018-06-27 00:40:22,646] [train] [INFO] epoch=8.00 step=67500, 10.4480 examples/sec lr=0.000011, loss=41.612, loss_ll=7.95305, loss_ll_paf=14.3439, loss_ll_heat=1.56221, q=1000
+[2018-06-27 00:42:50,895] [train] [INFO] epoch=8.00 step=67600, 10.4485 examples/sec lr=0.000011, loss=9.82358, loss_ll=1.7469, loss_ll_paf=2.78314, loss_ll_heat=0.710667, q=1000
+[2018-06-27 00:45:18,110] [train] [INFO] epoch=8.00 step=67700, 10.4491 examples/sec lr=0.000011, loss=27.7428, loss_ll=4.88266, loss_ll_paf=8.37089, loss_ll_heat=1.39442, q=1000
+[2018-06-27 00:47:45,769] [train] [INFO] epoch=8.00 step=67800, 10.4497 examples/sec lr=0.000011, loss=28.2983, loss_ll=5.11063, loss_ll_paf=8.83916, loss_ll_heat=1.3821, q=1000
+[2018-06-27 00:50:12,338] [train] [INFO] epoch=8.00 step=67900, 10.4503 examples/sec lr=0.000011, loss=22.7939, loss_ll=4.11355, loss_ll_paf=6.73982, loss_ll_heat=1.48727, q=1000
+[2018-06-27 00:52:40,099] [train] [INFO] epoch=8.00 step=68000, 10.4508 examples/sec lr=0.000011, loss=20.0319, loss_ll=3.71508, loss_ll_paf=5.77506, loss_ll_heat=1.6551, q=1000
+[2018-06-27 00:55:21,030] [train] [INFO] epoch=8.00 step=68100, 10.4501 examples/sec lr=0.000011, loss=11.906, loss_ll=2.30647, loss_ll_paf=3.33199, loss_ll_heat=1.28095, q=1000
+[2018-06-27 00:57:50,908] [train] [INFO] epoch=8.00 step=68200, 10.4504 examples/sec lr=0.000011, loss=16.9229, loss_ll=2.93164, loss_ll_paf=4.93398, loss_ll_heat=0.92931, q=1000
+[2018-06-27 01:00:18,773] [train] [INFO] epoch=8.00 step=68300, 10.4509 examples/sec lr=0.000011, loss=21.0918, loss_ll=4.28504, loss_ll_paf=7.20707, loss_ll_heat=1.36301, q=1000
+[2018-06-27 01:02:46,645] [train] [INFO] epoch=8.00 step=68400, 10.4514 examples/sec lr=0.000011, loss=26.2972, loss_ll=4.81549, loss_ll_paf=8.31509, loss_ll_heat=1.31589, q=1000
+[2018-06-27 01:05:19,271] [train] [INFO] epoch=9.00 step=68500, 10.4515 examples/sec lr=0.000011, loss=25.8905, loss_ll=5.01811, loss_ll_paf=8.5865, loss_ll_heat=1.44972, q=1000
+[2018-06-27 01:07:46,233] [train] [INFO] epoch=9.00 step=68600, 10.4521 examples/sec lr=0.000011, loss=9.80055, loss_ll=1.88905, loss_ll_paf=2.4949, loss_ll_heat=1.2832, q=1000
+[2018-06-27 01:10:16,871] [train] [INFO] epoch=9.00 step=68700, 10.4523 examples/sec lr=0.000011, loss=15.7542, loss_ll=2.99038, loss_ll_paf=4.52905, loss_ll_heat=1.4517, q=1000
+[2018-06-27 01:12:44,160] [train] [INFO] epoch=9.00 step=68800, 10.4529 examples/sec lr=0.000011, loss=12.8551, loss_ll=2.44466, loss_ll_paf=3.85807, loss_ll_heat=1.03126, q=1000
+[2018-06-27 01:15:12,996] [train] [INFO] epoch=9.00 step=68900, 10.4533 examples/sec lr=0.000011, loss=20.8091, loss_ll=3.5172, loss_ll_paf=6.19945, loss_ll_heat=0.834947, q=1000
+[2018-06-27 01:17:41,641] [train] [INFO] epoch=9.00 step=69000, 10.4538 examples/sec lr=0.000011, loss=16.3028, loss_ll=3.02227, loss_ll_paf=5.18349, loss_ll_heat=0.861055, q=1000
+[2018-06-27 01:20:22,429] [train] [INFO] epoch=9.00 step=69100, 10.4530 examples/sec lr=0.000011, loss=19.0417, loss_ll=3.51681, loss_ll_paf=5.38359, loss_ll_heat=1.65003, q=1000
+[2018-06-27 01:22:51,342] [train] [INFO] epoch=9.00 step=69200, 10.4534 examples/sec lr=0.000011, loss=20.3521, loss_ll=3.83934, loss_ll_paf=5.63358, loss_ll_heat=2.0451, q=1000
+[2018-06-27 01:25:18,501] [train] [INFO] epoch=9.00 step=69300, 10.4540 examples/sec lr=0.000011, loss=15.2272, loss_ll=2.44417, loss_ll_paf=3.98371, loss_ll_heat=0.904624, q=1000
+[2018-06-27 01:27:46,912] [train] [INFO] epoch=9.00 step=69400, 10.4544 examples/sec lr=0.000011, loss=13.1649, loss_ll=2.34822, loss_ll_paf=3.81728, loss_ll_heat=0.879158, q=1000
+[2018-06-27 01:30:16,558] [train] [INFO] epoch=9.00 step=69500, 10.4548 examples/sec lr=0.000011, loss=26.9342, loss_ll=5.14119, loss_ll_paf=8.16431, loss_ll_heat=2.11808, q=1000
+[2018-06-27 01:32:42,700] [train] [INFO] epoch=9.00 step=69600, 10.4555 examples/sec lr=0.000011, loss=20.8057, loss_ll=3.74752, loss_ll_paf=6.12432, loss_ll_heat=1.37072, q=1000
+[2018-06-27 01:35:10,929] [train] [INFO] epoch=9.00 step=69700, 10.4559 examples/sec lr=0.000011, loss=18.1412, loss_ll=3.40779, loss_ll_paf=5.72069, loss_ll_heat=1.09489, q=1000
+[2018-06-27 01:37:38,994] [train] [INFO] epoch=9.00 step=69800, 10.4564 examples/sec lr=0.000011, loss=16.6434, loss_ll=3.10128, loss_ll_paf=4.96984, loss_ll_heat=1.23272, q=1000
+[2018-06-27 01:40:08,313] [train] [INFO] epoch=9.00 step=69900, 10.4568 examples/sec lr=0.000011, loss=13.087, loss_ll=2.24326, loss_ll_paf=3.3112, loss_ll_heat=1.17532, q=1000
+[2018-06-27 01:42:38,495] [train] [INFO] epoch=9.00 step=70000, 10.4571 examples/sec lr=0.000011, loss=15.9587, loss_ll=3.04672, loss_ll_paf=4.66564, loss_ll_heat=1.42781, q=1000
+[2018-06-27 01:45:17,454] [train] [INFO] epoch=9.00 step=70100, 10.4565 examples/sec lr=0.000011, loss=10.5026, loss_ll=1.97198, loss_ll_paf=2.9292, loss_ll_heat=1.01476, q=1000
+[2018-06-27 01:47:47,586] [train] [INFO] epoch=9.00 step=70200, 10.4568 examples/sec lr=0.000011, loss=20.0638, loss_ll=3.40082, loss_ll_paf=5.76168, loss_ll_heat=1.03997, q=1000
+[2018-06-27 01:50:16,337] [train] [INFO] epoch=9.00 step=70300, 10.4572 examples/sec lr=0.000011, loss=16.8813, loss_ll=3.02361, loss_ll_paf=4.93159, loss_ll_heat=1.11562, q=1000
+[2018-06-27 01:52:45,083] [train] [INFO] epoch=9.00 step=70400, 10.4576 examples/sec lr=0.000011, loss=20.2456, loss_ll=3.58972, loss_ll_paf=6.2485, loss_ll_heat=0.930946, q=1000
+[2018-06-27 01:55:15,892] [train] [INFO] epoch=9.00 step=70500, 10.4578 examples/sec lr=0.000011, loss=17.9827, loss_ll=3.1998, loss_ll_paf=5.08721, loss_ll_heat=1.3124, q=1000
+[2018-06-27 01:57:49,889] [train] [INFO] epoch=9.00 step=70600, 10.4577 examples/sec lr=0.000011, loss=16.5601, loss_ll=2.92408, loss_ll_paf=4.79029, loss_ll_heat=1.05786, q=1000
+[2018-06-27 02:00:24,136] [train] [INFO] epoch=9.00 step=70700, 10.4576 examples/sec lr=0.000011, loss=16.5797, loss_ll=3.01213, loss_ll_paf=5.28072, loss_ll_heat=0.743542, q=1000
+[2018-06-27 02:02:57,220] [train] [INFO] epoch=9.00 step=70800, 10.4576 examples/sec lr=0.000011, loss=12.9871, loss_ll=2.49251, loss_ll_paf=3.85776, loss_ll_heat=1.12725, q=1000
+[2018-06-27 02:05:27,138] [train] [INFO] epoch=9.00 step=70900, 10.4579 examples/sec lr=0.000011, loss=23.1829, loss_ll=4.29652, loss_ll_paf=7.10637, loss_ll_heat=1.48666, q=1000
+[2018-06-27 02:07:58,178] [train] [INFO] epoch=9.00 step=71000, 10.4581 examples/sec lr=0.000011, loss=14.6283, loss_ll=2.80774, loss_ll_paf=4.74552, loss_ll_heat=0.869968, q=1000
+[2018-06-27 02:10:41,305] [train] [INFO] epoch=9.00 step=71100, 10.4571 examples/sec lr=0.000011, loss=22.1781, loss_ll=4.32108, loss_ll_paf=7.225, loss_ll_heat=1.41715, q=1000
+[2018-06-27 02:13:08,661] [train] [INFO] epoch=9.00 step=71200, 10.4576 examples/sec lr=0.000011, loss=16.4418, loss_ll=2.63276, loss_ll_paf=4.20951, loss_ll_heat=1.05601, q=1000
+[2018-06-27 02:15:39,713] [train] [INFO] epoch=9.00 step=71300, 10.4578 examples/sec lr=0.000011, loss=16.445, loss_ll=2.85101, loss_ll_paf=4.57778, loss_ll_heat=1.12423, q=1000
+[2018-06-27 02:18:08,757] [train] [INFO] epoch=9.00 step=71400, 10.4582 examples/sec lr=0.000011, loss=14.2365, loss_ll=2.48759, loss_ll_paf=3.91092, loss_ll_heat=1.06426, q=1000
+[2018-06-27 02:20:37,323] [train] [INFO] epoch=9.00 step=71500, 10.4586 examples/sec lr=0.000011, loss=23.3224, loss_ll=4.17176, loss_ll_paf=6.92292, loss_ll_heat=1.42061, q=1000
+[2018-06-27 02:23:04,562] [train] [INFO] epoch=9.00 step=71600, 10.4592 examples/sec lr=0.000011, loss=26.9941, loss_ll=5.21547, loss_ll_paf=9.08673, loss_ll_heat=1.3442, q=1000
+[2018-06-27 02:25:36,299] [train] [INFO] epoch=9.00 step=71700, 10.4593 examples/sec lr=0.000011, loss=13.699, loss_ll=2.54866, loss_ll_paf=4.07267, loss_ll_heat=1.02466, q=1000
+[2018-06-27 02:28:07,578] [train] [INFO] epoch=9.00 step=71800, 10.4594 examples/sec lr=0.000011, loss=19.2004, loss_ll=3.15535, loss_ll_paf=5.35, loss_ll_heat=0.960693, q=1000
+[2018-06-27 02:30:35,155] [train] [INFO] epoch=9.00 step=71900, 10.4599 examples/sec lr=0.000011, loss=23.7686, loss_ll=4.2608, loss_ll_paf=7.10719, loss_ll_heat=1.41442, q=1000
+[2018-06-27 02:33:03,801] [train] [INFO] epoch=9.00 step=72000, 10.4604 examples/sec lr=0.000011, loss=17.5332, loss_ll=3.1941, loss_ll_paf=5.03936, loss_ll_heat=1.34883, q=1000
+[2018-06-27 02:35:43,378] [train] [INFO] epoch=9.00 step=72100, 10.4597 examples/sec lr=0.000011, loss=16.8091, loss_ll=3.17926, loss_ll_paf=5.59826, loss_ll_heat=0.760258, q=1000
+[2018-06-27 02:38:11,868] [train] [INFO] epoch=9.00 step=72200, 10.4602 examples/sec lr=0.000011, loss=15.2638, loss_ll=2.79081, loss_ll_paf=4.43284, loss_ll_heat=1.14878, q=1000
+[2018-06-27 02:40:41,658] [train] [INFO] epoch=9.00 step=72300, 10.4605 examples/sec lr=0.000011, loss=25.1301, loss_ll=4.64617, loss_ll_paf=8.2382, loss_ll_heat=1.05413, q=1000
+[2018-06-27 02:43:10,831] [train] [INFO] epoch=9.00 step=72400, 10.4608 examples/sec lr=0.000011, loss=19.0218, loss_ll=3.37602, loss_ll_paf=5.55202, loss_ll_heat=1.20001, q=1000
+[2018-06-27 02:45:41,553] [train] [INFO] epoch=9.00 step=72500, 10.4610 examples/sec lr=0.000011, loss=13.8435, loss_ll=2.61242, loss_ll_paf=4.25923, loss_ll_heat=0.965605, q=1000
+[2018-06-27 02:48:09,523] [train] [INFO] epoch=9.00 step=72600, 10.4615 examples/sec lr=0.000011, loss=14.3635, loss_ll=2.49765, loss_ll_paf=4.15363, loss_ll_heat=0.841678, q=1000
+[2018-06-27 02:50:38,080] [train] [INFO] epoch=9.00 step=72700, 10.4619 examples/sec lr=0.000011, loss=23.672, loss_ll=4.0705, loss_ll_paf=6.92219, loss_ll_heat=1.21882, q=1000
+[2018-06-27 02:53:15,443] [train] [INFO] epoch=9.00 step=72800, 10.4615 examples/sec lr=0.000011, loss=18.3954, loss_ll=3.37093, loss_ll_paf=5.63564, loss_ll_heat=1.10623, q=1000
+[2018-06-27 02:55:45,128] [train] [INFO] epoch=9.00 step=72900, 10.4618 examples/sec lr=0.000011, loss=26.5197, loss_ll=4.82089, loss_ll_paf=8.0782, loss_ll_heat=1.56359, q=1000
+[2018-06-27 02:58:14,214] [train] [INFO] epoch=9.00 step=73000, 10.4622 examples/sec lr=0.000011, loss=31.0928, loss_ll=5.48383, loss_ll_paf=9.46349, loss_ll_heat=1.50416, q=1000
+[2018-06-27 03:01:04,736] [train] [INFO] epoch=9.00 step=73100, 10.4605 examples/sec lr=0.000011, loss=28.3608, loss_ll=4.91595, loss_ll_paf=8.40942, loss_ll_heat=1.42247, q=1000
+[2018-06-27 03:03:34,805] [train] [INFO] epoch=9.00 step=73200, 10.4608 examples/sec lr=0.000011, loss=13.9131, loss_ll=2.60305, loss_ll_paf=4.00843, loss_ll_heat=1.19767, q=1000
+[2018-06-27 03:06:00,075] [train] [INFO] epoch=9.00 step=73300, 10.4615 examples/sec lr=0.000011, loss=11.9899, loss_ll=2.02298, loss_ll_paf=3.10225, loss_ll_heat=0.943702, q=1000
+[2018-06-27 03:08:27,455] [train] [INFO] epoch=9.00 step=73400, 10.4620 examples/sec lr=0.000011, loss=12.866, loss_ll=2.09844, loss_ll_paf=3.15891, loss_ll_heat=1.03797, q=1000
+[2018-06-27 03:10:57,442] [train] [INFO] epoch=9.00 step=73500, 10.4623 examples/sec lr=0.000011, loss=24.0075, loss_ll=4.56615, loss_ll_paf=8.09099, loss_ll_heat=1.0413, q=1000
+[2018-06-27 03:13:27,594] [train] [INFO] epoch=9.00 step=73600, 10.4625 examples/sec lr=0.000011, loss=14.4207, loss_ll=2.43863, loss_ll_paf=4.07733, loss_ll_heat=0.799922, q=1000
+[2018-06-27 03:15:57,208] [train] [INFO] epoch=9.00 step=73700, 10.4629 examples/sec lr=0.000011, loss=21.2478, loss_ll=3.84754, loss_ll_paf=6.64431, loss_ll_heat=1.05077, q=1000
+[2018-06-27 03:18:25,935] [train] [INFO] epoch=9.00 step=73800, 10.4632 examples/sec lr=0.000011, loss=16.1139, loss_ll=2.9303, loss_ll_paf=4.57406, loss_ll_heat=1.28654, q=1000
+[2018-06-27 03:20:51,759] [train] [INFO] epoch=9.00 step=73900, 10.4639 examples/sec lr=0.000011, loss=21.7318, loss_ll=3.72274, loss_ll_paf=6.27167, loss_ll_heat=1.1738, q=1000
+[2018-06-27 03:23:21,189] [train] [INFO] epoch=9.00 step=74000, 10.4642 examples/sec lr=0.000011, loss=29.7758, loss_ll=5.63, loss_ll_paf=9.80558, loss_ll_heat=1.45442, q=1000
+[2018-06-27 03:25:59,294] [train] [INFO] epoch=9.00 step=74100, 10.4637 examples/sec lr=0.000011, loss=14.8539, loss_ll=2.66936, loss_ll_paf=4.04819, loss_ll_heat=1.29053, q=1000
+[2018-06-27 03:28:26,436] [train] [INFO] epoch=9.00 step=74200, 10.4643 examples/sec lr=0.000011, loss=9.90578, loss_ll=1.885, loss_ll_paf=2.89844, loss_ll_heat=0.871558, q=1000
+[2018-06-27 03:30:54,173] [train] [INFO] epoch=9.00 step=74300, 10.4647 examples/sec lr=0.000011, loss=14.0093, loss_ll=2.40121, loss_ll_paf=4.04995, loss_ll_heat=0.752467, q=1000
+[2018-06-27 03:33:21,136] [train] [INFO] epoch=9.00 step=74400, 10.4653 examples/sec lr=0.000011, loss=10.389, loss_ll=1.92126, loss_ll_paf=3.06976, loss_ll_heat=0.772755, q=1000
+[2018-06-27 03:35:57,517] [train] [INFO] epoch=9.00 step=74500, 10.4650 examples/sec lr=0.000011, loss=25.217, loss_ll=4.81119, loss_ll_paf=8.24126, loss_ll_heat=1.38111, q=1000
+[2018-06-27 03:38:24,205] [train] [INFO] epoch=9.00 step=74600, 10.4655 examples/sec lr=0.000011, loss=17.3269, loss_ll=3.01049, loss_ll_paf=4.89586, loss_ll_heat=1.12512, q=1000
+[2018-06-27 03:40:52,710] [train] [INFO] epoch=9.00 step=74700, 10.4659 examples/sec lr=0.000011, loss=22.1242, loss_ll=4.18324, loss_ll_paf=7.18845, loss_ll_heat=1.17803, q=1000
+[2018-06-27 03:43:19,787] [train] [INFO] epoch=9.00 step=74800, 10.4665 examples/sec lr=0.000011, loss=13.7545, loss_ll=2.47299, loss_ll_paf=3.89694, loss_ll_heat=1.04905, q=1000
+[2018-06-27 03:45:46,285] [train] [INFO] epoch=9.00 step=74900, 10.4671 examples/sec lr=0.000011, loss=24.8643, loss_ll=3.94727, loss_ll_paf=7.13933, loss_ll_heat=0.755217, q=1000
+[2018-06-27 03:48:14,275] [train] [INFO] epoch=9.00 step=75000, 10.4675 examples/sec lr=0.000011, loss=20.7994, loss_ll=3.67906, loss_ll_paf=6.19654, loss_ll_heat=1.16159, q=1000
+[2018-06-27 03:50:52,433] [train] [INFO] epoch=9.00 step=75100, 10.4670 examples/sec lr=0.000011, loss=24.6122, loss_ll=4.22349, loss_ll_paf=6.94542, loss_ll_heat=1.50156, q=1000
+[2018-06-27 03:53:23,207] [train] [INFO] epoch=9.00 step=75200, 10.4672 examples/sec lr=0.000011, loss=19.0908, loss_ll=3.57768, loss_ll_paf=6.15253, loss_ll_heat=1.00283, q=1000
+[2018-06-27 03:55:53,117] [train] [INFO] epoch=9.00 step=75300, 10.4675 examples/sec lr=0.000011, loss=26.5065, loss_ll=4.37287, loss_ll_paf=7.15735, loss_ll_heat=1.58839, q=1000
+[2018-06-27 03:58:22,335] [train] [INFO] epoch=9.00 step=75400, 10.4678 examples/sec lr=0.000011, loss=22.5196, loss_ll=4.21154, loss_ll_paf=6.5393, loss_ll_heat=1.88378, q=1000
+[2018-06-27 04:00:55,537] [train] [INFO] epoch=9.00 step=75500, 10.4678 examples/sec lr=0.000011, loss=15.7287, loss_ll=3.09531, loss_ll_paf=4.79747, loss_ll_heat=1.39316, q=1000
+[2018-06-27 04:03:27,352] [train] [INFO] epoch=9.00 step=75600, 10.4679 examples/sec lr=0.000011, loss=30.2907, loss_ll=5.80237, loss_ll_paf=10.3798, loss_ll_heat=1.22497, q=1000
+[2018-06-27 04:05:55,441] [train] [INFO] epoch=9.00 step=75700, 10.4683 examples/sec lr=0.000011, loss=11.1829, loss_ll=1.92482, loss_ll_paf=2.99373, loss_ll_heat=0.855917, q=1000
+[2018-06-27 04:08:22,926] [train] [INFO] epoch=9.00 step=75800, 10.4688 examples/sec lr=0.000011, loss=18.1296, loss_ll=3.2592, loss_ll_paf=5.82863, loss_ll_heat=0.68976, q=1000
+[2018-06-27 04:10:51,038] [train] [INFO] epoch=9.00 step=75900, 10.4692 examples/sec lr=0.000011, loss=16.0795, loss_ll=2.89269, loss_ll_paf=4.88962, loss_ll_heat=0.895749, q=1000
+[2018-06-27 04:13:19,194] [train] [INFO] epoch=9.00 step=76000, 10.4696 examples/sec lr=0.000011, loss=17.0426, loss_ll=3.22756, loss_ll_paf=5.46581, loss_ll_heat=0.989317, q=1000
+[2018-06-27 04:16:03,224] [train] [INFO] epoch=10.00 step=76100, 10.4686 examples/sec lr=0.000011, loss=19.0038, loss_ll=3.41031, loss_ll_paf=5.62588, loss_ll_heat=1.19475, q=1000
+[2018-06-27 04:18:34,462] [train] [INFO] epoch=10.00 step=76200, 10.4688 examples/sec lr=0.000011, loss=12.8886, loss_ll=2.34954, loss_ll_paf=3.80732, loss_ll_heat=0.89176, q=1000
+[2018-06-27 04:21:03,348] [train] [INFO] epoch=10.00 step=76300, 10.4691 examples/sec lr=0.000011, loss=17.1586, loss_ll=2.96354, loss_ll_paf=4.59787, loss_ll_heat=1.32922, q=1000
+[2018-06-27 04:23:30,850] [train] [INFO] epoch=10.00 step=76400, 10.4696 examples/sec lr=0.000011, loss=21.1492, loss_ll=4.01255, loss_ll_paf=6.94913, loss_ll_heat=1.07597, q=1000
+[2018-06-27 04:26:01,157] [train] [INFO] epoch=10.00 step=76500, 10.4698 examples/sec lr=0.000011, loss=13.7561, loss_ll=2.4385, loss_ll_paf=3.77642, loss_ll_heat=1.10057, q=1000
+[2018-06-27 04:28:29,329] [train] [INFO] epoch=10.00 step=76600, 10.4702 examples/sec lr=0.000011, loss=11.0357, loss_ll=1.71584, loss_ll_paf=2.50485, loss_ll_heat=0.926826, q=1000
+[2018-06-27 04:30:57,318] [train] [INFO] epoch=10.00 step=76700, 10.4707 examples/sec lr=0.000011, loss=14.0799, loss_ll=2.63171, loss_ll_paf=3.96235, loss_ll_heat=1.30106, q=1000
+[2018-06-27 04:33:29,718] [train] [INFO] epoch=10.00 step=76800, 10.4707 examples/sec lr=0.000011, loss=28.3235, loss_ll=4.94275, loss_ll_paf=8.09378, loss_ll_heat=1.79171, q=1000
+[2018-06-27 04:35:59,947] [train] [INFO] epoch=10.00 step=76900, 10.4709 examples/sec lr=0.000011, loss=14.5172, loss_ll=2.71062, loss_ll_paf=4.16105, loss_ll_heat=1.26019, q=1000
+[2018-06-27 04:38:32,209] [train] [INFO] epoch=10.00 step=77000, 10.4710 examples/sec lr=0.000011, loss=19.2213, loss_ll=3.62733, loss_ll_paf=6.09179, loss_ll_heat=1.16286, q=1000
+[2018-06-27 04:41:14,478] [train] [INFO] epoch=10.00 step=77100, 10.4701 examples/sec lr=0.000011, loss=16.0165, loss_ll=3.22737, loss_ll_paf=5.12458, loss_ll_heat=1.33015, q=1000
+[2018-06-27 04:43:48,421] [train] [INFO] epoch=10.00 step=77200, 10.4700 examples/sec lr=0.000011, loss=17.6031, loss_ll=3.06506, loss_ll_paf=4.80863, loss_ll_heat=1.32148, q=1000
+[2018-06-27 04:46:19,691] [train] [INFO] epoch=10.00 step=77300, 10.4702 examples/sec lr=0.000011, loss=20.6461, loss_ll=3.96313, loss_ll_paf=6.84057, loss_ll_heat=1.0857, q=1000
+[2018-06-27 04:48:44,925] [train] [INFO] epoch=10.00 step=77400, 10.4709 examples/sec lr=0.000011, loss=18.9023, loss_ll=3.36025, loss_ll_paf=5.44683, loss_ll_heat=1.27367, q=1000
+[2018-06-27 04:51:14,295] [train] [INFO] epoch=10.00 step=77500, 10.4712 examples/sec lr=0.000011, loss=14.8613, loss_ll=2.53358, loss_ll_paf=4.29552, loss_ll_heat=0.771649, q=1000
+[2018-06-27 04:53:47,447] [train] [INFO] epoch=10.00 step=77600, 10.4711 examples/sec lr=0.000011, loss=37.0467, loss_ll=7.1207, loss_ll_paf=11.7278, loss_ll_heat=2.51357, q=1000
+[2018-06-27 04:56:14,813] [train] [INFO] epoch=10.00 step=77700, 10.4716 examples/sec lr=0.000011, loss=14.1645, loss_ll=2.66798, loss_ll_paf=4.09829, loss_ll_heat=1.23767, q=1000
+[2018-06-27 04:58:46,743] [train] [INFO] epoch=10.00 step=77800, 10.4717 examples/sec lr=0.000011, loss=16.3589, loss_ll=2.81771, loss_ll_paf=4.44262, loss_ll_heat=1.19281, q=1000
+[2018-06-27 05:01:14,991] [train] [INFO] epoch=10.00 step=77900, 10.4721 examples/sec lr=0.000011, loss=14.435, loss_ll=2.71362, loss_ll_paf=3.94293, loss_ll_heat=1.48431, q=1000
+[2018-06-27 05:03:42,968] [train] [INFO] epoch=10.00 step=78000, 10.4725 examples/sec lr=0.000011, loss=17.1286, loss_ll=2.96804, loss_ll_paf=4.92632, loss_ll_heat=1.00976, q=1000
+[2018-06-27 05:06:23,050] [train] [INFO] epoch=10.00 step=78100, 10.4719 examples/sec lr=0.000011, loss=15.1004, loss_ll=2.8374, loss_ll_paf=4.76265, loss_ll_heat=0.912143, q=1000
+[2018-06-27 05:08:52,693] [train] [INFO] epoch=10.00 step=78200, 10.4721 examples/sec lr=0.000011, loss=11.5068, loss_ll=2.30751, loss_ll_paf=3.33832, loss_ll_heat=1.2767, q=1000
+[2018-06-27 05:11:20,800] [train] [INFO] epoch=10.00 step=78300, 10.4725 examples/sec lr=0.000011, loss=13.7979, loss_ll=2.30769, loss_ll_paf=3.49835, loss_ll_heat=1.11703, q=1000
+[2018-06-27 05:13:53,172] [train] [INFO] epoch=10.00 step=78400, 10.4726 examples/sec lr=0.000011, loss=18.3037, loss_ll=3.07459, loss_ll_paf=4.84629, loss_ll_heat=1.3029, q=1000
+[2018-06-27 05:16:23,423] [train] [INFO] epoch=10.00 step=78500, 10.4728 examples/sec lr=0.000011, loss=23.9029, loss_ll=4.18634, loss_ll_paf=7.25918, loss_ll_heat=1.11351, q=1000
+[2018-06-27 05:18:52,267] [train] [INFO] epoch=10.00 step=78600, 10.4731 examples/sec lr=0.000011, loss=21.0837, loss_ll=4.13735, loss_ll_paf=6.94744, loss_ll_heat=1.32726, q=1000
+[2018-06-27 05:21:19,571] [train] [INFO] epoch=10.00 step=78700, 10.4736 examples/sec lr=0.000011, loss=19.2255, loss_ll=3.3957, loss_ll_paf=5.58516, loss_ll_heat=1.20624, q=1000
+[2018-06-27 05:23:49,756] [train] [INFO] epoch=10.00 step=78800, 10.4738 examples/sec lr=0.000011, loss=17.9063, loss_ll=3.4833, loss_ll_paf=5.36843, loss_ll_heat=1.59817, q=1000
+[2018-06-27 05:26:16,875] [train] [INFO] epoch=10.00 step=78900, 10.4743 examples/sec lr=0.000011, loss=10.723, loss_ll=1.92137, loss_ll_paf=2.76853, loss_ll_heat=1.0742, q=1000
+[2018-06-27 05:28:47,134] [train] [INFO] epoch=10.00 step=79000, 10.4746 examples/sec lr=0.000011, loss=12.985, loss_ll=2.28517, loss_ll_paf=3.60404, loss_ll_heat=0.966296, q=1000
+[2018-06-27 05:31:27,397] [train] [INFO] epoch=10.00 step=79100, 10.4739 examples/sec lr=0.000011, loss=10.5922, loss_ll=1.89046, loss_ll_paf=2.98258, loss_ll_heat=0.798333, q=1000
+[2018-06-27 05:33:56,732] [train] [INFO] epoch=10.00 step=79200, 10.4742 examples/sec lr=0.000011, loss=22.4653, loss_ll=3.61542, loss_ll_paf=5.86374, loss_ll_heat=1.3671, q=1000
+[2018-06-27 05:36:30,442] [train] [INFO] epoch=10.00 step=79300, 10.4741 examples/sec lr=0.000011, loss=17.9367, loss_ll=3.27564, loss_ll_paf=5.53012, loss_ll_heat=1.02117, q=1000
+[2018-06-27 05:39:02,517] [train] [INFO] epoch=10.00 step=79400, 10.4742 examples/sec lr=0.000011, loss=17.1198, loss_ll=2.84968, loss_ll_paf=4.9107, loss_ll_heat=0.788666, q=1000
+[2018-06-27 05:41:32,578] [train] [INFO] epoch=10.00 step=79500, 10.4744 examples/sec lr=0.000011, loss=14.1255, loss_ll=2.64911, loss_ll_paf=4.27491, loss_ll_heat=1.0233, q=1000
+[2018-06-27 05:44:03,059] [train] [INFO] epoch=10.00 step=79600, 10.4746 examples/sec lr=0.000011, loss=19.5877, loss_ll=3.11159, loss_ll_paf=5.54222, loss_ll_heat=0.680955, q=1000
+[2018-06-27 05:46:30,759] [train] [INFO] epoch=10.00 step=79700, 10.4750 examples/sec lr=0.000011, loss=16.9401, loss_ll=3.27782, loss_ll_paf=5.13886, loss_ll_heat=1.41679, q=1000
+[2018-06-27 05:49:01,091] [train] [INFO] epoch=10.00 step=79800, 10.4752 examples/sec lr=0.000011, loss=16.6209, loss_ll=3.11445, loss_ll_paf=5.36264, loss_ll_heat=0.866257, q=1000
+[2018-06-27 05:51:28,952] [train] [INFO] epoch=10.00 step=79900, 10.4757 examples/sec lr=0.000011, loss=20.732, loss_ll=3.8371, loss_ll_paf=6.15557, loss_ll_heat=1.51862, q=1000
+[2018-06-27 05:53:57,159] [train] [INFO] epoch=10.00 step=80000, 10.4761 examples/sec lr=0.000011, loss=13.6511, loss_ll=2.52611, loss_ll_paf=4.02553, loss_ll_heat=1.0267, q=1000
+[2018-06-27 05:56:38,481] [train] [INFO] epoch=10.00 step=80100, 10.4753 examples/sec lr=0.000011, loss=10.057, loss_ll=1.61014, loss_ll_paf=2.5939, loss_ll_heat=0.626381, q=1000
+[2018-06-27 05:59:08,670] [train] [INFO] epoch=10.00 step=80200, 10.4755 examples/sec lr=0.000011, loss=13.0247, loss_ll=2.44296, loss_ll_paf=3.36996, loss_ll_heat=1.51595, q=1000
+[2018-06-27 06:01:41,187] [train] [INFO] epoch=10.00 step=80300, 10.4756 examples/sec lr=0.000011, loss=21.788, loss_ll=3.75237, loss_ll_paf=6.45694, loss_ll_heat=1.04779, q=1000
+[2018-06-27 06:04:11,908] [train] [INFO] epoch=10.00 step=80400, 10.4757 examples/sec lr=0.000011, loss=13.2714, loss_ll=2.21302, loss_ll_paf=3.36908, loss_ll_heat=1.05695, q=1000
+[2018-06-27 06:06:39,001] [train] [INFO] epoch=10.00 step=80500, 10.4762 examples/sec lr=0.000011, loss=8.60939, loss_ll=1.53453, loss_ll_paf=2.38115, loss_ll_heat=0.687902, q=1000
+[2018-06-27 06:09:15,662] [train] [INFO] epoch=10.00 step=80600, 10.4759 examples/sec lr=0.000011, loss=15.6151, loss_ll=2.89123, loss_ll_paf=4.68957, loss_ll_heat=1.0929, q=1000
+[2018-06-27 06:11:44,942] [train] [INFO] epoch=10.00 step=80700, 10.4762 examples/sec lr=0.000011, loss=14.3691, loss_ll=2.65634, loss_ll_paf=4.19122, loss_ll_heat=1.12145, q=1000
+[2018-06-27 06:14:13,683] [train] [INFO] epoch=10.00 step=80800, 10.4765 examples/sec lr=0.000011, loss=19.6014, loss_ll=3.75681, loss_ll_paf=6.43551, loss_ll_heat=1.0781, q=1000
+[2018-06-27 06:16:42,455] [train] [INFO] epoch=10.00 step=80900, 10.4768 examples/sec lr=0.000011, loss=17.8982, loss_ll=3.41116, loss_ll_paf=5.58528, loss_ll_heat=1.23705, q=1000
+[2018-06-27 06:19:12,564] [train] [INFO] epoch=10.00 step=81000, 10.4771 examples/sec lr=0.000011, loss=10.1147, loss_ll=1.80579, loss_ll_paf=2.7091, loss_ll_heat=0.902479, q=1000
+[2018-06-27 06:21:54,146] [train] [INFO] epoch=10.00 step=81100, 10.4763 examples/sec lr=0.000011, loss=26.7284, loss_ll=5.00037, loss_ll_paf=8.5352, loss_ll_heat=1.46554, q=1000
+[2018-06-27 06:24:23,448] [train] [INFO] epoch=10.00 step=81200, 10.4766 examples/sec lr=0.000011, loss=21.3577, loss_ll=3.57754, loss_ll_paf=5.91081, loss_ll_heat=1.24427, q=1000
+[2018-06-27 06:26:54,936] [train] [INFO] epoch=10.00 step=81300, 10.4767 examples/sec lr=0.000011, loss=15.8152, loss_ll=2.76403, loss_ll_paf=4.47052, loss_ll_heat=1.05755, q=1000
+[2018-06-27 06:29:19,722] [train] [INFO] epoch=10.00 step=81400, 10.4774 examples/sec lr=0.000011, loss=16.2208, loss_ll=2.92139, loss_ll_paf=4.80891, loss_ll_heat=1.03388, q=1000
+[2018-06-27 06:31:47,801] [train] [INFO] epoch=10.00 step=81500, 10.4778 examples/sec lr=0.000011, loss=12.1958, loss_ll=2.13633, loss_ll_paf=3.35559, loss_ll_heat=0.917067, q=1000
+[2018-06-27 06:34:21,908] [train] [INFO] epoch=10.00 step=81600, 10.4776 examples/sec lr=0.000011, loss=23.4579, loss_ll=4.08296, loss_ll_paf=6.83834, loss_ll_heat=1.32757, q=1000
+[2018-06-27 06:36:49,729] [train] [INFO] epoch=10.00 step=81700, 10.4781 examples/sec lr=0.000011, loss=19.6783, loss_ll=3.76313, loss_ll_paf=6.08194, loss_ll_heat=1.44432, q=1000
+[2018-06-27 06:39:19,922] [train] [INFO] epoch=10.00 step=81800, 10.4783 examples/sec lr=0.000011, loss=23.7132, loss_ll=4.23326, loss_ll_paf=6.98645, loss_ll_heat=1.48006, q=1000
+[2018-06-27 06:41:48,060] [train] [INFO] epoch=10.00 step=81900, 10.4786 examples/sec lr=0.000011, loss=19.8993, loss_ll=3.68679, loss_ll_paf=6.34586, loss_ll_heat=1.02772, q=1000
+[2018-06-27 06:44:15,367] [train] [INFO] epoch=10.00 step=82000, 10.4791 examples/sec lr=0.000011, loss=20.1511, loss_ll=3.73299, loss_ll_paf=6.54561, loss_ll_heat=0.920363, q=1000
+[2018-06-27 06:46:58,064] [train] [INFO] epoch=10.00 step=82100, 10.4783 examples/sec lr=0.000011, loss=11.2548, loss_ll=1.89249, loss_ll_paf=2.95466, loss_ll_heat=0.830326, q=1000
+[2018-06-27 06:49:31,440] [train] [INFO] epoch=10.00 step=82200, 10.4782 examples/sec lr=0.000011, loss=13.5474, loss_ll=2.5537, loss_ll_paf=4.20589, loss_ll_heat=0.901514, q=1000
+[2018-06-27 06:51:58,259] [train] [INFO] epoch=10.00 step=82300, 10.4787 examples/sec lr=0.000011, loss=22.0753, loss_ll=4.32267, loss_ll_paf=7.54574, loss_ll_heat=1.0996, q=1000
+[2018-06-27 06:54:25,986] [train] [INFO] epoch=10.00 step=82400, 10.4791 examples/sec lr=0.000011, loss=30.4737, loss_ll=5.21397, loss_ll_paf=8.93386, loss_ll_heat=1.49409, q=1000
+[2018-06-27 06:56:54,822] [train] [INFO] epoch=10.00 step=82500, 10.4794 examples/sec lr=0.000011, loss=24.692, loss_ll=4.54323, loss_ll_paf=7.60534, loss_ll_heat=1.48111, q=1000
+[2018-06-27 06:59:23,846] [train] [INFO] epoch=10.00 step=82600, 10.4797 examples/sec lr=0.000011, loss=17.4005, loss_ll=3.18367, loss_ll_paf=5.189, loss_ll_heat=1.17833, q=1000
+[2018-06-27 07:01:52,706] [train] [INFO] epoch=10.00 step=82700, 10.4800 examples/sec lr=0.000011, loss=26.6717, loss_ll=4.59052, loss_ll_paf=7.36241, loss_ll_heat=1.81862, q=1000
+[2018-06-27 07:04:20,680] [train] [INFO] epoch=10.00 step=82800, 10.4804 examples/sec lr=0.000011, loss=23.3086, loss_ll=4.35293, loss_ll_paf=7.50809, loss_ll_heat=1.19777, q=1000
+[2018-06-27 07:06:50,140] [train] [INFO] epoch=10.00 step=82900, 10.4807 examples/sec lr=0.000011, loss=17.5956, loss_ll=3.22987, loss_ll_paf=5.15003, loss_ll_heat=1.30971, q=1000
+[2018-06-27 07:09:17,783] [train] [INFO] epoch=10.00 step=83000, 10.4811 examples/sec lr=0.000011, loss=17.658, loss_ll=3.23845, loss_ll_paf=5.52426, loss_ll_heat=0.952635, q=1000
+[2018-06-27 07:11:57,824] [train] [INFO] epoch=10.00 step=83100, 10.4805 examples/sec lr=0.000011, loss=18.8276, loss_ll=3.42359, loss_ll_paf=6.04307, loss_ll_heat=0.804114, q=1000
+[2018-06-27 07:14:26,908] [train] [INFO] epoch=10.00 step=83200, 10.4808 examples/sec lr=0.000011, loss=9.77822, loss_ll=1.73486, loss_ll_paf=2.65447, loss_ll_heat=0.815246, q=1000
+[2018-06-27 07:16:54,264] [train] [INFO] epoch=10.00 step=83300, 10.4812 examples/sec lr=0.000011, loss=27.3902, loss_ll=4.59677, loss_ll_paf=8.23952, loss_ll_heat=0.954021, q=1000
+[2018-06-27 07:19:23,032] [train] [INFO] epoch=10.00 step=83400, 10.4816 examples/sec lr=0.000011, loss=15.9231, loss_ll=2.81086, loss_ll_paf=4.50548, loss_ll_heat=1.11624, q=1000
+[2018-06-27 07:21:51,587] [train] [INFO] epoch=10.00 step=83500, 10.4819 examples/sec lr=0.000011, loss=13.7606, loss_ll=2.52431, loss_ll_paf=3.87437, loss_ll_heat=1.17425, q=1000
+[2018-06-27 07:24:19,482] [train] [INFO] epoch=10.00 step=83600, 10.4823 examples/sec lr=0.000011, loss=18.0144, loss_ll=3.32061, loss_ll_paf=5.58654, loss_ll_heat=1.05468, q=1000
+[2018-06-27 07:26:50,666] [train] [INFO] epoch=11.00 step=83700, 10.4824 examples/sec lr=0.000011, loss=12.8514, loss_ll=2.36333, loss_ll_paf=3.68295, loss_ll_heat=1.0437, q=1000
+[2018-06-27 07:29:17,732] [train] [INFO] epoch=11.00 step=83800, 10.4829 examples/sec lr=0.000011, loss=13.6327, loss_ll=2.43695, loss_ll_paf=3.88216, loss_ll_heat=0.991745, q=1000
+[2018-06-27 07:31:43,934] [train] [INFO] epoch=11.00 step=83900, 10.4834 examples/sec lr=0.000011, loss=16.1261, loss_ll=2.92482, loss_ll_paf=4.79846, loss_ll_heat=1.05118, q=1000
+[2018-06-27 07:34:17,334] [train] [INFO] epoch=11.00 step=84000, 10.4833 examples/sec lr=0.000011, loss=15.9977, loss_ll=3.04046, loss_ll_paf=4.85813, loss_ll_heat=1.22278, q=1000
+[2018-06-27 07:36:53,613] [train] [INFO] epoch=11.00 step=84100, 10.4830 examples/sec lr=0.000011, loss=26.6998, loss_ll=5.28752, loss_ll_paf=9.07614, loss_ll_heat=1.49891, q=1000
+[2018-06-27 07:39:23,305] [train] [INFO] epoch=11.00 step=84200, 10.4833 examples/sec lr=0.000011, loss=12.8123, loss_ll=2.30657, loss_ll_paf=3.57727, loss_ll_heat=1.03588, q=1000
+[2018-06-27 07:41:52,526] [train] [INFO] epoch=11.00 step=84300, 10.4835 examples/sec lr=0.000011, loss=14.3295, loss_ll=2.56927, loss_ll_paf=3.93884, loss_ll_heat=1.19969, q=1000
+[2018-06-27 07:44:25,577] [train] [INFO] epoch=11.00 step=84400, 10.4835 examples/sec lr=0.000011, loss=11.6538, loss_ll=2.17357, loss_ll_paf=3.33821, loss_ll_heat=1.00892, q=1000
+[2018-06-27 07:46:55,241] [train] [INFO] epoch=11.00 step=84500, 10.4837 examples/sec lr=0.000011, loss=14.0357, loss_ll=2.67494, loss_ll_paf=3.93611, loss_ll_heat=1.41377, q=1000
+[2018-06-27 07:49:24,335] [train] [INFO] epoch=11.00 step=84600, 10.4840 examples/sec lr=0.000011, loss=10.1991, loss_ll=1.70857, loss_ll_paf=2.60613, loss_ll_heat=0.811018, q=1000
+[2018-06-27 07:51:54,011] [train] [INFO] epoch=11.00 step=84700, 10.4843 examples/sec lr=0.000011, loss=14.22, loss_ll=2.66075, loss_ll_paf=4.38469, loss_ll_heat=0.936809, q=1000
+[2018-06-27 07:54:27,804] [train] [INFO] epoch=11.00 step=84800, 10.4842 examples/sec lr=0.000011, loss=20.8123, loss_ll=3.6752, loss_ll_paf=6.30145, loss_ll_heat=1.04894, q=1000
+[2018-06-27 07:56:57,206] [train] [INFO] epoch=11.00 step=84900, 10.4844 examples/sec lr=0.000011, loss=15.8377, loss_ll=2.73469, loss_ll_paf=4.40845, loss_ll_heat=1.06092, q=1000
+[2018-06-27 07:59:23,913] [train] [INFO] epoch=11.00 step=85000, 10.4849 examples/sec lr=0.000011, loss=11.721, loss_ll=2.07986, loss_ll_paf=3.4391, loss_ll_heat=0.720617, q=1000
+[2018-06-27 08:02:07,127] [train] [INFO] epoch=11.00 step=85100, 10.4841 examples/sec lr=0.000011, loss=16.8976, loss_ll=3.04005, loss_ll_paf=5.05073, loss_ll_heat=1.02937, q=1000
+[2018-06-27 08:04:41,410] [train] [INFO] epoch=11.00 step=85200, 10.4839 examples/sec lr=0.000011, loss=18.6989, loss_ll=3.4418, loss_ll_paf=5.60906, loss_ll_heat=1.27454, q=1000
+[2018-06-27 08:07:12,617] [train] [INFO] epoch=11.00 step=85300, 10.4840 examples/sec lr=0.000011, loss=18.3135, loss_ll=3.28422, loss_ll_paf=5.28857, loss_ll_heat=1.27987, q=1000
+[2018-06-27 08:09:46,729] [train] [INFO] epoch=11.00 step=85400, 10.4839 examples/sec lr=0.000011, loss=16.162, loss_ll=2.89552, loss_ll_paf=4.60514, loss_ll_heat=1.1859, q=1000
+[2018-06-27 08:12:13,770] [train] [INFO] epoch=11.00 step=85500, 10.4844 examples/sec lr=0.000011, loss=20.1668, loss_ll=3.6426, loss_ll_paf=5.98525, loss_ll_heat=1.29996, q=1000
+[2018-06-27 08:14:44,034] [train] [INFO] epoch=11.00 step=85600, 10.4846 examples/sec lr=0.000011, loss=23.71, loss_ll=4.07556, loss_ll_paf=6.83446, loss_ll_heat=1.31667, q=1000
+[2018-06-27 08:17:18,417] [train] [INFO] epoch=11.00 step=85700, 10.4844 examples/sec lr=0.000011, loss=31.0942, loss_ll=5.85648, loss_ll_paf=10.2826, loss_ll_heat=1.4304, q=1000
+[2018-06-27 08:19:45,709] [train] [INFO] epoch=11.00 step=85800, 10.4848 examples/sec lr=0.000011, loss=21.8517, loss_ll=3.99333, loss_ll_paf=6.91473, loss_ll_heat=1.07194, q=1000
+[2018-06-27 08:22:14,748] [train] [INFO] epoch=11.00 step=85900, 10.4851 examples/sec lr=0.000011, loss=21.989, loss_ll=4.43819, loss_ll_paf=7.72761, loss_ll_heat=1.14878, q=1000
+[2018-06-27 08:24:43,517] [train] [INFO] epoch=11.00 step=86000, 10.4854 examples/sec lr=0.000011, loss=17.3534, loss_ll=3.01459, loss_ll_paf=4.86473, loss_ll_heat=1.16444, q=1000
+[2018-06-27 08:27:24,338] [train] [INFO] epoch=11.00 step=86100, 10.4848 examples/sec lr=0.000011, loss=9.18744, loss_ll=1.62293, loss_ll_paf=2.41488, loss_ll_heat=0.830969, q=1000
+[2018-06-27 08:29:50,524] [train] [INFO] epoch=11.00 step=86200, 10.4853 examples/sec lr=0.000011, loss=17.2133, loss_ll=3.37326, loss_ll_paf=5.45961, loss_ll_heat=1.28692, q=1000
+[2018-06-27 08:32:18,672] [train] [INFO] epoch=11.00 step=86300, 10.4856 examples/sec lr=0.000011, loss=9.45735, loss_ll=1.72913, loss_ll_paf=2.73214, loss_ll_heat=0.726129, q=1000
+[2018-06-27 08:34:49,989] [train] [INFO] epoch=11.00 step=86400, 10.4857 examples/sec lr=0.000011, loss=18.0327, loss_ll=3.07775, loss_ll_paf=5.08088, loss_ll_heat=1.07462, q=1000
+[2018-06-27 08:37:17,206] [train] [INFO] epoch=11.00 step=86500, 10.4862 examples/sec lr=0.000011, loss=12.5389, loss_ll=2.1846, loss_ll_paf=3.58955, loss_ll_heat=0.779657, q=1000
+[2018-06-27 08:39:45,374] [train] [INFO] epoch=11.00 step=86600, 10.4865 examples/sec lr=0.000011, loss=13.3857, loss_ll=2.48364, loss_ll_paf=3.73271, loss_ll_heat=1.23456, q=1000
+[2018-06-27 08:42:12,194] [train] [INFO] epoch=11.00 step=86700, 10.4870 examples/sec lr=0.000011, loss=17.8178, loss_ll=3.3909, loss_ll_paf=5.77962, loss_ll_heat=1.00219, q=1000
+[2018-06-27 08:44:40,725] [train] [INFO] epoch=11.00 step=86800, 10.4873 examples/sec lr=0.000011, loss=17.2682, loss_ll=3.12904, loss_ll_paf=5.17345, loss_ll_heat=1.08463, q=1000
+[2018-06-27 08:47:09,194] [train] [INFO] epoch=11.00 step=86900, 10.4876 examples/sec lr=0.000011, loss=18.5938, loss_ll=3.5359, loss_ll_paf=5.80339, loss_ll_heat=1.26841, q=1000
+[2018-06-27 08:49:41,786] [train] [INFO] epoch=11.00 step=87000, 10.4876 examples/sec lr=0.000011, loss=16.666, loss_ll=2.94695, loss_ll_paf=5.22898, loss_ll_heat=0.664931, q=1000
+[2018-06-27 08:52:22,790] [train] [INFO] epoch=11.00 step=87100, 10.4869 examples/sec lr=0.000011, loss=17.4552, loss_ll=2.88004, loss_ll_paf=4.69139, loss_ll_heat=1.0687, q=1000
+[2018-06-27 08:54:53,491] [train] [INFO] epoch=11.00 step=87200, 10.4871 examples/sec lr=0.000011, loss=20.2915, loss_ll=3.78437, loss_ll_paf=6.56285, loss_ll_heat=1.00588, q=1000
+[2018-06-27 08:57:25,662] [train] [INFO] epoch=11.00 step=87300, 10.4871 examples/sec lr=0.000011, loss=17.4779, loss_ll=3.48035, loss_ll_paf=6.2537, loss_ll_heat=0.706996, q=1000
+[2018-06-27 08:59:59,137] [train] [INFO] epoch=11.00 step=87400, 10.4871 examples/sec lr=0.000011, loss=15.7578, loss_ll=2.9498, loss_ll_paf=4.84342, loss_ll_heat=1.05618, q=1000
+[2018-06-27 09:02:28,052] [train] [INFO] epoch=11.00 step=87500, 10.4873 examples/sec lr=0.000011, loss=15.3557, loss_ll=2.40906, loss_ll_paf=3.62232, loss_ll_heat=1.1958, q=1000
+[2018-06-27 09:05:02,696] [train] [INFO] epoch=11.00 step=87600, 10.4872 examples/sec lr=0.000011, loss=15.7398, loss_ll=3.13198, loss_ll_paf=5.13981, loss_ll_heat=1.12415, q=1000
+[2018-06-27 09:07:31,521] [train] [INFO] epoch=11.00 step=87700, 10.4875 examples/sec lr=0.000011, loss=21.5216, loss_ll=3.87337, loss_ll_paf=6.30189, loss_ll_heat=1.44485, q=1000
+[2018-06-27 09:09:59,580] [train] [INFO] epoch=11.00 step=87800, 10.4878 examples/sec lr=0.000011, loss=12.8202, loss_ll=2.10364, loss_ll_paf=3.40353, loss_ll_heat=0.803736, q=1000
+[2018-06-27 09:12:26,436] [train] [INFO] epoch=11.00 step=87900, 10.4883 examples/sec lr=0.000011, loss=16.7212, loss_ll=2.93513, loss_ll_paf=5.10642, loss_ll_heat=0.763838, q=1000
+[2018-06-27 09:14:55,851] [train] [INFO] epoch=11.00 step=88000, 10.4885 examples/sec lr=0.000011, loss=13.2928, loss_ll=2.63332, loss_ll_paf=4.14955, loss_ll_heat=1.1171, q=1000
+[2018-06-27 09:17:36,744] [train] [INFO] epoch=11.00 step=88100, 10.4879 examples/sec lr=0.000011, loss=14.6804, loss_ll=2.86674, loss_ll_paf=4.91918, loss_ll_heat=0.814303, q=1000
+[2018-06-27 09:20:08,436] [train] [INFO] epoch=11.00 step=88200, 10.4879 examples/sec lr=0.000011, loss=19.1674, loss_ll=3.58619, loss_ll_paf=6.14987, loss_ll_heat=1.0225, q=1000
+[2018-06-27 09:22:38,225] [train] [INFO] epoch=11.00 step=88300, 10.4881 examples/sec lr=0.000011, loss=18.1336, loss_ll=3.38817, loss_ll_paf=5.55108, loss_ll_heat=1.22526, q=1000
+[2018-06-27 09:25:07,628] [train] [INFO] epoch=11.00 step=88400, 10.4884 examples/sec lr=0.000011, loss=17.3681, loss_ll=3.47018, loss_ll_paf=5.71845, loss_ll_heat=1.22191, q=1000
+[2018-06-27 09:27:35,883] [train] [INFO] epoch=11.00 step=88500, 10.4887 examples/sec lr=0.000011, loss=27.3286, loss_ll=4.4896, loss_ll_paf=7.47798, loss_ll_heat=1.50123, q=1000
+[2018-06-27 09:30:06,222] [train] [INFO] epoch=11.00 step=88600, 10.4889 examples/sec lr=0.000011, loss=15.64, loss_ll=2.92806, loss_ll_paf=4.66389, loss_ll_heat=1.19222, q=1000
+[2018-06-27 09:32:35,952] [train] [INFO] epoch=11.00 step=88700, 10.4891 examples/sec lr=0.000011, loss=26.6822, loss_ll=5.64628, loss_ll_paf=9.87781, loss_ll_heat=1.41475, q=1000
+[2018-06-27 09:35:03,751] [train] [INFO] epoch=11.00 step=88800, 10.4895 examples/sec lr=0.000011, loss=21.377, loss_ll=4.10468, loss_ll_paf=7.293, loss_ll_heat=0.916352, q=1000
+[2018-06-27 09:37:33,837] [train] [INFO] epoch=11.00 step=88900, 10.4897 examples/sec lr=0.000011, loss=13.4829, loss_ll=2.1144, loss_ll_paf=3.4462, loss_ll_heat=0.782597, q=1000
+[2018-06-27 09:39:59,610] [train] [INFO] epoch=11.00 step=89000, 10.4902 examples/sec lr=0.000011, loss=20.879, loss_ll=3.71297, loss_ll_paf=6.43391, loss_ll_heat=0.992028, q=1000
+[2018-06-27 09:42:40,820] [train] [INFO] epoch=11.00 step=89100, 10.4895 examples/sec lr=0.000011, loss=15.7122, loss_ll=2.90466, loss_ll_paf=4.48739, loss_ll_heat=1.32194, q=1000
+[2018-06-27 09:45:15,161] [train] [INFO] epoch=11.00 step=89200, 10.4894 examples/sec lr=0.000011, loss=9.47679, loss_ll=1.77833, loss_ll_paf=2.8636, loss_ll_heat=0.693054, q=1000
+[2018-06-27 09:47:51,871] [train] [INFO] epoch=11.00 step=89300, 10.4891 examples/sec lr=0.000011, loss=16.9355, loss_ll=2.96079, loss_ll_paf=5.03091, loss_ll_heat=0.890674, q=1000
+[2018-06-27 09:50:23,529] [train] [INFO] epoch=11.00 step=89400, 10.4891 examples/sec lr=0.000011, loss=18.1915, loss_ll=3.03942, loss_ll_paf=5.12179, loss_ll_heat=0.957053, q=1000
+[2018-06-27 09:52:53,420] [train] [INFO] epoch=11.00 step=89500, 10.4893 examples/sec lr=0.000011, loss=13.7378, loss_ll=2.32663, loss_ll_paf=3.80037, loss_ll_heat=0.852877, q=1000
+[2018-06-27 09:55:23,891] [train] [INFO] epoch=11.00 step=89600, 10.4895 examples/sec lr=0.000011, loss=14.5133, loss_ll=2.73284, loss_ll_paf=4.58635, loss_ll_heat=0.879335, q=1000
+[2018-06-27 09:57:58,470] [train] [INFO] epoch=11.00 step=89700, 10.4893 examples/sec lr=0.000011, loss=23.0904, loss_ll=4.3932, loss_ll_paf=7.82235, loss_ll_heat=0.964045, q=1000
+[2018-06-27 10:00:24,652] [train] [INFO] epoch=11.00 step=89800, 10.4898 examples/sec lr=0.000011, loss=11.0004, loss_ll=2.02843, loss_ll_paf=3.47544, loss_ll_heat=0.581416, q=1000
+[2018-06-27 10:02:54,532] [train] [INFO] epoch=11.00 step=89900, 10.4900 examples/sec lr=0.000011, loss=10.7799, loss_ll=1.95991, loss_ll_paf=2.98531, loss_ll_heat=0.934505, q=1000
+[2018-06-27 10:05:24,216] [train] [INFO] epoch=11.00 step=90000, 10.4902 examples/sec lr=0.000004, loss=12.9129, loss_ll=2.15954, loss_ll_paf=3.5303, loss_ll_heat=0.788775, q=1000
+[2018-06-27 10:08:11,541] [train] [INFO] epoch=11.00 step=90100, 10.4891 examples/sec lr=0.000004, loss=14.6982, loss_ll=2.57297, loss_ll_paf=4.01046, loss_ll_heat=1.13548, q=1000
+[2018-06-27 10:10:37,668] [train] [INFO] epoch=11.00 step=90200, 10.4896 examples/sec lr=0.000004, loss=23.4455, loss_ll=4.40539, loss_ll_paf=7.1367, loss_ll_heat=1.67407, q=1000
+[2018-06-27 10:13:09,104] [train] [INFO] epoch=11.00 step=90300, 10.4897 examples/sec lr=0.000004, loss=11.2265, loss_ll=2.08464, loss_ll_paf=3.08323, loss_ll_heat=1.08605, q=1000
+[2018-06-27 10:15:39,383] [train] [INFO] epoch=11.00 step=90400, 10.4899 examples/sec lr=0.000004, loss=13.579, loss_ll=2.37023, loss_ll_paf=3.92869, loss_ll_heat=0.81177, q=1000
+[2018-06-27 10:18:09,901] [train] [INFO] epoch=11.00 step=90500, 10.4900 examples/sec lr=0.000004, loss=23.5414, loss_ll=4.293, loss_ll_paf=6.93438, loss_ll_heat=1.65162, q=1000
+[2018-06-27 10:20:39,202] [train] [INFO] epoch=11.00 step=90600, 10.4902 examples/sec lr=0.000004, loss=19.3709, loss_ll=3.51431, loss_ll_paf=5.97102, loss_ll_heat=1.0576, q=1000
+[2018-06-27 10:23:12,075] [train] [INFO] epoch=11.00 step=90700, 10.4902 examples/sec lr=0.000004, loss=15.8405, loss_ll=2.9643, loss_ll_paf=4.88548, loss_ll_heat=1.04311, q=1000
+[2018-06-27 10:25:42,279] [train] [INFO] epoch=11.00 step=90800, 10.4904 examples/sec lr=0.000004, loss=10.3042, loss_ll=1.79914, loss_ll_paf=2.77307, loss_ll_heat=0.825206, q=1000
+[2018-06-27 10:28:11,967] [train] [INFO] epoch=11.00 step=90900, 10.4906 examples/sec lr=0.000004, loss=12.9543, loss_ll=2.32412, loss_ll_paf=3.53294, loss_ll_heat=1.1153, q=1000
+[2018-06-27 10:30:42,588] [train] [INFO] epoch=11.00 step=91000, 10.4908 examples/sec lr=0.000004, loss=14.1432, loss_ll=2.51546, loss_ll_paf=4.01443, loss_ll_heat=1.01649, q=1000
+[2018-06-27 10:33:27,052] [train] [INFO] epoch=11.00 step=91100, 10.4899 examples/sec lr=0.000004, loss=15.3881, loss_ll=2.86519, loss_ll_paf=4.60344, loss_ll_heat=1.12695, q=1000
+[2018-06-27 10:35:58,297] [train] [INFO] epoch=11.00 step=91200, 10.4900 examples/sec lr=0.000004, loss=15.5325, loss_ll=2.67918, loss_ll_paf=4.45547, loss_ll_heat=0.902894, q=1000
+[2018-06-27 10:38:27,844] [train] [INFO] epoch=11.00 step=91300, 10.4902 examples/sec lr=0.000004, loss=11.4822, loss_ll=1.89382, loss_ll_paf=2.9316, loss_ll_heat=0.856051, q=1000
+[2018-06-27 10:41:01,247] [train] [INFO] epoch=12.00 step=91400, 10.4901 examples/sec lr=0.000004, loss=13.9025, loss_ll=2.41079, loss_ll_paf=4.16074, loss_ll_heat=0.660831, q=1000
+[2018-06-27 10:43:30,821] [train] [INFO] epoch=12.00 step=91500, 10.4903 examples/sec lr=0.000004, loss=11.5694, loss_ll=1.94563, loss_ll_paf=3.00689, loss_ll_heat=0.884369, q=1000
+[2018-06-27 10:46:01,108] [train] [INFO] epoch=12.00 step=91600, 10.4905 examples/sec lr=0.000004, loss=10.917, loss_ll=1.94211, loss_ll_paf=2.94716, loss_ll_heat=0.937072, q=1000
+[2018-06-27 10:48:30,562] [train] [INFO] epoch=12.00 step=91700, 10.4907 examples/sec lr=0.000004, loss=19.8983, loss_ll=3.45042, loss_ll_paf=5.88205, loss_ll_heat=1.01879, q=1000
+[2018-06-27 10:51:02,228] [train] [INFO] epoch=12.00 step=91800, 10.4908 examples/sec lr=0.000004, loss=18.7057, loss_ll=2.78628, loss_ll_paf=4.64173, loss_ll_heat=0.930827, q=1000
+[2018-06-27 10:53:32,354] [train] [INFO] epoch=12.00 step=91900, 10.4910 examples/sec lr=0.000004, loss=12.5211, loss_ll=2.26569, loss_ll_paf=3.63862, loss_ll_heat=0.892761, q=1000
+[2018-06-27 10:56:03,802] [train] [INFO] epoch=12.00 step=92000, 10.4911 examples/sec lr=0.000004, loss=15.7036, loss_ll=2.59078, loss_ll_paf=4.20024, loss_ll_heat=0.981309, q=1000
+[2018-06-27 10:58:43,357] [train] [INFO] epoch=12.00 step=92100, 10.4905 examples/sec lr=0.000004, loss=19.1239, loss_ll=3.69981, loss_ll_paf=5.89048, loss_ll_heat=1.50915, q=1000
+[2018-06-27 11:01:13,539] [train] [INFO] epoch=12.00 step=92200, 10.4907 examples/sec lr=0.000004, loss=18.2725, loss_ll=3.48536, loss_ll_paf=5.75467, loss_ll_heat=1.21606, q=1000
+[2018-06-27 11:03:50,156] [train] [INFO] epoch=12.00 step=92300, 10.4904 examples/sec lr=0.000004, loss=15.4429, loss_ll=2.80952, loss_ll_paf=4.92398, loss_ll_heat=0.695062, q=1000
+[2018-06-27 11:06:28,826] [train] [INFO] epoch=12.00 step=92400, 10.4899 examples/sec lr=0.000004, loss=15.2752, loss_ll=2.9398, loss_ll_paf=4.74202, loss_ll_heat=1.13758, q=1000
+[2018-06-27 11:09:05,911] [train] [INFO] epoch=12.00 step=92500, 10.4896 examples/sec lr=0.000004, loss=21.4352, loss_ll=3.86607, loss_ll_paf=6.49269, loss_ll_heat=1.23945, q=1000
+[2018-06-27 11:11:43,204] [train] [INFO] epoch=12.00 step=92600, 10.4892 examples/sec lr=0.000004, loss=26.3913, loss_ll=5.1336, loss_ll_paf=8.57598, loss_ll_heat=1.69122, q=1000
+[2018-06-27 11:14:20,554] [train] [INFO] epoch=12.00 step=92700, 10.4889 examples/sec lr=0.000004, loss=17.9864, loss_ll=3.19454, loss_ll_paf=4.9075, loss_ll_heat=1.48157, q=1000
+[2018-06-27 11:16:58,615] [train] [INFO] epoch=12.00 step=92800, 10.4885 examples/sec lr=0.000004, loss=13.3476, loss_ll=2.38145, loss_ll_paf=3.76765, loss_ll_heat=0.995256, q=1000
+[2018-06-27 11:19:36,230] [train] [INFO] epoch=12.00 step=92900, 10.4881 examples/sec lr=0.000004, loss=10.7999, loss_ll=2.07174, loss_ll_paf=3.17599, loss_ll_heat=0.967486, q=1000
+[2018-06-27 11:22:12,204] [train] [INFO] epoch=12.00 step=93000, 10.4878 examples/sec lr=0.000004, loss=14.3897, loss_ll=2.32406, loss_ll_paf=3.77344, loss_ll_heat=0.87468, q=1000
+[2018-06-27 11:25:02,309] [train] [INFO] epoch=12.00 step=93100, 10.4866 examples/sec lr=0.000004, loss=17.275, loss_ll=2.78257, loss_ll_paf=4.65473, loss_ll_heat=0.910403, q=1000
+[2018-06-27 11:27:40,047] [train] [INFO] epoch=12.00 step=93200, 10.4862 examples/sec lr=0.000004, loss=26.0385, loss_ll=4.83504, loss_ll_paf=8.51659, loss_ll_heat=1.15348, q=1000
+[2018-06-27 11:30:17,590] [train] [INFO] epoch=12.00 step=93300, 10.4858 examples/sec lr=0.000004, loss=28.43, loss_ll=5.26035, loss_ll_paf=8.91446, loss_ll_heat=1.60623, q=1000
+[2018-06-27 11:32:46,109] [train] [INFO] epoch=12.00 step=93400, 10.4861 examples/sec lr=0.000004, loss=15.0089, loss_ll=2.79429, loss_ll_paf=4.58342, loss_ll_heat=1.00517, q=1000
+[2018-06-27 11:35:12,925] [train] [INFO] epoch=12.00 step=93500, 10.4865 examples/sec lr=0.000004, loss=18.1398, loss_ll=3.1844, loss_ll_paf=5.53502, loss_ll_heat=0.833772, q=1000
+[2018-06-27 11:37:41,661] [train] [INFO] epoch=12.00 step=93600, 10.4868 examples/sec lr=0.000004, loss=12.9702, loss_ll=2.18425, loss_ll_paf=3.45658, loss_ll_heat=0.911914, q=1000
+[2018-06-27 11:40:09,582] [train] [INFO] epoch=12.00 step=93700, 10.4872 examples/sec lr=0.000004, loss=11.9277, loss_ll=2.20295, loss_ll_paf=3.63108, loss_ll_heat=0.774826, q=1000
+[2018-06-27 11:42:36,481] [train] [INFO] epoch=12.00 step=93800, 10.4876 examples/sec lr=0.000004, loss=23.5238, loss_ll=4.7566, loss_ll_paf=8.20103, loss_ll_heat=1.31218, q=1000
+[2018-06-27 11:45:04,588] [train] [INFO] epoch=12.00 step=93900, 10.4879 examples/sec lr=0.000004, loss=21.872, loss_ll=3.99677, loss_ll_paf=6.60383, loss_ll_heat=1.38972, q=1000
+[2018-06-27 11:47:40,742] [train] [INFO] epoch=12.00 step=94000, 10.4876 examples/sec lr=0.000004, loss=18.6524, loss_ll=3.1105, loss_ll_paf=5.38932, loss_ll_heat=0.831688, q=1000
+[2018-06-27 11:50:34,850] [train] [INFO] epoch=12.00 step=94100, 10.4861 examples/sec lr=0.000004, loss=12.0333, loss_ll=2.30293, loss_ll_paf=3.59719, loss_ll_heat=1.00866, q=1000
+[2018-06-27 11:53:12,930] [train] [INFO] epoch=12.00 step=94200, 10.4857 examples/sec lr=0.000004, loss=10.3711, loss_ll=1.81801, loss_ll_paf=2.90472, loss_ll_heat=0.731303, q=1000
+[2018-06-27 11:55:50,537] [train] [INFO] epoch=12.00 step=94300, 10.4853 examples/sec lr=0.000004, loss=19.2363, loss_ll=3.73309, loss_ll_paf=6.31203, loss_ll_heat=1.15415, q=1000
+[2018-06-27 11:58:27,696] [train] [INFO] epoch=12.00 step=94400, 10.4850 examples/sec lr=0.000004, loss=18.6774, loss_ll=3.47403, loss_ll_paf=5.67189, loss_ll_heat=1.27617, q=1000
+[2018-06-27 12:01:05,844] [train] [INFO] epoch=12.00 step=94500, 10.4846 examples/sec lr=0.000004, loss=16.1306, loss_ll=2.84394, loss_ll_paf=4.40819, loss_ll_heat=1.27968, q=1000
+[2018-06-27 12:03:44,617] [train] [INFO] epoch=12.00 step=94600, 10.4841 examples/sec lr=0.000004, loss=17.0428, loss_ll=3.23799, loss_ll_paf=4.79456, loss_ll_heat=1.68141, q=1000
+[2018-06-27 12:06:20,375] [train] [INFO] epoch=12.00 step=94700, 10.4839 examples/sec lr=0.000004, loss=18.8368, loss_ll=3.57445, loss_ll_paf=5.44963, loss_ll_heat=1.69928, q=1000
+[2018-06-27 12:08:56,898] [train] [INFO] epoch=12.00 step=94800, 10.4836 examples/sec lr=0.000004, loss=11.073, loss_ll=1.84128, loss_ll_paf=3.044, loss_ll_heat=0.638561, q=1000
+[2018-06-27 12:11:33,911] [train] [INFO] epoch=12.00 step=94900, 10.4833 examples/sec lr=0.000004, loss=24.668, loss_ll=4.14455, loss_ll_paf=6.74602, loss_ll_heat=1.54309, q=1000
+[2018-06-27 12:14:12,058] [train] [INFO] epoch=12.00 step=95000, 10.4829 examples/sec lr=0.000004, loss=12.4369, loss_ll=2.26406, loss_ll_paf=3.85306, loss_ll_heat=0.675067, q=1000
+[2018-06-27 12:17:02,020] [train] [INFO] epoch=12.00 step=95100, 10.4816 examples/sec lr=0.000004, loss=14.7972, loss_ll=2.90617, loss_ll_paf=4.68177, loss_ll_heat=1.13058, q=1000
+[2018-06-27 12:19:42,174] [train] [INFO] epoch=12.00 step=95200, 10.4811 examples/sec lr=0.000004, loss=8.6948, loss_ll=1.56089, loss_ll_paf=2.33168, loss_ll_heat=0.790106, q=1000
+[2018-06-27 12:22:20,083] [train] [INFO] epoch=12.00 step=95300, 10.4807 examples/sec lr=0.000004, loss=22.7687, loss_ll=4.122, loss_ll_paf=7.00398, loss_ll_heat=1.24003, q=1000
+[2018-06-27 12:24:57,878] [train] [INFO] epoch=12.00 step=95400, 10.4803 examples/sec lr=0.000004, loss=14.8337, loss_ll=2.55548, loss_ll_paf=4.32819, loss_ll_heat=0.782771, q=1000
+[2018-06-27 12:27:37,527] [train] [INFO] epoch=12.00 step=95500, 10.4798 examples/sec lr=0.000004, loss=15.9042, loss_ll=2.80933, loss_ll_paf=4.33575, loss_ll_heat=1.2829, q=1000
+[2018-06-27 12:30:16,610] [train] [INFO] epoch=12.00 step=95600, 10.4794 examples/sec lr=0.000004, loss=16.253, loss_ll=2.62374, loss_ll_paf=4.36753, loss_ll_heat=0.87996, q=1000
+[2018-06-27 12:32:55,516] [train] [INFO] epoch=12.00 step=95700, 10.4789 examples/sec lr=0.000004, loss=21.8244, loss_ll=4.11076, loss_ll_paf=7.021, loss_ll_heat=1.20052, q=1000
+[2018-06-27 12:35:34,435] [train] [INFO] epoch=12.00 step=95800, 10.4785 examples/sec lr=0.000004, loss=15.4759, loss_ll=2.87085, loss_ll_paf=4.88037, loss_ll_heat=0.861319, q=1000
+[2018-06-27 12:38:12,863] [train] [INFO] epoch=12.00 step=95900, 10.4781 examples/sec lr=0.000004, loss=11.8451, loss_ll=1.97763, loss_ll_paf=2.88886, loss_ll_heat=1.06639, q=1000
+[2018-06-27 12:40:52,392] [train] [INFO] epoch=12.00 step=96000, 10.4776 examples/sec lr=0.000004, loss=19.967, loss_ll=3.21855, loss_ll_paf=5.6168, loss_ll_heat=0.820289, q=1000
+[2018-06-27 12:43:43,948] [train] [INFO] epoch=12.00 step=96100, 10.4762 examples/sec lr=0.000004, loss=24.9344, loss_ll=4.38522, loss_ll_paf=7.3011, loss_ll_heat=1.46935, q=1000
+[2018-06-27 12:46:19,542] [train] [INFO] epoch=12.00 step=96200, 10.4760 examples/sec lr=0.000004, loss=12.4473, loss_ll=2.20587, loss_ll_paf=3.307, loss_ll_heat=1.10475, q=1000
+[2018-06-27 12:48:57,925] [train] [INFO] epoch=12.00 step=96300, 10.4756 examples/sec lr=0.000004, loss=11.5108, loss_ll=1.89587, loss_ll_paf=2.9535, loss_ll_heat=0.838245, q=1000
+[2018-06-27 12:51:36,993] [train] [INFO] epoch=12.00 step=96400, 10.4752 examples/sec lr=0.000004, loss=16.4293, loss_ll=3.08171, loss_ll_paf=5.22884, loss_ll_heat=0.934573, q=1000
+[2018-06-27 12:54:16,896] [train] [INFO] epoch=12.00 step=96500, 10.4747 examples/sec lr=0.000004, loss=11.2998, loss_ll=1.91973, loss_ll_paf=3.16783, loss_ll_heat=0.671629, q=1000
+[2018-06-27 12:56:55,181] [train] [INFO] epoch=12.00 step=96600, 10.4743 examples/sec lr=0.000004, loss=12.7392, loss_ll=2.19379, loss_ll_paf=3.53238, loss_ll_heat=0.855193, q=1000
+[2018-06-27 12:59:32,502] [train] [INFO] epoch=12.00 step=96700, 10.4740 examples/sec lr=0.000004, loss=21.2948, loss_ll=3.52077, loss_ll_paf=5.6146, loss_ll_heat=1.42693, q=1000
+[2018-06-27 13:02:09,298] [train] [INFO] epoch=12.00 step=96800, 10.4737 examples/sec lr=0.000004, loss=9.00449, loss_ll=1.61942, loss_ll_paf=2.55056, loss_ll_heat=0.688266, q=1000
+[2018-06-27 13:04:47,738] [train] [INFO] epoch=12.00 step=96900, 10.4733 examples/sec lr=0.000004, loss=12.2633, loss_ll=2.41337, loss_ll_paf=3.98212, loss_ll_heat=0.844628, q=1000
+[2018-06-27 13:07:26,879] [train] [INFO] epoch=12.00 step=97000, 10.4728 examples/sec lr=0.000004, loss=24.7132, loss_ll=4.64895, loss_ll_paf=8.00279, loss_ll_heat=1.29512, q=1000
+[2018-06-27 13:10:18,672] [train] [INFO] epoch=12.00 step=97100, 10.4715 examples/sec lr=0.000004, loss=14.8792, loss_ll=2.85004, loss_ll_paf=4.97322, loss_ll_heat=0.72685, q=1000
+[2018-06-27 13:12:56,782] [train] [INFO] epoch=12.00 step=97200, 10.4711 examples/sec lr=0.000004, loss=11.3367, loss_ll=1.93176, loss_ll_paf=3.18536, loss_ll_heat=0.678149, q=1000
+[2018-06-27 13:15:33,207] [train] [INFO] epoch=12.00 step=97300, 10.4708 examples/sec lr=0.000004, loss=15.8894, loss_ll=2.89053, loss_ll_paf=4.30397, loss_ll_heat=1.4771, q=1000
+[2018-06-27 13:18:12,959] [train] [INFO] epoch=12.00 step=97400, 10.4704 examples/sec lr=0.000004, loss=18.3279, loss_ll=3.16478, loss_ll_paf=5.05843, loss_ll_heat=1.27112, q=1000
+[2018-06-27 13:20:52,419] [train] [INFO] epoch=12.00 step=97500, 10.4699 examples/sec lr=0.000004, loss=35.1806, loss_ll=6.28726, loss_ll_paf=11.2295, loss_ll_heat=1.34508, q=1000
+[2018-06-27 13:23:32,141] [train] [INFO] epoch=12.00 step=97600, 10.4694 examples/sec lr=0.000004, loss=13.9031, loss_ll=2.54166, loss_ll_paf=4.37693, loss_ll_heat=0.706395, q=1000
+[2018-06-27 13:26:10,927] [train] [INFO] epoch=12.00 step=97700, 10.4690 examples/sec lr=0.000004, loss=30.4684, loss_ll=5.95836, loss_ll_paf=10.6607, loss_ll_heat=1.25598, q=1000
+[2018-06-27 13:28:49,917] [train] [INFO] epoch=12.00 step=97800, 10.4686 examples/sec lr=0.000004, loss=15.4411, loss_ll=2.8576, loss_ll_paf=4.89645, loss_ll_heat=0.818748, q=1000
+[2018-06-27 13:31:29,137] [train] [INFO] epoch=12.00 step=97900, 10.4681 examples/sec lr=0.000004, loss=29.8888, loss_ll=5.55677, loss_ll_paf=9.50901, loss_ll_heat=1.60453, q=1000
+[2018-06-27 13:34:08,951] [train] [INFO] epoch=12.00 step=98000, 10.4676 examples/sec lr=0.000004, loss=10.5944, loss_ll=1.90048, loss_ll_paf=2.97965, loss_ll_heat=0.821305, q=1000
+[2018-06-27 13:37:02,300] [train] [INFO] epoch=12.00 step=98100, 10.4662 examples/sec lr=0.000004, loss=21.4182, loss_ll=4.03062, loss_ll_paf=6.99435, loss_ll_heat=1.06689, q=1000
+[2018-06-27 13:39:47,845] [train] [INFO] epoch=12.00 step=98200, 10.4653 examples/sec lr=0.000004, loss=15.1224, loss_ll=2.93589, loss_ll_paf=5.08756, loss_ll_heat=0.784216, q=1000
+[2018-06-27 13:42:27,280] [train] [INFO] epoch=12.00 step=98300, 10.4649 examples/sec lr=0.000004, loss=19.2785, loss_ll=3.55507, loss_ll_paf=5.78543, loss_ll_heat=1.32471, q=1000
+[2018-06-27 13:45:06,138] [train] [INFO] epoch=12.00 step=98400, 10.4644 examples/sec lr=0.000004, loss=22.9944, loss_ll=4.32765, loss_ll_paf=7.57172, loss_ll_heat=1.08358, q=1000
+[2018-06-27 13:47:44,415] [train] [INFO] epoch=12.00 step=98500, 10.4641 examples/sec lr=0.000004, loss=14.5068, loss_ll=2.54456, loss_ll_paf=4.01605, loss_ll_heat=1.07308, q=1000
+[2018-06-27 13:50:23,500] [train] [INFO] epoch=12.00 step=98600, 10.4636 examples/sec lr=0.000004, loss=11.9983, loss_ll=2.18059, loss_ll_paf=3.30542, loss_ll_heat=1.05576, q=1000
+[2018-06-27 13:53:01,598] [train] [INFO] epoch=12.00 step=98700, 10.4633 examples/sec lr=0.000004, loss=8.58323, loss_ll=1.48769, loss_ll_paf=2.16063, loss_ll_heat=0.814753, q=1000
+[2018-06-27 13:55:41,508] [train] [INFO] epoch=12.00 step=98800, 10.4628 examples/sec lr=0.000004, loss=11.8039, loss_ll=1.9703, loss_ll_paf=3.00387, loss_ll_heat=0.936732, q=1000
+[2018-06-27 13:58:21,443] [train] [INFO] epoch=12.00 step=98900, 10.4623 examples/sec lr=0.000004, loss=19.417, loss_ll=3.88701, loss_ll_paf=6.23591, loss_ll_heat=1.53811, q=1000
+[2018-06-27 14:01:03,377] [train] [INFO] epoch=13.00 step=99000, 10.4617 examples/sec lr=0.000004, loss=18.7087, loss_ll=3.58599, loss_ll_paf=5.93902, loss_ll_heat=1.23297, q=1000
+[2018-06-27 14:03:55,723] [train] [INFO] epoch=13.00 step=99100, 10.4603 examples/sec lr=0.000004, loss=12.1091, loss_ll=2.01464, loss_ll_paf=3.12501, loss_ll_heat=0.90428, q=1000
+[2018-06-27 14:06:34,490] [train] [INFO] epoch=13.00 step=99200, 10.4599 examples/sec lr=0.000004, loss=14.8625, loss_ll=2.54059, loss_ll_paf=3.94374, loss_ll_heat=1.13744, q=1000
+[2018-06-27 14:09:13,643] [train] [INFO] epoch=13.00 step=99300, 10.4595 examples/sec lr=0.000004, loss=15.6453, loss_ll=2.91967, loss_ll_paf=4.98825, loss_ll_heat=0.851081, q=1000
+[2018-06-27 14:11:58,248] [train] [INFO] epoch=13.00 step=99400, 10.4587 examples/sec lr=0.000004, loss=9.3075, loss_ll=1.65036, loss_ll_paf=2.66076, loss_ll_heat=0.639959, q=1000
+[2018-06-27 14:14:39,499] [train] [INFO] epoch=13.00 step=99500, 10.4582 examples/sec lr=0.000004, loss=11.2712, loss_ll=2.00972, loss_ll_paf=3.03719, loss_ll_heat=0.982243, q=1000
+[2018-06-27 14:17:19,827] [train] [INFO] epoch=13.00 step=99600, 10.4576 examples/sec lr=0.000004, loss=20.2789, loss_ll=3.9728, loss_ll_paf=6.56592, loss_ll_heat=1.37967, q=1000
+[2018-06-27 14:20:01,341] [train] [INFO] epoch=13.00 step=99700, 10.4571 examples/sec lr=0.000004, loss=12.4879, loss_ll=2.41033, loss_ll_paf=4.05384, loss_ll_heat=0.766816, q=1000
+[2018-06-27 14:22:42,387] [train] [INFO] epoch=13.00 step=99800, 10.4565 examples/sec lr=0.000004, loss=19.9399, loss_ll=3.82736, loss_ll_paf=6.16352, loss_ll_heat=1.49121, q=1000
+[2018-06-27 14:25:22,683] [train] [INFO] epoch=13.00 step=99900, 10.4560 examples/sec lr=0.000004, loss=12.0426, loss_ll=2.25334, loss_ll_paf=3.58178, loss_ll_heat=0.924892, q=1000
+[2018-06-27 14:28:07,281] [train] [INFO] epoch=13.00 step=100000, 10.4552 examples/sec lr=0.000004, loss=19.466, loss_ll=3.70349, loss_ll_paf=6.61887, loss_ll_heat=0.788099, q=1000
+[2018-06-27 14:31:07,628] [train] [INFO] epoch=13.00 step=100100, 10.4534 examples/sec lr=0.000004, loss=13.5265, loss_ll=2.36187, loss_ll_paf=3.91767, loss_ll_heat=0.806064, q=1000
+[2018-06-27 14:33:53,742] [train] [INFO] epoch=13.00 step=100200, 10.4525 examples/sec lr=0.000004, loss=14.1508, loss_ll=2.73029, loss_ll_paf=4.67792, loss_ll_heat=0.782662, q=1000
+[2018-06-27 14:36:38,957] [train] [INFO] epoch=13.00 step=100300, 10.4516 examples/sec lr=0.000004, loss=11.8115, loss_ll=2.20095, loss_ll_paf=3.62034, loss_ll_heat=0.781568, q=1000
+[2018-06-27 14:39:25,126] [train] [INFO] epoch=13.00 step=100400, 10.4508 examples/sec lr=0.000004, loss=20.9056, loss_ll=4.11646, loss_ll_paf=7.26728, loss_ll_heat=0.96563, q=1000

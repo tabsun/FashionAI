@@ -1,8 +1,11 @@
 #!/bin/bash
 
+export CUDA_VISIBLE_DEVICES=0
+
 python run_checkpoint.py \
---model=cmu \
---modelpath='trained/blouse/vgg_batch:96_lr:0.0005_gpus:8_368x368_blouse/model-50721'
+--model=seresnet50 \
+--tag='skirt' \
+--modelpath='trained/model-121000'
 
 python -m tensorflow.python.tools.freeze_graph \
 --input_graph=./tmp/graph.pb \
