@@ -8,6 +8,8 @@ FashionAI是阿里天池组织的一个服饰关键点检测比赛，包括blous
 
 第一赛季rank 37,第二赛季rank 42，比赛已结束。
 
+[2018-07-24]该比赛已开放成为长期比赛：https://tianchi.aliyun.com/getStart/introduction.htm?spm=5176.11165320.5678.1.68a84226w3Hys5&raceId=231670。
+
 整个过程中在focal loss/dsconv/upsampling/stage 方面实验较多，遗憾的是refine net方面没有来得及完成实验，目前还在尝试。
 
 最终结果为单模型4.51%，如果做refine net或者ensemble model或许会有所提高。
