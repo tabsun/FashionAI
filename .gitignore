@@ -1,0 +1,27 @@
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
+
+# My configurations:
+*.csv
+*.jpg
+*.tar
+*.zip
+*.tar.gz
+*.npy
+*.pb
+code/models/trained/blouse
+code/models/trained/dress
+code/models/trained/outwear
+code/models/trained/skirt
+code/models/trained/trousers
+code/models/training

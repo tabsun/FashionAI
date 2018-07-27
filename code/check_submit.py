@@ -1,7 +1,5 @@
 import argparse
-import logging
 import time
-import ast
 
 import common
 import cv2
@@ -9,19 +7,8 @@ import os
 import math
 import numpy as np
 
-from estimator import TfPoseEstimator
-from networks import get_graph_path, model_wh
-
 #from lifting.prob_model import Prob3dPose
 #from lifting.draw import plot_pose
-
-logger = logging.getLogger('TfPoseEstimator')
-logger.setLevel(logging.DEBUG)
-ch = logging.StreamHandler()
-ch.setLevel(logging.DEBUG)
-formatter = logging.Formatter('[%(asctime)s] [%(name)s] [%(levelname)s] %(message)s')
-ch.setFormatter(formatter)
-logger.addHandler(ch)
 
 csv_seq = list(['nkl','nkr','cf','shl','shr','apl','apr','wll','wlr','cli','clo','cri','cro','thl','thr','wbl','wbr','hll','hlr','cr','bli','blo','bri','bro'])
 joint_idx_dict = dict()
@@ -30,7 +17,65 @@ joint_idx_dict['dress'] = list(['nkl','nkr','shl','shr','cf','apl','apr','wll','
 joint_idx_dict['skirt'] = list(['wbl','wbr','hll','hlr'])
 joint_idx_dict['trousers'] = list(['wbl','wbr','cr','bli','blo','bri','bro'])
 joint_idx_dict['outwear'] = list(['nkl','nkr','shl','shr','apl','apr','wll','wlr','cli','clo','cri','cro','thl','thr'])
+link_idx_dict = dict()
+link_idx_dict['blouse'] = list([['nkr','nkl'],
+                                ['nkl','shl'],
+                                ['nkr','shr'],
+                                ['nkl','cf'],
+                                ['nkr','cf'],
+                                ['shl','clo'],
+                                ['shr','cro'],
+                                ['clo','cli'],
+                                ['cro','cri'],
+                                ['cli','apl'],
+                                ['cri','apr'],
+                                ['apl','thl'],
+                                ['apr','thr'],
+                                ['thl','thr']])
 
+link_idx_dict['outwear'] = list([['nkr','nkl'],
+                                ['nkl','shl'],
+                                ['nkr','shr'],
+                                ['shl','clo'],
+                                ['shr','cro'],
+                                ['clo','cli'],
+                                ['cro','cri'],
+                                ['cli','apl'],
+                                ['cri','apr'],
+                                ['apl','wll'],
+                                ['apr','wlr'],
+                                ['wll','thl'],
+                                ['wlr','thr'],
+                                ['wll','wlr'],
+                                ['thl','thr']])
+link_idx_dict['dress'] = list([ ['nkr','nkl'],
+                                ['nkl','shl'],
+                                ['nkr','shr'],
+                                ['nkl','cf' ],
+                                ['nkr','cf' ],
+                                ['shl','clo'],
+                                ['shr','cro'],
+                                ['clo','cli'],
+                                ['cro','cri'],
+                                ['cli','apl'],
+                                ['cri','apr'],
+                                ['apl','wll'],
+                                ['apr','wlr'],
+                                ['wll','hll'],
+                                ['wlr','hlr'],
+                                ['wll','wlr'],
+                                ['hll','hlr']])
+link_idx_dict['trousers'] = list([['wbl','wbr'],
+                                ['wbl','blo'],
+                                ['wbr','bro'],
+                                ['blo','bli'],
+                                ['bro','bri'],
+                                ['bli','cr' ],
+                                ['bri','cr' ] ])
+link_idx_dict['skirt'] = list([ ['wbl','wbr'],
+                                ['hll','wbl'],
+                                ['wbr','hlr'],
+                                ['hll','hlr'] ])
 
 norm_index = {'blouse':['apl','apr'], 'skirt':['hll','hlr'], 'dress':['apl','apr'], 'trousers':['blo','bro'], 'outwear':['apl','apr']}
 
@@ -56,6 +101,7 @@ if __name__ == '__main__':
                     for elem in elems[2:]:
                        parts.append([int(x) for x in elem.split('_')])
                     # plot image
+                    links = link_idx_dict[category]
                     image = cv2.imread(image_path)
                     for part in parts:
                         x,y,visible = part[:]
@@ -63,6 +109,9 @@ if __name__ == '__main__':
                             cv2.circle(image, (x,y), 2, (255,0,128), 2)
                         elif(visible == 0):
                             cv2.circle(image, (x,y), 3, (0,128,255), 2)
+                    for link in links:
+                        pt1, pt2 = parts[csv_seq.index(link[0])], parts[csv_seq.index(link[1])]
+                        cv2.line(image, (pt1[0],pt1[1]), (pt2[0],pt2[1]),(255,225,0),2 )
                     # save image
                     cv2.imwrite(os.path.join(args.outputpath, "%s_%05d.jpg"%(category, test_num)), image)
                     test_num += 1

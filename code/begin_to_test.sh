@@ -1,10 +1,10 @@
 #!/bin/bash
-export CUDA_VISIBLE_DEVICES=0
+export CUDA_VISIBLE_DEVICES=4
 
 python run.py \
---modelpath="./tmp/frozen_graph.pb" \
---imagepath="../data/train" \
---csv="../data/test_b/test.csv" \
+--modelpath="./models/trained/skirt/frozen_graph.pb" \
+--imagepath="../data/new_data/test" \
+--csv="../submit/submit_skirt.csv" \
 --tag="skirt" \
 --test="submit" \
 --inputsize='368' \

@@ -3,9 +3,9 @@
 export CUDA_VISIBLE_DEVICES=0
 
 python run_checkpoint.py \
---model=seresnet50 \
---tag='skirt' \
---modelpath='trained/model-121000'
+--model=seresnext50 \
+--tag='trousers' \
+--modelpath='trained/trousers/model-94000'
 
 python -m tensorflow.python.tools.freeze_graph \
 --input_graph=./tmp/graph.pb \
