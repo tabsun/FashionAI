@@ -2,6 +2,10 @@
 
 > A keypoint detection scheme __based on OpenPose__.
 
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+
+[![LICENSE](https://img.shields.io/badge/license-NPL%20(The%20996%20Prohibited%20License)-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+
 ## Introduction
 
 FashionAI是阿里天池组织的一个服饰关键点检测比赛，包括blouse/dress/outwear/skirt/trousers五种类型服饰。具体情况可参见[FashionAI](https://tianchi.aliyun.com/competition/introduction.htm?spm=5176.100066.0.0.6acd33afRiMB54&raceId=231648).
